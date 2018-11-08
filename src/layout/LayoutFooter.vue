@@ -8,28 +8,37 @@
           <hr class="mb-4">
           <div class="row">
             <div class="col-sm pb-4">
-              <div class="footer-text small font-weight-bold mb-3">ABOUT US</div>
-              <a href="javascript:void(0)" class="footer-link d-block pb-2">About</a>
-              <a href="javascript:void(0)" class="footer-link d-block pb-2">Our Story</a>
-              <a href="javascript:void(0)" class="footer-link d-block pb-2">Shipping</a>
+              <div class="footer-text font-weight-bold mb-3 text-large">LOCATIONS</div>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2 text-large">locations1</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2 text-large">locations1</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2 text-large">locations1</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2 text-large">locations1</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2 text-large">locations1</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2 text-large">locations1</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2 text-large">locations1</a>
             </div>
             <div class="col-sm pb-4">
-              <div class="footer-text small font-weight-bold mb-3">CATEGORY</div>
-              <a href="javascript:void(0)" class="footer-link d-block pb-2">Woman</a>
-              <a href="javascript:void(0)" class="footer-link d-block pb-2">Man</a>
-              <a href="javascript:void(0)" class="footer-link d-block pb-2">Kids</a>
+              <div class="footer-text text-large font-weight-bold mb-3">LOCAL STAY</div>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2 text-large">Careers</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2 text-large">Press</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2 text-large">Blog</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2 text-large">AtHome With us</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2 text-large">Stay with us</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2 text-large">Introduce a host</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2 text-large">Contact us</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2 text-large">Profolio</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2 text-large">FAQ</a>
             </div>
             <div class="col-sm pb-4">
-              <div class="footer-text small font-weight-bold mb-3">SUPPORT</div>
-              <a href="javascript:void(0)" class="footer-link d-block pb-2">FAQ</a>
-              <a href="javascript:void(0)" class="footer-link d-block pb-2">Support</a>
-              <a href="javascript:void(0)" class="footer-link d-block pb-2">Consultant</a>
-            </div>
-            <div class="col-sm pb-4">
-              <div class="footer-text small font-weight-bold mb-3">PARTNERS</div>
-              <a href="javascript:void(0)" class="footer-link d-block pb-2">Wholesale</a>
-              <a href="javascript:void(0)" class="footer-link d-block pb-2">Office solutions</a>
-              <a href="javascript:void(0)" class="footer-link d-block pb-2">Press Resource</a>
+              <div class="footer-text font-weight-bold mb-3 text-large">CONTACT</div>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2 text-large">montreal@localstay.com`</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2 text-large">+1 514-123-4567</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2 text-large">address</a>
+              
+              <br>
+              <div class="footer-text font-weight-bold mb-3 text-large">GUEST CONTACT</div>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2 text-large">service@localstay.com`</a>
+              <a href="javascript:void(0)" class="footer-link d-block pb-2 text-large">+1 514-123-4567</a>
             </div>
           </div>
         </div>
