@@ -8,9 +8,9 @@
 
 <script>
 export default {
-  name: 'home',
+  name: "home",
   metaInfo: {
-    title: 'Home'
+    title: "Home"
   }
-}
+};
 </script>
