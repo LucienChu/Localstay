@@ -1,24 +1,9 @@
 <template>
-  <b-navbar toggleable="lg" :variant="getLayoutNavbarBg()" class="layout-navbar align-items-lg-center container-p-x">
+  <div>
 
-    <!-- Brand -->
-    <!-- <b-navbar-brand to="/">LocasStay</b-navbar-brand> -->
-
-    <!-- Sidenav toggle -->
-    <b-navbar-nav class="align-items-lg-center mr-auto mr-lg-4" v-if="sidenavToggle">
-      <a class="nav-item nav-link px-0 ml-2 ml-lg-0" href="javascript:void(0)" @click="toggleSidenav">
-        <i class="ion ion-md-menu text-large align-middle" />
-      </a>
-    </b-navbar-nav>
-
-    <!-- Navbar toggle -->
-    <b-navbar-toggle target="app-layout-navbar"></b-navbar-toggle>
-
-    <!-- top navbar menue -->
-    <b-collapse d-flex justfiy-contend-between is-nav>
-      <!-- location dropdown -->
-      <b-navbar-nav class="align-items-lg-center justify-content-end" >
-          <b-dd id = "locationDropdownBtn" variant="default" text="Montreal" :right="isRTL">
+    <!-- top navbar -->
+    <b-navbar id = "top-nav-bar" toggleable="lg" variant="dark" style="z-index: 20">
+      <b-dd id = "locationDropdownBtn" variant="default" text="Montreal" :right="isRTL">
             <b-dd-item>First action</b-dd-item>
 
             <div class="dropdown-toggle">
@@ -47,24 +32,40 @@
               </div>
             </div>
           </b-dd>
-      </b-navbar-nav>
-      <!-- end location dropdown -->
+      <b-navbar-toggle target="navbar-example-1"></b-navbar-toggle>
 
-      <!-- contact methods -->
-      <b-nav class="justify-content-end">
-        <b-nav-item><a href = "#">{{localEmail}}</a></b-nav-item>
+      <b-collapse is-nav id="navbar-example-1">
+        <b-navbar-nav class = "ml-auto">
+          <b-nav-item><a href = "#">{{localEmail}}</a></b-nav-item>
         <b-nav-item><a href = "#"> {{localPhoneNumber}}</a></b-nav-item>
-      </b-nav>
-      <!-- end contact methods -->
-    </b-collapse>
-    <!-- end top navbar menue -->
+        </b-navbar-nav>
+      </b-collapse>
+    </b-navbar>
+    <!-- end top navbar -->
 
-  </b-navbar>
+    <!-- sub navbar -->
+    <b-navbar id = "sup-nav-bar" toggleable="lg" variant="light" style="z-index: 20">
+      <b-navbar-nav>
+        <a href = "#">LocalStay</a>
+      </b-navbar-nav>
+      <b-navbar-toggle target="sub-bar-list"></b-navbar-toggle>
+
+      <b-collapse is-nav id="sub-bar-list">
+        <b-navbar-nav class = "ml-auto">
+          <b-nav-item href="#" active>What we do</b-nav-item>
+          <b-nav-item href="#" active>Pricing</b-nav-item>
+          <b-nav-item href="#" active>Who we are</b-nav-item>
+          <b-nav-item><a href = "#">Log in</a></b-nav-item>
+        </b-navbar-nav>
+      </b-collapse>
+    </b-navbar>
+    <!-- end sub navbar -->
+  </div>
 </template>
 
 <script>
 export default {
-  name: "app-layout-navbar",
+  name: "app-header",
   data: function() {
     return {
       localEmail: "montreal@localstaty.com",
@@ -94,3 +95,5 @@ export default {
   border: 0;
 }
 </style>
+
+

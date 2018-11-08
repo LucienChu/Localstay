@@ -1,6 +1,5 @@
 <template>
-      <nav class="footer bg-footer-theme pt-4 mb-4">
-          <h1>NYT, Forbes, Bloomber, BBC, INDEPENTDENT, CNBC 圖片</h1>
+          <nav class="footer bg-footer-theme pt-4 mb-4">
         <div class="container text-center py-4">
           <div class="pb-3">
             <a href="javascript:void(0)" class="footer-text text-large font-weight-normal">.bg-footer-theme</a> <span class="align-top">©</span>
@@ -33,18 +32,15 @@
             </div>
           </div>
         </div>
-        <h1>地標圖</h1>
       </nav>
 </template>
 
 <script>
 export default {
-  name: "app-footer",
-
-  methods: {
-    getLayoutFooterBg() {
-      return `bg-${this.layoutFooterBg}`;
-    }
-  }
+  name: "footer",
+  metaInfo: {
+    title: "footer"
+  },
+  data: () => {}
 };
 </script>
