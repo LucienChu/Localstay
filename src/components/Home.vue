@@ -1,22 +1,24 @@
 <template>
     <div class="home-page-content">
       <!-- house images carousel -->
-      <b-carousel indicators :interval="4000">
-        <b-carousel-slide
-          caption="First slide"
-          text="Eos mutat malis maluisset et, agam ancillae quo te, in vim congue pertinacia."
-          :img-src="`${baseUrl}img/bg/1.jpg`" />
-        <b-carousel-slide
-          caption="Second slide"
-          text="In numquam omittam sea."
-          :img-src="`${baseUrl}img/bg/2.jpg`" />
-        <b-carousel-slide
-          caption="Third slide"
-          text="Lorem ipsum dolor sit amet, virtute consequat ea qui, minim graeco mel no."
-          :img-src="`${baseUrl}img/bg/3.jpg`" />
-      </b-carousel>
+      <div class="home-image-carousel">
+        <b-carousel indicators :interval="4000">
+          <b-carousel-slide
+            caption="First slide"
+            text="Eos mutat malis maluisset et, agam ancillae quo te, in vim congue pertinacia."
+            :img-src="`${baseUrl}img/bg/1.jpg`" />
+          <b-carousel-slide
+            caption="Second slide"
+            text="In numquam omittam sea."
+            :img-src="`${baseUrl}img/bg/2.jpg`" />
+          <b-carousel-slide
+            caption="Third slide"
+            text="Lorem ipsum dolor sit amet, virtute consequat ea qui, minim graeco mel no."
+            :img-src="`${baseUrl}img/bg/3.jpg`" />
+        </b-carousel>
+      </div>
       <!-- end house images carousel -->
-<hr>
+
       <!-- first month guarantee -->
       <div class="container" id = "first-month-rent-guarantee">
         <div class="row" align-content-center>
@@ -34,12 +36,64 @@
             </div>
         </div>
       </div>
+
+      <div class="space"></div>
+
       <!-- end first month guarantee -->
+
+      <div class = "coop-partners">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="container">
+              <h1 class="display-3 text-center mb-4">
+              Maximising the visiblity of your London listing across channels
+            </h1>
+            <p class="lead display-4 col-md-10 col-lg-8 text-center text-muted p-0 mx-auto mb-4">
+              Such As Airbnb, Homeaway, Booking.com, Tripadvisor and other leading channels globally
+            </p>
+            </div>
+          </div><br><br>
+          <div class="row">
+            <div class="container-fluid">
+              <div class="row text-center p-0 mx-auto">
+                <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
+                    <img class = "partner-img" src="../../public/img/partners/airbnb.svg" alt="airbnb">
+                </div>
+                <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
+                    <img class = "partner-img" src="../../public/img/partners/homeaway.svg" alt="airbnb">
+                </div>
+                
+                <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
+                    <img class = "partner-img" src="../../public/img/partners/luxuryretreats.svg" alt="airbnb">
+                </div>
+                
+                <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
+                    <img class = "partner-img" src="../../public/img/partners/tripadvisor.svg" alt="airbnb">
+                </div>
+                <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
+                    <img class = "partner-img" src="../../public/img/partners/onefinestay.svg" alt="airbnb">
+                </div>
+                <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
+                    <img class = "partner-img" src="../../public/img/partners/bookingcom.svg" alt="airbnb">
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
     </div>
 
 </template>
 
 <style>
+.home-page-content > div {
+  margin-bottom: 150px;
+}
+
+.partner-img {
+  width: 180px;
+  height: 50px;
+}
 .swiper-container .swiper-slide {
   padding: 5rem 0;
   text-align: center;
