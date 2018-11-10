@@ -41,6 +41,7 @@
 
       <!-- end first month guarantee -->
 
+    <!-- partner platforms -->
       <div class = "coop-partners">
         <div class="container-fluid">
           <div class="row">
@@ -80,14 +81,57 @@
             </div>
           </div>
           </div>
+      </div>
+    <!-- end partner platforms -->
+
+    <!-- why localstay -->
+    <div class="why-localstay">
+      <div class="container">
+        <h1 class="display-3 text-center mb-5">Why Localstay</h1>
+        <div class="display-4 text-center mb-5">
+          Our unique approach smartly balances short, mid and long 
+          lettings to deliver superior earnings
         </div>
+
+        <div class="row text-center">
+          <div class="col-md-4 my-5">
+              <h2>picture</h2>
+              <p style = "font-size: 130%">
+                International track record of delivering 
+                <strong>superior yields</strong> 
+              </p>
+          </div>
+
+          <div class="col-md-4 my-5">
+              <h2>picture</h2>
+              <p style = "font-size: 130%">
+                <strong>Customised pricing algorithm </strong> 
+                based on rich industry data and market expertise
+              </p>
+          </div>
+
+          <div class="col-md-4 my-5">
+              <h2>picture</h2>
+              <p style = "font-size: 130%">
+                Achieve more 5 star reviews with customised welcome packs and 
+                <strong>24/7 guest support</strong> 
+              </p>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+        <a href="javascript:void(0)" class="btn btn-primary btn-lg">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <!-- end why localstay -->
     </div>
 
 </template>
 
 <style>
 .home-page-content > div {
-  margin-bottom: 150px;
+  margin-bottom: 120px;
 }
 
 .partner-img {
