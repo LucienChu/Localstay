@@ -46,36 +46,36 @@
         <div class="container-fluid">
           <div class="row">
             <div class="container">
-              <h1 class="display-3 text-center mb-4">
+              <h1 class="display-3 text-center mb-5">
               Maximising the visiblity of your London listing across channels
             </h1>
-            <p class="lead display-4 col-md-10 col-lg-8 text-center text-muted p-0 mx-auto mb-4">
+            <p class="lead display-5 col-md-10 col-lg-8 text-center text-muted p-0 mx-auto my-4">
               Such As Airbnb, Homeaway, Booking.com, Tripadvisor and other leading channels globally
             </p>
             </div>
           </div><br><br>
           <div class="row">
-            <div class="container-fluid">
+            <div class="container">
               <div class="row text-center p-0 mx-auto">
                 <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
-                    <img class = "partner-img" src="../../public/img/partners/airbnb.svg" alt="airbnb">
+                    <img class = "partner-img" src="../../public/img/partners/airbnb.svg" style = "width: 90%" alt="airbnb">
                 </div>
                 <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
-                    <img class = "partner-img" src="../../public/img/partners/homeaway.svg" alt="airbnb">
-                </div>
-                
-                <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
-                    <img class = "partner-img" src="../../public/img/partners/luxuryretreats.svg" alt="airbnb">
+                    <img class = "partner-img" src="../../public/img/partners/homeaway.svg" style = "width: 90%" alt="airbnb">
                 </div>
                 
                 <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
-                    <img class = "partner-img" src="../../public/img/partners/tripadvisor.svg" alt="airbnb">
+                    <img class = "partner-img" src="../../public/img/partners/luxuryretreats.svg" style = "width: 90%" alt="airbnb">
+                </div>
+                
+                <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
+                    <img class = "partner-img" src="../../public/img/partners/tripadvisor.svg" style = "width: 90%" alt="airbnb">
                 </div>
                 <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
-                    <img class = "partner-img" src="../../public/img/partners/onefinestay.svg" alt="airbnb">
+                    <img class = "partner-img" src="../../public/img/partners/onefinestay.svg" style = "width: 90%" alt="airbnb">
                 </div>
                 <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
-                    <img class = "partner-img" src="../../public/img/partners/bookingcom.svg" alt="airbnb">
+                    <img class = "partner-img" src="../../public/img/partners/bookingcom.svg" style = "width: 90%" alt="airbnb">
                 </div>
               </div>
             </div>
@@ -117,10 +117,6 @@
                 <strong>24/7 guest support</strong> 
               </p>
           </div>
-        </div>
-
-        <div class="text-center mt-5">
-        <a href="javascript:void(0)" class="btn btn-primary btn-lg">Learn More</a>
         </div>
       </div>
     </div>
