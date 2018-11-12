@@ -121,11 +121,58 @@
       </div>
     </div>
     <!-- end why localstay -->
-    </div>
+
+    <!-- see what your home could earn -->
+    <div class="jumbotron ui-hero ui-mh-100vh ui-bg-cover ui-bg-overlay-container text-white" style="background-image: url('assets/img/bg/18.jpg');">
+      <div class="ui-bg-overlay bg-dark opacity-25"></div>
+        <div class="container my-5">
+          <div class="row">
+            <div class="w-100">
+              <div class="col-md-10 col-lg-8 col-xl-6 text-center mx-auto">
+                <h1 class="display-4 mb-5">
+                  Fidn out what your place could earn
+                </h1>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-6">
+                  <b-card header="Default" header-tag="h6" class="mb-4">
+                    <b-form>
+                      <b-form-group label="Email address">
+                        <b-input type="email" placeholder="Your property's address" />
+                      </b-form-group>
+                      <b-form-group label="Number of bedrooms">
+                        <b-select value="Select state" :options="['Select state','California','Hawaii','Florida','Texas','Massachusetts','Alabama']" />
+                      </b-form-group>
+                    </b-form>
+                  </b-card>
+                </div>
+                <div class="col-6">
+                  <div class="input-group input-group-lg">
+                    <input type="text" class="form-control bg-white border-top-0 border-bottom-0 border-left-0 px-3" placeholder="Your property's address">
+                    <select class="custom-select d-none d-sm-block bg-white border-top-0 border-right-0 border-bottom-0 pl-3">
+                      
+                    </select>
+                    <span class="input-group-append">
+                      <a class="btn btn-primary">
+                        <span class="ion ion-ios-search"></span>&nbsp; Search
+                      </a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+      </div>
+  </div>
+    <!-- end what your home could earn -->
+  </div>
 
 </template>
 
-<style>
+<style scoped>
 .home-page-content > div {
   margin-bottom: 120px;
 }
@@ -133,33 +180,6 @@
 .partner-img {
   width: 180px;
   height: 50px;
-}
-.swiper-container .swiper-slide {
-  padding: 5rem 0;
-  text-align: center;
-  font-size: 1.5rem;
-  background: #ecebed;
-}
-
-#swiper-vertical {
-  max-height: 195px;
-}
-
-#swiper-3d-cube-effect {
-  max-width: 300px;
-}
-
-#swiper-3d-coverflow-effect .swiper-slide {
-  max-width: 300px;
-}
-
-#swiper-3d-flip-effect,
-#swiper-3d-flip-effect .swiper-slide {
-  max-width: 300px;
-}
-
-#swiper-3d-flip-effect {
-  padding: 50px;
 }
 </style>
 <style src="@/vendor/libs/vue-awesome-swiper/vue-awesome-swiper.scss" lang="scss"></style>
