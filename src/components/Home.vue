@@ -85,88 +85,80 @@
     <!-- end partner platforms -->
 
     <!-- why localstay -->
-    <div class="why-localstay">
-      <div class="container">
-        <h1 class="display-3 text-center mb-5">Why Localstay</h1>
-        <div class="display-4 text-center mb-5">
-          Our unique approach smartly balances short, mid and long 
-          lettings to deliver superior earnings
-        </div>
-
-        <div class="row text-center">
-          <div class="col-md-4 my-5">
-              <h2>picture</h2>
-              <p style = "font-size: 130%">
-                International track record of delivering 
-                <strong>superior yields</strong> 
-              </p>
+      <div class="why-localstay">
+        <div class="container">
+          <h1 class="display-3 text-center mb-5">Why Localstay</h1>
+          <div class="display-4 text-center mb-5">
+            Our unique approach smartly balances short, mid and long 
+            lettings to deliver superior earnings
           </div>
 
-          <div class="col-md-4 my-5">
-              <h2>picture</h2>
-              <p style = "font-size: 130%">
-                <strong>Customised pricing algorithm </strong> 
-                based on rich industry data and market expertise
-              </p>
-          </div>
+          <div class="row text-center">
+            <div class="col-md-4 my-5">
+                <h2>picture</h2>
+                <p style = "font-size: 130%">
+                  International track record of delivering 
+                  <strong>superior yields</strong> 
+                </p>
+            </div>
 
-          <div class="col-md-4 my-5">
-              <h2>picture</h2>
-              <p style = "font-size: 130%">
-                Achieve more 5 star reviews with customised welcome packs and 
-                <strong>24/7 guest support</strong> 
-              </p>
+            <div class="col-md-4 my-5">
+                <h2>picture</h2>
+                <p style = "font-size: 130%">
+                  <strong>Customised pricing algorithm </strong> 
+                  based on rich industry data and market expertise
+                </p>
+            </div>
+
+            <div class="col-md-4 my-5">
+                <h2>picture</h2>
+                <p style = "font-size: 130%">
+                  Achieve more 5 star reviews with customised welcome packs and 
+                  <strong>24/7 guest support</strong> 
+                </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     <!-- end why localstay -->
 
     <!-- see what your home could earn -->
-    <div class="jumbotron ui-hero ui-mh-100vh ui-bg-cover ui-bg-overlay-container text-white" style="background-image: url('assets/img/bg/18.jpg');">
-      <div class="ui-bg-overlay bg-dark opacity-25"></div>
-        <div class="container my-5">
-          <div class="row">
-            <div class="w-100">
-              <div class="col-md-10 col-lg-8 col-xl-6 text-center mx-auto">
-                <h1 class="display-4 mb-5">
-                  Fidn out what your place could earn
-                </h1>
-              </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="col-6">
-                  <b-card header="Default" header-tag="h6" class="mb-4">
-                    <b-form>
-                      <b-form-group label="Email address">
-                        <b-input type="email" placeholder="Your property's address" />
-                      </b-form-group>
-                      <b-form-group label="Number of bedrooms">
-                        <b-select value="Select state" :options="['Select state','California','Hawaii','Florida','Texas','Massachusetts','Alabama']" />
-                      </b-form-group>
-                    </b-form>
-                  </b-card>
+      <div class="jumbotron ui-hero ui-mh-100vh ui-bg-cover ui-bg-overlay-container text-black" style="background-image: url('assets/img/bg/18.jpg');">
+        <div class="ui-bg-overlay bg-dark opacity-25"></div>
+          <div class="container my-5">
+            <div class="row">
+              <div class="w-100">
+                <div class="col-md-10 col-lg-8 col-xl-6 text-center mx-auto">
+                  <h1 class="display-4 mb-5">
+                    Find out what your place could earn
+                  </h1>
                 </div>
-                <div class="col-6">
-                  <div class="input-group input-group-lg">
-                    <input type="text" class="form-control bg-white border-top-0 border-bottom-0 border-left-0 px-3" placeholder="Your property's address">
-                    <select class="custom-select d-none d-sm-block bg-white border-top-0 border-right-0 border-bottom-0 pl-3">
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+                    <b-card header-tag="h6" class="mb-4">
+                      <b-form>
+                        <b-form-group label="Address">
+                          <b-input placeholder="Your property's address" />
+                        </b-form-group>
+                        <b-form-group label = "Number of bedrooms">
+                          <b-select value="" :options="['studio', '1','2','3', '4+']"/>
+                        </b-form-group>
+                      </b-form>
                       
-                    </select>
-                    <span class="input-group-append">
-                      <a class="btn btn-primary">
-                        <span class="ion ion-ios-search"></span>&nbsp; Search
-                      </a>
-                    </span>
+                    </b-card>
+                  </div>
+                        
+        
+                      
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-
-          </div>
+        </div>
       </div>
-  </div>
     <!-- end what your home could earn -->
   </div>
 
