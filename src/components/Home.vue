@@ -37,7 +37,6 @@
         </div>
       </div>
 
-      <div class="space"></div>
 
       <!-- end first month guarantee -->
 
@@ -186,6 +185,54 @@
       </div>
     </div>
     <!-- end what your home could earn -->
+    
+
+    <!-- where are our clients arcoss your area -->
+    <div class="jumbotron" style = "margin: 0">
+      <div class="container my-5">
+        <div class="row mb-3">
+          <div class="col-md-8 col-lg-8 col-xl-6 text-center mx-auto">
+            <h1 class="display-4 mb-4">
+              Boosting earnings for Hostmaker hosts across London
+            </h1>
+          </div>
+        </div>
+        <div class="row mb-5">
+          <div class="col-md-10 text-center mx-auto">
+            <h4>in areas including:</h4>
+          </div>
+        </div> 
+
+        <div class="row mb-5">
+          <div class="col-md-8 mx-auto">
+            <b-list-group class="list-group d-flex flex-row flex-wrap">
+              <b-list-group-item class = "col-lg-6">
+                kk
+              </b-list-group-item>
+              <b-list-group-item class = "col-lg-6">
+                kk
+              </b-list-group-item>
+              <b-list-group-item class = "col-lg-6">
+                kk
+              </b-list-group-item>
+              <b-list-group-item class = "col-lg-6">
+                kk
+              </b-list-group-item>
+              <b-list-group-item class = "col-lg-6">
+                kk
+              </b-list-group-item>
+            </b-list-group>
+          </div>
+        </div>
+
+        <div class="row mb-5">
+          <div class="col-md-10 text-center mx-auto">
+            <h5>and more</h5>
+          </div>
+        </div> 
+      </div>
+    </div>
+    <!-- end where are our clients arcoss your area -->
   </div>
 
 </template>
