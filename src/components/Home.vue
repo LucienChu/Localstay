@@ -125,12 +125,19 @@
     <!-- see what your home could earn -->
     <div class="jumbotron">
       <div class="container my-5">
-        <div class="row">
-            <div class="col-md-8 col-lg-8 col-xl-6 text-center mx-auto">
-              <h1 class="display-4 mb-5">
-                Find out what your place could earn
-              </h1>
-            </div>
+        <div class="row mb-5">
+          <div class="col-md-8 col-lg-8 col-xl-6 text-center mx-auto">
+            <h1 class="display-4 mb-5">
+              Find out what your place could earn
+            </h1>
+          </div>
+        </div>
+        <div class="row mb-5">
+          <div class="col-md-10 text-center mx-auto">
+            <h4 class="">Get an instant estimate of how much your primary home, your secondary residence or one of your properties would earn with our flexible lettings approach. Contact us to get a more accurate estimate by our pricing experts.</h4>
+          </div>
+        </div>
+        <div class="row mb-5">
             <div class="container property-search-div py-5" style="background: white; width: 80%">
               <div class="row">
                 <div class="col-md-5 ml-auto mr-auto">
@@ -140,20 +147,17 @@
                   <b-form-group label="Number of bedrooms" class="">
                     <b-select value="Studio" :options="['Studio','1','2','3','4+']" />
                   </b-form-group>
-                  
-                  
-                  
                 </div>
                 <div class="col-md-5 ml-auto mr-auto">
-                  <div class="container">
+                  <div class="container d-flex flex-column" style="">
                     <div class="row mb-3">
                       <div class="col">From</div>
                       <div class="col text-right">To</div>
                     </div>
                     <div class="row mb-3">
-                      <div class="col ml-auto">min</div>
-                      <div class="col text-center">--</div>
-                      <div class="col mr-auto text-right">max</div>
+                      <div class="col ml-auto"> <p class = "display-4">min</p></div>
+                      <div class="col text-center"><p class = "display-4">--</p></div>
+                      <div class="col mr-auto text-right "><p class = "display-4">max</p></div>
                     </div>
                     <div class="row mb-3">
                       <div class="col text-center">
@@ -165,19 +169,22 @@
                     <a href="#" class="btn btn-primary" style="width: 80%">Get Start</a>
                   </div>
                 </div>
-          </div>
+              </div>
                 
 
                 
-              </div>
-              
-              
-              
             </div>
         </div>
-            
+        <div class="row mb-5">
+          <div class="col-md-10 col-lg-8 text-center mx-auto">
+            <h4 class="text-muted">
+              Calculations based on comparable listings in the property area, guest capacity, and Hostmaker data and analysis.
+            </h4>
+          </div>
+        </div>
+        
       </div>
-      </div>
+    </div>
     <!-- end what your home could earn -->
   </div>
 
