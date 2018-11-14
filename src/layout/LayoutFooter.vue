@@ -12,7 +12,6 @@
               <a v-for="(value, key) in locations" :key="key" :href="value" class="footer-link d-block pb-2 text-large">
                 {{key}}
               </a>
-              <img :src="path" alt="Monretal skyline">
             </div>
             <div class="col-sm pb-4">
               <div class="footer-text text-large font-weight-bold mb-3">LOCAL STAY</div>
@@ -49,7 +48,6 @@ export default {
 
   data: function() {
     return {
-      path: "../../public/img/avatars/1.png",
       locations: {
         Montreal: "www.baidu.com",
         Laval: "www.taobao.com",
@@ -65,3 +63,4 @@ export default {
   }
 };
 </script>
+
