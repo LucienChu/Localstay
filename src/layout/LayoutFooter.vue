@@ -49,7 +49,7 @@ export default {
 
   data: function() {
     return {
-      path: "../../public/img/avatars/1.png",
+      path: "img/avatars/1.png",
       locations: {
         Montreal: "www.baidu.com",
         Laval: "www.taobao.com",
