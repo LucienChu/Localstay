@@ -6,6 +6,9 @@ import BootstrapVue from 'bootstrap-vue'
 
 import globals from './globals'
 import Popper from 'popper.js'
+import VueTypedJs from 'vue-typed-js'
+
+
 
 // Required to enable animations on dropdowns/tooltips/popovers
 Popper.Defaults.modifiers.computeStyle.gpuAcceleration = false
@@ -13,6 +16,7 @@ Popper.Defaults.modifiers.computeStyle.gpuAcceleration = false
 Vue.config.productionTip = false
 
 Vue.use(BootstrapVue)
+Vue.use(VueTypedJs)
 
 // Global RTL flag
 Vue.mixin({
