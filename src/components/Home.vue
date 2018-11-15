@@ -1,86 +1,84 @@
 <template>
-    <div class="home-page-content">
-      <!-- house images carousel -->
-      <div class="home-image-carousel">
-        <b-carousel indicators :interval="4000">
-          <b-carousel-slide
-            caption="First slide"
-            text="Eos mutat malis maluisset et, agam ancillae quo te, in vim congue pertinacia."
-            :img-src="`${baseUrl}img/bg/1.jpg`" />
-          <b-carousel-slide
-            caption="Second slide"
-            text="In numquam omittam sea."
-            :img-src="`${baseUrl}img/bg/2.jpg`" />
-          <b-carousel-slide
-            caption="Third slide"
-            text="Lorem ipsum dolor sit amet, virtute consequat ea qui, minim graeco mel no."
-            :img-src="`${baseUrl}img/bg/3.jpg`" />
-        </b-carousel>
-      </div>
-      <!-- end house images carousel -->
+  <div class="home-page-content">
+    <!-- house images carousel -->
+    <div class="home-image-carousel">
+      <b-carousel indicators :interval="4000">
+        <b-carousel-slide
+          caption="First slide"
+          text="Eos mutat malis maluisset et, agam ancillae quo te, in vim congue pertinacia."
+          :img-src="`${baseUrl}img/bg/1.jpg`" />
+        <b-carousel-slide
+          caption="Second slide"
+          text="In numquam omittam sea."
+          :img-src="`${baseUrl}img/bg/2.jpg`" />
+        <b-carousel-slide
+          caption="Third slide"
+          text="Lorem ipsum dolor sit amet, virtute consequat ea qui, minim graeco mel no."
+          :img-src="`${baseUrl}img/bg/3.jpg`" />
+      </b-carousel>
+    </div>
+    <!-- end house images carousel -->
 
-      <!-- first month guarantee -->
-      <div class="container" id = "first-month-rent-guarantee">
-        <div class="row" align-content-center>
-          <div class = "col-md-10 col-lg-5 text-center mx-auto" id="first-month-rent-guarantee-image">
-            <img src="../../public/img/promotion/first month rent guarantee.png" alt="first month rent guarantee">
-          </div>
-          <div class=" col-md-10 col-lg-5 text-center mx-auto">
-              <h1 class="display-3 mb-5">
-                We'll guarantee your first month's rent
-              </h1>
-              <h3 class = "display-4">
-                We're so confident we can fill your property that we'll guarantee it
-              </h3>
-              <a href="#" class="btn btn-primary btn-xl"><small>Please, tell me more!</small></a>
-            </div>
+    <!-- first month guarantee -->
+    <div class="container" id = "first-month-rent-guarantee">
+      <div class="row" align-content-center>
+        <div class = "col-md-10 col-lg-5 text-center mx-auto" id="first-month-rent-guarantee-image">
+          <img src="../../public/img/promotion/first month rent guarantee.png" alt="first month rent guarantee">
         </div>
+        <div class=" col-md-10 col-lg-5 text-center mx-auto">
+            <h1 class="display-3 mb-5">
+              We'll guarantee your first month's rent
+            </h1>
+            <h3 class = "display-4">
+              We're so confident we can fill your property that we'll guarantee it
+            </h3>
+            <a href="#" class="btn btn-primary btn-xl"><small>Please, tell me more!</small></a>
+          </div>
       </div>
-
-
-      <!-- end first month guarantee -->
+    </div>
+    <!-- end first month guarantee -->
 
     <!-- partner platforms -->
-      <div class = "coop-partners">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="container">
-              <h1 class="display-3 text-center mb-5">
-              Maximising the visiblity of your London listing across channels
-            </h1>
-            <p class="lead display-5 col-md-10 col-lg-8 text-center text-muted p-0 mx-auto my-4">
-              Such As Airbnb, Homeaway, Booking.com, Tripadvisor and other leading channels globally
-            </p>
-            </div>
-          </div><br><br>
-          <div class="row">
-            <div class="container">
-              <div class="row text-center p-0 mx-auto">
-                <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
-                    <img class = "partner-img" src="../../public/img/partners/airbnb.svg" style = "width: 90%" alt="airbnb">
-                </div>
-                <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
-                    <img class = "partner-img" src="../../public/img/partners/homeaway.svg" style = "width: 90%" alt="airbnb">
-                </div>
-                
-                <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
-                    <img class = "partner-img" src="../../public/img/partners/luxuryretreats.svg" style = "width: 90%" alt="airbnb">
-                </div>
-                
-                <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
-                    <img class = "partner-img" src="../../public/img/partners/tripadvisor.svg" style = "width: 90%" alt="airbnb">
-                </div>
-                <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
-                    <img class = "partner-img" src="../../public/img/partners/onefinestay.svg" style = "width: 90%" alt="airbnb">
-                </div>
-                <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
-                    <img class = "partner-img" src="../../public/img/partners/bookingcom.svg" style = "width: 90%" alt="airbnb">
-                </div>
+    <div class = "coop-partners">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="container">
+            <h1 class="display-3 text-center mb-5">
+            Maximising the visiblity of your London listing across channels
+          </h1>
+          <p class="lead display-5 col-md-10 col-lg-8 text-center text-muted p-0 mx-auto my-4">
+            Such As Airbnb, Homeaway, Booking.com, Tripadvisor and other leading channels globally
+          </p>
+          </div>
+        </div><br><br>
+        <div class="row">
+          <div class="container">
+            <div class="row text-center p-0 mx-auto">
+              <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
+                  <img class = "partner-img" src="../../public/img/partners/airbnb.svg" style = "width: 90%" alt="airbnb">
+              </div>
+              <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
+                  <img class = "partner-img" src="../../public/img/partners/homeaway.svg" style = "width: 90%" alt="airbnb">
+              </div>
+              
+              <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
+                  <img class = "partner-img" src="../../public/img/partners/luxuryretreats.svg" style = "width: 90%" alt="airbnb">
+              </div>
+              
+              <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
+                  <img class = "partner-img" src="../../public/img/partners/tripadvisor.svg" style = "width: 90%" alt="airbnb">
+              </div>
+              <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
+                  <img class = "partner-img" src="../../public/img/partners/onefinestay.svg" style = "width: 90%" alt="airbnb">
+              </div>
+              <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
+                  <img class = "partner-img" src="../../public/img/partners/bookingcom.svg" style = "width: 90%" alt="airbnb">
               </div>
             </div>
           </div>
-          </div>
-      </div>
+        </div>
+        </div>
+    </div>
     <!-- end partner platforms -->
 
     <!-- why localstay -->
@@ -188,57 +186,130 @@
     
 
     <!-- where are our clients arcoss your area -->
-    <div class="container-fluid junbotron-container">
-      <div>
-        <div class="container my-5">
-          <div class="row mb-3">
-            <div class="col-md-8 col-lg-8 col-xl-6 text-center mx-auto">
-              <h1 class="display-4 mb-4">
-                Boosting earnings for Hostmaker hosts across London
-              </h1>
-            </div>
+    <div class="container-fluid jumbotron-container">
+      <div class="container my-5">
+        <div class="row mb-3">
+          <div class="col-md-8 col-lg-8 col-xl-6 text-center mx-auto">
+            <h1 class="display-4 mb-4">
+              Boosting earnings for Hostmaker hosts across London
+            </h1>
           </div>
-          <div class="row mb-5">
-            <div class="col-md-10 text-center mx-auto">
-              <h4>in areas including:</h4>
-            </div>
-          </div> 
-
-          <div class="row mb-5">
-            <div class="col-md-8 mx-auto">
-              <b-list-group class="list-group d-flex flex-row flex-wrap">
-                <b-list-group-item class = "col-lg-5">
-                  <span><i class = "fa fa-map-marker-alt"></i></span> not show
-                </b-list-group-item>
-                <b-list-group-item class = "col-lg-5">
-                  kk
-                </b-list-group-item>
-                <b-list-group-item class = "col-lg-5">
-                  kk
-                </b-list-group-item>
-                <b-list-group-item class = "col-lg-5">
-                  kk
-                </b-list-group-item>
-                <b-list-group-item class = "col-lg-5">
-                  kk
-                </b-list-group-item>
-              </b-list-group>
-              <i class="fas fa-pencil" title="Edit"></i> 
-            </div>
-          </div>
-
-          <div class="row mb-5">
-            <div class="col-md-10 text-center mx-auto">
-              <h5>and more</h5>
-            </div>
-          </div> 
         </div>
+        <div class="row mb-5">
+          <div class="col-md-10 text-center mx-auto">
+            <h4>in areas including:</h4>
+          </div>
+        </div> 
+
+        <div class="row mb-5">
+          <div class="col-md-8 mx-auto">
+            <b-list-group class="list-group d-flex flex-row flex-wrap">
+              <b-list-group-item class = "col-lg-5">
+                <span><i class = "fa fa-map-marker-alt"></i></span> not show
+              </b-list-group-item>
+              <b-list-group-item class = "col-lg-5">
+                kk
+              </b-list-group-item>
+              <b-list-group-item class = "col-lg-5">
+                kk
+              </b-list-group-item>
+              <b-list-group-item class = "col-lg-5">
+                kk
+              </b-list-group-item>
+              <b-list-group-item class = "col-lg-5">
+                kk
+              </b-list-group-item>
+            </b-list-group>
+            <i class="fas fa-pencil" title="Edit"></i> 
+          </div>
+        </div>
+
+        <div class="row mb-5">
+          <div class="col-md-10 text-center mx-auto">
+            <h5>and more</h5>
+          </div>
+        </div> 
       </div>
       <div class="landline-img-div">
         <img :src="landlineSrc" alt="Montreal Landline" class="landline">
       </div>
     </div>
     <!-- end where are our clients arcoss your area -->
+
+    <div class="mt-5"></div>
+    <!-- house keeping services -->
+    <div class="everything-is-taken-care">
+      <div class="container">
+        <div class="row">
+          <div class="display-4 text-center mb-5 mx-auto">
+          Everything is taken care of
+        </div>
+        </div>
+
+      <div class="row text-center">
+          <div class="col-md-3 my-5 text-center" v-for="(service, id) in services" :key="id">
+              <div class="container align-content-center mb-4">
+                <img :src="service.url" :alt="service.desc">
+              </div>
+              <h3>
+                {{service.title}}
+              </h3>
+              <p style = "font-size: 130%">
+                {{service.desc}}
+              </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row mt-5 text-center">
+        <div class="col-2 mx-auto">
+          <a href="#" class = "btn btn-primary text-large">Learn more</a>
+        </div>
+      </div>
+    </div>
+    <!-- end house keeping services -->
+
+    <!-- text animation -->
+    <div class="container-fluid text-animation-div" style="background: aqua; height: 200px">
+      <div class="row">
+        <div class="mx-auto text-center">
+          <!-- <p class = "text-animation">Font Awesome Localstay!</p> -->
+          <vue-typed-js :strings="['^500 guests']" 
+                        :loop = "true"
+                        :smartBackspace = "true"
+                        :showCursor = "false"
+                        :typeSpeed = "100"
+                        :backSpeed = "50"
+                        :backDelay = "500"
+                        :startDelay = "1000">
+            <h1>200,000 <span class = "typing"></span></h1>
+          </vue-typed-js>
+          <vue-typed-js :strings="['^500 First text', '^500 Second Text']" 
+                        :loop = "true"
+                        :smartBackspace = "true"
+                        :showCursor = "false"
+                        :typeSpeed = "100"
+                        :backSpeed = "50"
+                        :backDelay = "500"
+                        :startDelay = "1000">
+            <h1>200,000 <span class = "typing"></span></h1>
+          </vue-typed-js>
+          <vue-typed-js :strings="['^500 First text', '^500 Second Text']" 
+                        :loop = "true"
+                        :smartBackspace = "true"
+                        :showCursor = "false"
+                        :typeSpeed = "100"
+                        :backSpeed = "50"
+                        :backDelay = "500"
+                        :startDelay = "1000">
+            <h1>200,000 <span class = "typing"></span></h1>
+          </vue-typed-js>
+        </div>
+      </div>
+
+    </div>
+    <!-- end text animation -->
   </div>
 
 </template>
@@ -248,27 +319,66 @@
   margin-bottom: 120px;
 }
 
+.text-animation-div,
+.jumbotron-container {
+  margin-bottom: 0px !important;
+}
+
+.text-animation-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .partner-img {
   width: 180px;
   height: 50px;
 }
 
-.junbotron-container{
-    position: relative;
-    display: inline-block;
-    margin-bottom: 0px !important;
-  }
-  .landline-img-div{
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-  }
+.jumbotron-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0px !important;
+}
+.landline-img-div {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
 
-  @media screen and (max-width: 600px){
-    .landline{
-      position: relative;
-    }   
+@media screen and (max-width: 800px) {
+  .landline-img-div {
+    position: relative;
+    align-content: center;
   }
+  .landline-img-div img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes text {
+  from {
+    width: 0;
+  }
+}
+.text-animation {
+  width: 23ch;
+  margin: 0 auto;
+  overflow: hidden;
+  word-break: keep-all;
+  word-wrap: nowrap;
+  white-space: nowrap;
+  border-right: 3px solid #000000;
+  font: 400% monospace;
+  color: white;
+  animation: caret 0.5s step-end infinite, text 5s infinite steps(23);
+}
 </style>
 
 <style src="@/vendor/libs/vue-awesome-swiper/vue-awesome-swiper.scss" lang="scss"></style>
@@ -287,9 +397,55 @@ export default {
   },
   data: function() {
     return {
-      
-      landlineSrc: "img/avatars/1.png"
+      landlineSrc: "img/avatars/1.png",
+      services: [
+        {
+          url: "img/services/profile.svg",
+          title: "Profile & Listing",
+          desc: "Stand-out listings created across all the best channels"
+        },
+        {
+          url: "img/services/photography.svg",
+          title: "Professional photography",
+          desc: "Professional photography"
+        },
+        {
+          url: "img/services/guest-relations.svg",
+          title: "Guest Relations",
+          desc: "24/7 guest support and callout service"
+        },
+        {
+          url: "img/services/daily-pricing.svg",
+          title: "Daily Pricing",
+          desc: "Daily pricing review for yield maximisation"
+        },
+        {
+          url: "img/services/property-design.svg",
+          title: "Interior Design service",
+          desc: "Interior Design"
+        },
+        {
+          url: "img/services/housekeeping.svg",
+          title: "Housekeeping",
+          desc: "5-star housekeeping and linen"
+        },
+        {
+          url: "img/services/maintenance.svg",
+          title: "Maintenance",
+          desc: "Quickly resolving maintenance issues"
+        },
+        {
+          url: "img/services/key-exchange.svg",
+          title: "24/7 Key Exchange",
+          desc: "In-person meet & greets, warmly welcoming guests to your home"
+        }
+      ]
     };
+  },
+  methods: {
+    doSth: function() {
+      alert("text typed");
+    }
   }
 };
 </script>
