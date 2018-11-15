@@ -167,9 +167,6 @@
                   </div>
                 </div>
               </div>
-                
-
-                
             </div>
         </div>
         <div class="row mb-5">
@@ -275,41 +272,66 @@
       <div class="row">
         <div class="mx-auto text-center">
           <!-- <p class = "text-animation">Font Awesome Localstay!</p> -->
-          <vue-typed-js :strings="['^500 guests']" 
+          <vue-typed-js :strings="['^500 200,000 guests welcomed', 
+                                   '^500 $25,200 average yearly revenue for 1-bed apartment in central Montreal',
+                                   '^500 $50M profits delivered to hosts']" 
                         :loop = "true"
                         :smartBackspace = "true"
-                        :showCursor = "false"
                         :typeSpeed = "100"
-                        :backSpeed = "50"
                         :backDelay = "500"
                         :startDelay = "1000">
-            <h1>200,000 <span class = "typing"></span></h1>
+            <h1 class = "typing"></h1>
           </vue-typed-js>
-          <vue-typed-js :strings="['^500 First text', '^500 Second Text']" 
-                        :loop = "true"
-                        :smartBackspace = "true"
-                        :showCursor = "false"
-                        :typeSpeed = "100"
-                        :backSpeed = "50"
-                        :backDelay = "500"
-                        :startDelay = "1000">
-            <h1>200,000 <span class = "typing"></span></h1>
-          </vue-typed-js>
-          <vue-typed-js :strings="['^500 First text', '^500 Second Text']" 
-                        :loop = "true"
-                        :smartBackspace = "true"
-                        :showCursor = "false"
-                        :typeSpeed = "100"
-                        :backSpeed = "50"
-                        :backDelay = "500"
-                        :startDelay = "1000">
-            <h1>200,000 <span class = "typing"></span></h1>
-          </vue-typed-js>
+          
         </div>
       </div>
 
     </div>
+    <div class="mb-5"></div>
     <!-- end text animation -->
+
+    <!-- hosts' comments -->
+    <div class="hosts' comments pt-5">
+      <div class="container">
+        <div class="row">
+          <div class="display-4 text-center mb-5 mx-auto">
+          What they are saying about us
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 mx-auto">
+              <swiper class="swiper-container" :options="swiperWithPagination">
+                <swiper-slide>
+                  <div class="container">
+                    <div class="row">
+                      <div class="container d-flex align-items-center">
+                      <div class="col-md-4">
+                        <b-card class="mb-3">
+                          <div>
+                             <span class="lnr lnr-star" style="background: yellow"></span>
+                          </div>
+                          <blockquote class="blockquote mb-0">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                            <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                          </blockquote>
+                        </b-card>
+                      </div>
+                    <div class="col-md-10"><img src="img/avatars/1.png" alt=""></div>
+                  </div>
+                  </div>
+                </div>
+                
+                </swiper-slide>
+                <div slot="pagination" class="swiper-pagination mt-3" style="position: static"></div>
+              </swiper>
+            </div>
+          </div>
+      </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- end hosts' comments -->
   </div>
 
 </template>
@@ -356,32 +378,10 @@
     transform: translateX(-50%);
   }
 }
-@keyframes caret {
-  50% {
-    border-color: transparent;
-  }
-}
-
-@keyframes text {
-  from {
-    width: 0;
-  }
-}
-.text-animation {
-  width: 23ch;
-  margin: 0 auto;
-  overflow: hidden;
-  word-break: keep-all;
-  word-wrap: nowrap;
-  white-space: nowrap;
-  border-right: 3px solid #000000;
-  font: 400% monospace;
-  color: white;
-  animation: caret 0.5s step-end infinite, text 5s infinite steps(23);
-}
 </style>
 
 <style src="@/vendor/libs/vue-awesome-swiper/vue-awesome-swiper.scss" lang="scss"></style>
+<style src="" lang="scss"></style>
 
 <script>
 import { swiper, swiperSlide } from "vue-awesome-swiper";
@@ -439,7 +439,13 @@ export default {
           title: "24/7 Key Exchange",
           desc: "In-person meet & greets, warmly welcoming guests to your home"
         }
-      ]
+      ],
+      swiperWithPagination: {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      }
+    },
     };
   },
   methods: {
