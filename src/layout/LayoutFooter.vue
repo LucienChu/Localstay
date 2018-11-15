@@ -1,6 +1,20 @@
 <template>
-      <nav class="footer bg-footer-theme pt-4 mb-4">
-          <h1>NYT, Forbes, Bloomber, BBC, INDEPENTDENT, CNBC 圖片</h1>
+      <div class="footer-wrapper">
+        
+        <div class="container-fluid footer-nav">
+          <nav class="footer bg-footer-theme pt-4 mb-4">
+                          <!-- associated press -->
+    <div class="container pt-4">
+      <div class="row d-flex align-contents-center">
+        <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4"><img class = "press-img" src="img/press/bbc.svg" alt="BBC image" style="width: 90%"></div>
+        <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4"> <img class = "press-img"  src="img/press/bloomberg.svg" alt="Bloomberg image" style="width: 90%"></div>
+        <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4"><img class = "press-img" src="img/press/cnbc.svg" alt="CNBC image" style="width: 90%"></div>
+        <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4"><img class = "press-img" src="img/press/forbes.svg" alt="forbes image" style="width: 90%"></div>
+        <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4"><img class = "press-img" src="img/press/independent.svg" alt="independent image" style="width: 90%"></div>
+        <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4"><img class = "press-img" src="img/press/newyorktimes.svg" alt="newyorktimes image" style="width: 90%"></div>
+      </div>
+    </div>
+    <!-- end associated press -->
         <div class="container text-center py-4">
           <div class="pb-3">
             <a href="javascript:void(0)" class="footer-text text-large font-weight-normal">.bg-footer-theme</a> <span class="align-top">©</span>
@@ -40,6 +54,8 @@
         </div>
         <h1>地標圖</h1>
       </nav>
+        </div>
+      </div>
 </template>
 
 <script>

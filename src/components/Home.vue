@@ -1,5 +1,5 @@
 <template>
-  <div class="home-page-content">
+  <div class="home-page-wrapper">
     <!-- house images carousel -->
     <div class="home-image-carousel">
       <b-carousel indicators :interval="4000">
@@ -54,24 +54,24 @@
         <div class="row">
           <div class="container">
             <div class="row text-center p-0 mx-auto">
-              <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
+              <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
                   <img class = "partner-img" src="../../public/img/partners/airbnb.svg" style = "width: 90%" alt="airbnb">
               </div>
-              <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
+              <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
                   <img class = "partner-img" src="../../public/img/partners/homeaway.svg" style = "width: 90%" alt="airbnb">
               </div>
               
-              <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
+              <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
                   <img class = "partner-img" src="../../public/img/partners/luxuryretreats.svg" style = "width: 90%" alt="airbnb">
               </div>
               
-              <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
+              <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
                   <img class = "partner-img" src="../../public/img/partners/tripadvisor.svg" style = "width: 90%" alt="airbnb">
               </div>
-              <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
+              <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
                   <img class = "partner-img" src="../../public/img/partners/onefinestay.svg" style = "width: 90%" alt="airbnb">
               </div>
-              <div class=" col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
+              <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
                   <img class = "partner-img" src="../../public/img/partners/bookingcom.svg" style = "width: 90%" alt="airbnb">
               </div>
             </div>
@@ -332,6 +332,8 @@
     </div>
     
     <!-- end hosts' comments -->
+
+
   </div>
 
 </template>
@@ -351,7 +353,8 @@
   justify-content: center;
   align-items: center;
 }
-.partner-img {
+.partner-img,
+.press-img {
   width: 180px;
   height: 50px;
 }
@@ -364,11 +367,16 @@
 .landline-img-div {
   position: absolute;
   bottom: 0px;
+  width: 25%;
   left: 0px;
+}
+.landline-img-div img {
+  width: 100%;
 }
 
 @media screen and (max-width: 800px) {
   .landline-img-div {
+    width: auto;
     position: relative;
     align-content: center;
   }
@@ -381,7 +389,6 @@
 </style>
 
 <style src="@/vendor/libs/vue-awesome-swiper/vue-awesome-swiper.scss" lang="scss"></style>
-<style src="" lang="scss"></style>
 
 <script>
 import { swiper, swiperSlide } from "vue-awesome-swiper";
@@ -441,17 +448,13 @@ export default {
         }
       ],
       swiperWithPagination: {
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        }
       }
-    },
     };
   },
-  methods: {
-    doSth: function() {
-      alert("text typed");
-    }
-  }
+  methods: {}
 };
 </script>
