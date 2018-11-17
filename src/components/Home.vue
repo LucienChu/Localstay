@@ -1,21 +1,39 @@
 <template>
   <div class="home-page-wrapper">
     <!-- house images carousel -->
-    <div class="home-image-carousel">
+    <div class="carousel-container">
+      
+      <!-- text content -->
+      <div class="container carousel-text-container">
+        <div class="row">
+          <div class="col mx-auto text-center">
+            <h2 class = "mt-5 pt-5">Award-winning home rental management company in Montreal</h2>
+            <h3 class = "text-secondary pt-5" my-5>Increase your returns by 30%</h3>
+            <a href="#" class="mt-5 btn btn-primary btn-lg">Get Start</a>
+          </div>
+        </div>
+        <div class="row mt-5">
+          
+          <div class="col-md-6 text-right">
+            <a href="#"><h4>In partnership with Marriott International</h4></a>
+          </div>
+          <div class="col-md-6 mx-auto">
+            <a href="#"><img src="img/partners/marriott_international_logo.svg" alt=""></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- carousel imgs -->
       <b-carousel indicators :interval="4000">
         <b-carousel-slide
-          caption="First slide"
-          text="Eos mutat malis maluisset et, agam ancillae quo te, in vim congue pertinacia."
           :img-src="`${baseUrl}img/bg/1.jpg`" />
         <b-carousel-slide
-          caption="Second slide"
-          text="In numquam omittam sea."
           :img-src="`${baseUrl}img/bg/2.jpg`" />
         <b-carousel-slide
-          caption="Third slide"
-          text="Lorem ipsum dolor sit amet, virtute consequat ea qui, minim graeco mel no."
           :img-src="`${baseUrl}img/bg/3.jpg`" />
       </b-carousel>
+
+
     </div>
     <!-- end house images carousel -->
 
@@ -32,7 +50,7 @@
             <h3 class = "display-4">
               We're so confident we can fill your property that we'll guarantee it
             </h3>
-            <a href="#" class="btn btn-primary btn-xl"><small>Please, tell me more!</small></a>
+            <a href="#" class="btn btn-primary btn-lg">Please, tell me more!</a>
           </div>
       </div>
     </div>
@@ -339,8 +357,20 @@
 </template>
 
 <style scoped>
-.home-page-content > div {
+.home-page-wrapper > div {
   margin-bottom: 120px;
+}
+
+.carousel-container {
+  position: relative;
+}
+
+.carousel-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 使用css3的transform来实现 */
+  z-index: 20;
 }
 
 .text-animation-div,
