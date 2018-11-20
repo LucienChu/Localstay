@@ -20,7 +20,7 @@ const router = new Router({
       path: '',
       component: () => import('@/components/Home')
     }, {
-      path: 'page-2',
+      path: '/home2',
       component: () => import('@/components/Page2')
     }]
   }]

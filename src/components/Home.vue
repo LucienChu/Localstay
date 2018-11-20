@@ -287,8 +287,8 @@
 
       </div>
 
-      <div class="row mt-5 text-center">
-        <div class="col-2 mx-auto">
+      <div class="row mt-5">
+        <div class="col-md-2 mx-auto text-center">
           <a href="#" class = "btn btn-primary text-large">Learn more</a>
         </div>
       </div>
@@ -296,21 +296,23 @@
     <!-- end house keeping services -->
 
     <!-- text animation -->
-    <div class="container-fluid text-animation-div" style="background: aqua; height: 200px">
-      <div class="row">
-        <div class="mx-auto text-center">
-          <!-- <p class = "text-animation">Font Awesome Localstay!</p> -->
-          <vue-typed-js :strings="['^500 200,000 guests welcomed', 
-                                   '^500 $25,200 average yearly revenue for 1-bed apartment in central Montreal',
-                                   '^500 $50M profits delivered to hosts']" 
+    <div class= "container-fluid text-animation-container py-4" style="background: aqua;">
+      <div class="row py-4 text-center">
+        <div class="col-md-2 ml-auto my-auto text-right">
+          <h2>{{animateStrTitle}}</h2>
+        </div>
+        <div class="mr-auto text-center py-4">
+          <vue-typed-js :strings = animateStrs 
                         :loop = "true"
                         :smartBackspace = "true"
                         :typeSpeed = "100"
                         :backDelay = "500"
-                        :startDelay = "1000">
-            <h1 class = "typing"></h1>
+                        :backSpeed = "50"
+                        :startDelay = "1000"
+                        :cursorChar = "'|'"
+                        @preStringTyped = "getNextTitle()">
+            <h2 class = "typing" style="display: inline-block"></h2>
           </vue-typed-js>
-          
         </div>
       </div>
 
@@ -373,80 +375,110 @@
 </template>
 
 <style scoped>
+/* global css */
 .home-page-wrapper > div {
   margin-bottom: 120px;
 }
-/* swiper-wrapper css */
-    .swiper-wrapper {
-    position: relative;
-    }
-    .swiper-text-container {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 20;
-      width: 80%;
-    }
-    .swiper-text-container h2,
-    .swiper-text-container h4 {
-      color: whitesmoke;
-    }
 
-    @media screen and (max-width: 576px) {
-      .swiper-text-container h2,
-      .swiper-text-container h3,
-      .swiper-text-container h4 {
-        font-size: 90%;
-        margin-bottom: 0;
-        text-align: center;
-      }
-      .swiper-text-container img {
-        display: none;
-      }
-      .home-page-wrapper > div {
-        margin-bottom: 30px;
-      }
-    }
+@media screen and (max-width: 576px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .display-1,
+  .display-2,
+  .display-3,
+  .display-4 {
+    font-size: 90%;
+  }
+
+  .home-page-wrapper > div {
+    margin-bottom: 50px;
+  }
+}
+/* end global css */
+
+/* swiper-wrapper css */
+.swiper-wrapper {
+  position: relative;
+}
+.swiper-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  width: 80%;
+}
+.swiper-text-container h2,
+.swiper-text-container h4 {
+  color: whitesmoke;
+}
+
+@media screen and (max-width: 576px) {
+  .swiper-text-container h2,
+  .swiper-text-container h3,
+  .swiper-text-container h4 {
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .swiper-text-container img {
+    display: none;
+  }
+  .home-page-wrapper > div {
+    margin-bottom: 30px;
+  }
+}
 /* end swiper-wrapper css */
 
-
 /* partner platform css */
-  .partner-img,
-  {
-    width: 180px;
+.partner-img {
+  width: 180px;
+  height: 50px;
+}
+
+.partner-img {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media screen and (max-width: 576px) {
+  .partner-img {
+    width: 80px !important;
     height: 50px;
   }
-
-  .partner-img{
-    position: relative;
-    top:50%;
-    transform: translateY(-50%);
+  .partner-img-div {
+    width: 140px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
   }
-
-  @media screen and (max-width: 576px){
-    .partner-img{
-      width: 80px !important;
-      height: 50px;
-    }
-    .partner-img-div{
-      width: 140px !important;
-      margin: 0 auto !important;
-      padding: 0 !important;
-    }
-  }
+}
 
 /* end partner platform css */
 
-.text-animation-div,
+/* text animation css
+.text-animation-container,
 .jumbotron-container {
   margin-bottom: 0px !important;
 }
-.text-animation-div {
+.text-animation-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.typing {
+  margin: 0;
+  opacity: 1;
+  display: inline-block;
+}
+@media screen and (max-width: 576px) {
+  .text-animation-container .py-4 {
+    padding: 0 !important;
+  }
+} */
 
 .jumbotron-container {
   position: relative;
@@ -479,32 +511,30 @@
   position: relative;
 }
 
-
 /* host comment section css */
+.comment-card-div {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+.comment-card {
+  background: gray;
+  color: whitesmoke;
+}
+.comment-swiper-pagination {
+  position: static;
+}
+
+@media screen and (max-width: 562px) {
   .comment-card-div {
+    position: relative;
+  }
+
+  .comment-swiper-pagination {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 100;
+    transform: translateY(-350%);
   }
-  .comment-card{
-    background: gray;
-    color: whitesmoke;
-  }
-  .comment-swiper-pagination{
-    position: static;
-  }
-
-
-  @media screen and (max-width: 562px) {
-  .comment-card-div{
-      position: relative;
-    }
-
-    .comment-swiper-pagination{
-      position: absolute;
-      transform: translateY(-350%)
-    }
 }
 /* host comment section css */
 </style>
@@ -524,6 +554,19 @@ export default {
   },
   data: function() {
     return {
+      currentTextId: 0,
+      textArray: [
+        { fixed: "200,000", typing: "guests welcomed" },
+        {
+          fixed: "$25,200",
+          typing:
+            "average yearly revenue for 1-bed apartment in central Montreal"
+        },
+        { fixed: "$50M", typing: "profits delivered to hosts" }
+      ],
+      animateStrTitle: "",
+      animateStrs: [],
+      text: ["first one", "second one"],
       landlineSrc: "img/avatars/1.png",
       services: [
         {
@@ -579,6 +622,22 @@ export default {
       }
     };
   },
-  methods: {}
+  methods: {
+    getNextTitle: function() {
+      this.currentTextId = (this.currentTextId + 1) % this.textArray.length;
+      this.animateStrTitle = this.textArray[this.currentTextId].fixed;
+      console.log(this.animateStrTitle);
+    }
+  },
+  created: function() {
+    let size = this.textArray.length;
+    this.currentTextId = size - 1;
+    let strArray = [];
+    for (let i = 0; i < size; i++) {
+      strArray.push(this.textArray[i].typing);
+    }
+    this.animateStrs = strArray;
+    this.animateStrTitle = this.textArray[0].fixed;
+  }
 };
 </script>
