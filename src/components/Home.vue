@@ -332,7 +332,7 @@
               <swiper-slide>
                 <div class="container">
                   <div class="row">
-                    <div class="comment-img-div ml-auto col-md-9  col-sm-12 " style="padding: 0;">
+                    <div class="comment-img-div ml-auto col-lg-10 col-md-12" style="padding: 0;">
                       <img src="img/bg/4.jpg" alt="background img" style="width: 100%; height: 100%;">
                     </div>  
                     <div class="comment-card-div col-md-5 col-sm-6">
