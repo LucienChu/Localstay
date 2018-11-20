@@ -81,26 +81,26 @@
         </div><br><br>
         <div class="row">
           <div class="container">
-            <div class="row text-center p-0 mx-auto">
-              <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
-                  <img class = "partner-img" src="../../public/img/partners/airbnb.svg" style = "width: 90%" alt="airbnb">
+            <div class="row text-center mx-auto p-0">
+              <div class="col-xl-2 col-md-4 col-sm-5 mx-auto pt-3 my-4 partner-img-div">
+                  <img class = "partner-img" src="../../public/img/partners/airbnb.svg" style = "width: 70%" alt="airbnb">
               </div>
-              <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
-                  <img class = "partner-img" src="../../public/img/partners/homeaway.svg" style = "width: 90%" alt="airbnb">
-              </div>
-              
-              <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
-                  <img class = "partner-img" src="../../public/img/partners/luxuryretreats.svg" style = "width: 90%" alt="airbnb">
+              <div class="col-xl-2 col-md-4 col-sm-5 mx-auto pt-3 my-4 partner-img-div">
+                  <img class = "partner-img" src="../../public/img/partners/homeaway.svg" style = "width: 70%" alt="airbnb">
               </div>
               
-              <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
-                  <img class = "partner-img" src="../../public/img/partners/tripadvisor.svg" style = "width: 90%" alt="airbnb">
+              <div class="col-xl-2 col-md-4 col-sm-5 mx-auto pt-3 my-4 partner-img-div">
+                  <img class = "partner-img" src="../../public/img/partners/luxuryretreats.svg" style = "width: 70%" alt="airbnb">
               </div>
-              <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
-                  <img class = "partner-img" src="../../public/img/partners/onefinestay.svg" style = "width: 90%" alt="airbnb">
+              
+              <div class="col-xl-2 col-md-4 col-sm-5 mx-auto pt-3 my-4 partner-img-div">
+                  <img class = "partner-img" src="../../public/img/partners/tripadvisor.svg" style = "width: 70%" alt="airbnb">
               </div>
-              <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
-                  <img class = "partner-img" src="../../public/img/partners/bookingcom.svg" style = "width: 90%" alt="airbnb">
+              <div class="col-xl-2 col-md-4 col-sm-5 mx-auto pt-3 my-4 partner-img-div">
+                  <img class = "partner-img" src="../../public/img/partners/onefinestay.svg" style = "width: 70%" alt="airbnb">
+              </div>
+              <div class="col-xl-2 col-md-4 col-sm-5 mx-auto pt-3 my-4 partner-img-div">
+                  <img class = "partner-img" src="../../public/img/partners/bookingcom.svg" style = "width: 70%" alt="airbnb">
               </div>
             </div>
           </div>
@@ -330,35 +330,35 @@
           <div class="col" style="padding: 0;">
             <swiper class="comment-swiper-container" :options="swiperWithPagination">
               <swiper-slide>
-                <div class="container d-flex">
+                <div class="container">
                   <div class="row">
-                                    <div class="comment-img-div ml-auto col-sm-9 col-xs-12" style="padding: 0;">
-                  <img src="img/bg/4.jpg" alt="background img" style="width: 100%;">
-                </div>  
-                    <div class="comment-card-div col-sm-6">
-                  <b-card class="mb-33" style="background: black; color: white;">
-                    <div class="mb-3">
-                        <span>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                          <i class="fas fa-star"></i>
-                        </span>
-                    </div>
-                    <blockquote class="blockquote mb-0">
-                      <p>
-                        "Hosting through Hostmaker has enabled me to capure more revenue than ever befoure. I can't recommend them enough."
-                      </p>
-                      <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                    </blockquote>
-                  </b-card>
-                </div>           
+                    <div class="comment-img-div ml-auto col-md-9  col-sm-12 " style="padding: 0;">
+                      <img src="img/bg/4.jpg" alt="background img" style="width: 100%; height: 100%;">
+                    </div>  
+                    <div class="comment-card-div col-md-5 col-sm-6">
+                      <b-card class="comment-card">
+                        <div class="mb-3">
+                            <span>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                            </span>
+                        </div>
+                        <blockquote class="blockquote mb-0">
+                          <p>
+                            "Hosting through Hostmaker has enabled me to capure more revenue than ever befoure. I can't recommend them enough."
+                          </p>
+                          <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                        </blockquote>
+                      </b-card>
+                    </div>           
                   </div>
                 </div>   
               </swiper-slide>
                             
-            <div slot="pagination" class="comment-swiper-pagination swiper-pagination mt-3" style="position: static;"></div>
+            <div slot="pagination" class="comment-swiper-pagination swiper-pagination" style=""></div>
           </swiper>
           </div>
         </div>
@@ -376,39 +376,68 @@
 .home-page-wrapper > div {
   margin-bottom: 120px;
 }
-.swiper-wrapper {
-  position: relative;
-}
-.swiper-text-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 20;
-  width: 80%;
-}
-.swiper-text-container h2,
-.swiper-text-container h4 {
-  color: whitesmoke;
-}
+/* swiper-wrapper css */
+    .swiper-wrapper {
+    position: relative;
+    }
+    .swiper-text-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 20;
+      width: 80%;
+    }
+    .swiper-text-container h2,
+    .swiper-text-container h4 {
+      color: whitesmoke;
+    }
 
-@media screen and (max-width: 576px) {
-  .swiper-text-container h2,
-  .swiper-text-container h3,
-  .swiper-text-container h4 {
-    font-size: 90%;
-    margin-bottom: 0;
-    text-align: center;
+    @media screen and (max-width: 576px) {
+      .swiper-text-container h2,
+      .swiper-text-container h3,
+      .swiper-text-container h4 {
+        font-size: 90%;
+        margin-bottom: 0;
+        text-align: center;
+      }
+      .swiper-text-container img {
+        display: none;
+      }
+      .home-page-wrapper > div {
+        margin-bottom: 30px;
+      }
+    }
+/* end swiper-wrapper css */
+
+
+/* partner platform css */
+  .partner-img,
+  {
+    width: 180px;
+    height: 50px;
   }
-  .swiper-text-container img {
-    display: none;
+
+  .partner-img{
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
   }
-}
-@media screen and (max-width: 576px) {
-  .home-page-wrapper > div {
-    margin-bottom: 30px;
+
+  @media screen and (max-width: 576px){
+    .partner-img{
+      width: 80px !important;
+      height: 50px;
+    }
+    .partner-img-div{
+      width: 140px !important;
+      margin: 0 auto !important;
+      padding: 0 !important;
+    }
   }
-}
+
+/* end partner platform css */
+
 .text-animation-div,
 .jumbotron-container {
   margin-bottom: 0px !important;
@@ -418,11 +447,7 @@
   justify-content: center;
   align-items: center;
 }
-.partner-img,
-.press-img {
-  width: 180px;
-  height: 50px;
-}
+
 .jumbotron-container {
   position: relative;
   display: inline-block;
@@ -453,25 +478,35 @@
 .comment-swiper-container {
   position: relative;
 }
-.comment-card-div {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 100;
-  opacity: 0.75;
-}
 
-/* @media screen and (max-width: 562px) {
-  .comment-swiper-container {
-    position: relative;
-  }
-  .comment-img-div {
-    position: absolute;
-  }
+
+/* host comment section css */
   .comment-card-div {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
   }
-} */
+  .comment-card{
+    background: gray;
+    color: whitesmoke;
+  }
+  .comment-swiper-pagination{
+    position: static;
+  }
+
+
+  @media screen and (max-width: 562px) {
+  .comment-card-div{
+      position: relative;
+    }
+
+    .comment-swiper-pagination{
+      position: absolute;
+      transform: translateY(-350%)
+    }
+}
+/* host comment section css */
 </style>
 
 <style src="@/vendor/libs/vue-awesome-swiper/vue-awesome-swiper.scss" lang="scss"></style>
