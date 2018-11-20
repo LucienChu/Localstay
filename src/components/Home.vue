@@ -5,7 +5,7 @@
     <div class="container-fluid swiper-wrapper" style="padding: 0;">
       <!-- text content -->
       <div class="container swiper-text-container">
-        <div class="row mb-5">
+        <div class="row mb-4 mb-4">
           <div class="col-md-12 mx-auto text-center">
             <h2>Award-winning home rental management company in Montreal</h2>
             <h3 class = "text-secondary" >Increase your returns by 30%</h3>
@@ -81,26 +81,26 @@
         </div><br><br>
         <div class="row">
           <div class="container">
-            <div class="row text-center p-0 mx-auto">
-              <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
-                  <img class = "partner-img" src="../../public/img/partners/airbnb.svg" style = "width: 90%" alt="airbnb">
+            <div class="row text-center mx-auto p-0">
+              <div class="col-xl-2 col-md-4 col-sm-5 mx-auto pt-3 my-4 partner-img-div">
+                  <img class = "partner-img" src="../../public/img/partners/airbnb.svg" style = "width: 70%" alt="airbnb">
               </div>
-              <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
-                  <img class = "partner-img" src="../../public/img/partners/homeaway.svg" style = "width: 90%" alt="airbnb">
-              </div>
-              
-              <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
-                  <img class = "partner-img" src="../../public/img/partners/luxuryretreats.svg" style = "width: 90%" alt="airbnb">
+              <div class="col-xl-2 col-md-4 col-sm-5 mx-auto pt-3 my-4 partner-img-div">
+                  <img class = "partner-img" src="../../public/img/partners/homeaway.svg" style = "width: 70%" alt="airbnb">
               </div>
               
-              <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
-                  <img class = "partner-img" src="../../public/img/partners/tripadvisor.svg" style = "width: 90%" alt="airbnb">
+              <div class="col-xl-2 col-md-4 col-sm-5 mx-auto pt-3 my-4 partner-img-div">
+                  <img class = "partner-img" src="../../public/img/partners/luxuryretreats.svg" style = "width: 70%" alt="airbnb">
               </div>
-              <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
-                  <img class = "partner-img" src="../../public/img/partners/onefinestay.svg" style = "width: 90%" alt="airbnb">
+              
+              <div class="col-xl-2 col-md-4 col-sm-5 mx-auto pt-3 my-4 partner-img-div">
+                  <img class = "partner-img" src="../../public/img/partners/tripadvisor.svg" style = "width: 70%" alt="airbnb">
               </div>
-              <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4">
-                  <img class = "partner-img" src="../../public/img/partners/bookingcom.svg" style = "width: 90%" alt="airbnb">
+              <div class="col-xl-2 col-md-4 col-sm-5 mx-auto pt-3 my-4 partner-img-div">
+                  <img class = "partner-img" src="../../public/img/partners/onefinestay.svg" style = "width: 70%" alt="airbnb">
+              </div>
+              <div class="col-xl-2 col-md-4 col-sm-5 mx-auto pt-3 my-4 partner-img-div">
+                  <img class = "partner-img" src="../../public/img/partners/bookingcom.svg" style = "width: 70%" alt="airbnb">
               </div>
             </div>
           </div>
@@ -216,7 +216,7 @@
         <div class="row mb-3">
           <div class="col-md-8 col-lg-8 col-xl-6 text-center mx-auto">
             <h1 class="display-4 mb-4">
-              Boosting earnings for Hostmaker hosts across London
+              Boosting earnings for Hostmaker hosts across Montreal
             </h1>
           </div>
         </div>
@@ -319,42 +319,48 @@
     <!-- end text animation -->
 
     <!-- hosts' comments -->
-    <div class="hosts' comments pt-5">
+    <div class="hosts-comments pt-5">
       <div class="container">
         <div class="row">
           <div class="display-4 text-center mb-5 mx-auto">
-          What they are saying about us
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-10 mx-auto">
-              <swiper class="swiper-container" :options="swiperWithPagination">
-                <swiper-slide>
-                  <div class="container">
-                    <div class="row">
-                      <div class="container d-flex align-items-center">
-                      <div class="col-md-4">
-                        <b-card class="mb-3">
-                          <div>
-                             <span class="lnr lnr-star" style="background: yellow"></span>
-                          </div>
-                          <blockquote class="blockquote mb-0">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                            <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                          </blockquote>
-                        </b-card>
-                      </div>
-                    <div class="col-md-10"><img src="img/avatars/1.png" alt=""></div>
-                  </div>
-                  </div>
-                </div>
-                
-                </swiper-slide>
-                <div slot="pagination" class="swiper-pagination mt-3" style="position: static"></div>
-              </swiper>
-            </div>
+            What they are saying about us
           </div>
         </div>
+        <div class="row">
+          <div class="col" style="padding: 0;">
+            <swiper class="comment-swiper-container" :options="swiperWithPagination">
+              <swiper-slide>
+                <div class="container">
+                  <div class="row">
+                    <div class="comment-img-div ml-auto col-lg-10 col-md-12" style="padding: 0;">
+                      <img src="img/bg/4.jpg" alt="background img" style="width: 100%; height: 100%;">
+                    </div>  
+                    <div class="comment-card-div col-md-5 col-sm-6">
+                      <b-card class="comment-card">
+                        <div class="mb-3">
+                            <span>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                            </span>
+                        </div>
+                        <blockquote class="blockquote mb-0">
+                          <p>
+                            "Hosting through Hostmaker has enabled me to capure more revenue than ever befoure. I can't recommend them enough."
+                          </p>
+                          <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                        </blockquote>
+                      </b-card>
+                    </div>           
+                  </div>
+                </div>   
+              </swiper-slide>
+                            
+            <div slot="pagination" class="comment-swiper-pagination swiper-pagination" style=""></div>
+          </swiper>
+          </div>
         </div>
       </div>
     </div>
@@ -370,53 +376,76 @@
 .home-page-wrapper > div {
   margin-bottom: 120px;
 }
+/* swiper-wrapper css */
+    .swiper-wrapper {
+    position: relative;
+    }
+    .swiper-text-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 20;
+      width: 80%;
+    }
+    .swiper-text-container h2,
+    .swiper-text-container h4 {
+      color: whitesmoke;
+    }
 
-.swiper-wrapper {
-  position: relative;
-}
+    @media screen and (max-width: 576px) {
+      .swiper-text-container h2,
+      .swiper-text-container h3,
+      .swiper-text-container h4 {
+        font-size: 90%;
+        margin-bottom: 0;
+        text-align: center;
+      }
+      .swiper-text-container img {
+        display: none;
+      }
+      .home-page-wrapper > div {
+        margin-bottom: 30px;
+      }
+    }
+/* end swiper-wrapper css */
 
-.swiper-text-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); 
-  z-index: 20;
-  width: 80%;
-}
-@media screen and ( max-width: 576px){
-  .swiper-text-container h2,
-  .swiper-text-container h3,
-  .swiper-text-container h4 {
-    font-size: 90%;
-    margin-bottom: 0;
-    text-align: center;
+
+/* partner platform css */
+  .partner-img,
+  {
+    width: 180px;
+    height: 50px;
   }
-  .swiper-text-container img{
-    display: none;
+
+  .partner-img{
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
   }
-}
-@media screen and ( max-width: 576px){
-  .home-page-wrapper > div {
-  margin-bottom: 30px;
-}
 
-}
+  @media screen and (max-width: 576px){
+    .partner-img{
+      width: 80px !important;
+      height: 50px;
+    }
+    .partner-img-div{
+      width: 140px !important;
+      margin: 0 auto !important;
+      padding: 0 !important;
+    }
+  }
 
+/* end partner platform css */
 
 .text-animation-div,
 .jumbotron-container {
   margin-bottom: 0px !important;
 }
-
 .text-animation-div {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.partner-img,
-.press-img {
-  width: 180px;
-  height: 50px;
 }
 
 .jumbotron-container {
@@ -433,7 +462,6 @@
 .landline-img-div img {
   width: 100%;
 }
-
 @media screen and (max-width: 800px) {
   .landline-img-div {
     width: auto;
@@ -446,13 +474,45 @@
     transform: translateX(-50%);
   }
 }
+
+.comment-swiper-container {
+  position: relative;
+}
+
+
+/* host comment section css */
+  .comment-card-div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+  }
+  .comment-card{
+    background: gray;
+    color: whitesmoke;
+  }
+  .comment-swiper-pagination{
+    position: static;
+  }
+
+
+  @media screen and (max-width: 562px) {
+  .comment-card-div{
+      position: relative;
+    }
+
+    .comment-swiper-pagination{
+      position: absolute;
+      transform: translateY(-350%)
+    }
+}
+/* host comment section css */
 </style>
 
 <style src="@/vendor/libs/vue-awesome-swiper/vue-awesome-swiper.scss" lang="scss"></style>
 
 <script>
 import { swiper, swiperSlide } from "vue-awesome-swiper";
-
 export default {
   name: "home",
   metaInfo: {
@@ -512,7 +572,7 @@ export default {
           el: ".swiper-pagination",
           clickable: true
         },
-        autoplay:{
+        autoplay: {
           delay: 2500,
           disableOninteraction: false
         }
