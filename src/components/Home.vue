@@ -2,7 +2,7 @@
   <div class="home-page-wrapper">
     <!-- home images swiper -->
     
-    <div class="container-fluid swiper-wrapper" style="padding: 0;">
+    <div class="container-fluid swiper-wrapper py-4" style="padding: 0;">
       <!-- text content -->
       <div class="container swiper-text-container">
         <div class="row mb-4 mb-4">
@@ -48,7 +48,7 @@
     <!-- end home images swiper -->
 
     <!-- first month guarantee -->
-    <div class="container" id = "first-month-rent-guarantee">
+    <div class="container" id = "first-month-rent-guarantee py-4">
       <div class="row" align-content-center>
         <div class = "col-md-10 col-lg-5 text-center mx-auto" id="first-month-rent-guarantee-image">
           <img src="../../public/img/promotion/first month rent guarantee.png" alt="first month rent guarantee">
@@ -67,7 +67,7 @@
     <!-- end first month guarantee -->
 
     <!-- partner platforms -->
-    <div class = "coop-partners">
+    <div class = "coop-partners py-4">
       <div class="container-fluid">
         <div class="row">
           <div class="container">
@@ -110,13 +110,13 @@
     <!-- end partner platforms -->
 
     <!-- why localstay -->
-    <div class="why-localstay">
+    <div class="why-localstay py-4">
       <div class="container">
-        <h1 class="display-3 text-center mb-5">Why Localstay</h1>
-        <div class="display-4 text-center mb-5">
+        <h2 class="display-3 text-center mb-4">Why Localstay</h2>
+        <h5 class="display-4 text-center mb-5">
           Our unique approach smartly balances short, mid and long 
           lettings to deliver superior earnings
-        </div>
+        </h5>
 
         <div class="row text-center">
           <div class="col-md-4 my-5">
@@ -148,7 +148,7 @@
     <!-- end why localstay -->
 
     <!-- see what your home could earn -->
-    <div class="jumbotron">
+    <div class="jumbotron py-4">
       <div class="container my-5">
         <div class="row mb-5">
           <div class="col-md-8 col-lg-8 col-xl-6 text-center mx-auto">
@@ -211,7 +211,7 @@
     
 
     <!-- where are our clients arcoss your area -->
-    <div class="container-fluid jumbotron-container">
+    <div class="container-fluid jumbotron-container py-4">
       <div class="container my-5">
         <div class="row mb-3">
           <div class="col-md-8 col-lg-8 col-xl-6 text-center mx-auto">
@@ -263,7 +263,7 @@
 
     <div class="mt-5"></div>
     <!-- house keeping services -->
-    <div class="everything-is-taken-care">
+    <div class="everything-is-taken-care py-4">
       <div class="container">
         <div class="row">
           <div class="display-4 text-center mb-5 mx-auto">
@@ -299,7 +299,7 @@
     <div class= "container-fluid text-animation-container py-4" style="background: aqua;">
       <div class="row py-4 text-center d-flex">
         <div class="animate-text-head-div col-xl-2 col-lg-12 col-md-12 ml-auto my-auto text-right text-white">
-          <h1>{{animateStrTitle}}</h1>
+          <h1 class="fixed-text">{{animateStrTitle}}</h1>
         </div>
         <div class="animate-text-tail-div  mr-auto text-center">
           <vue-typed-js :strings = animateStrs 
@@ -311,7 +311,7 @@
                         :startDelay = "1000"
                         :cursorChar = "'|'"
                         @preStringTyped = "getNextTitle()">
-            <h1 class = "typing" style="display: inline-block"></h1>
+            <h1 class = "typing my-auto" style="display: inline-block"></h1>
           </vue-typed-js>
         </div>
       </div>
@@ -321,7 +321,7 @@
     <!-- end text animation -->
 
     <!-- hosts' comments -->
-    <div class="hosts-comments pt-5">
+    <div class="hosts-comments  py-4">
       <div class="container">
         <div class="row">
           <div class="display-4 text-center mb-5 mx-auto">
@@ -350,7 +350,7 @@
                         </div>
                         <blockquote class="blockquote mb-0">
                           <p>
-                            "Hosting through Hostmaker has enabled me to capure more revenue than ever befoure. I can't recommend them enough."
+                            "Hosting through Hostmaker has enabled me to capture more revenue than ever befoure. I can't recommend them enough."
                           </p>
                           <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
                         </blockquote>
@@ -459,11 +459,17 @@
 
 /* end partner platform css */
 
-@media screen and (max-width: 1025px) {
+.fixed-text, .typing{
+  margin-bottom: 0;
+}
+@media screen and (max-width: 1200px) {
   .animate-text-head-div,
   .animate-text-tail-div {
     text-align: center !important;
     margin: 0 auto !important;
+  }
+  .animate-text-tail-div .typing {
+    margin-bottom: 0px;
   }
 }
 
@@ -471,9 +477,6 @@
   .animate-text-head-div,
   .animate-text-tail-div {
     padding: 0px !important;
-  }
-  .animate-text-tail-div h1 {
-    margin-bottom: 0px;
   }
 }
 
