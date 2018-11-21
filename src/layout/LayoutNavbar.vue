@@ -30,7 +30,8 @@
 
         <b-collapse is-nav id="sub-bar-list">
           <b-navbar-nav class = "ml-auto">
-            <b-nav-item href="#" active>What we do</b-nav-item>
+            <b-nav-item to="/WhatWeDo">What We Do</b-nav-item>
+            <!-- <router-link to="/WhatWeDo">What we do</router-link> -->
             <b-nav-item href="#" active>Pricing</b-nav-item>
             <b-nav-item href="#" active>Who we are</b-nav-item>
           </b-navbar-nav>

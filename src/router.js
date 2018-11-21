@@ -16,12 +16,12 @@ const router = new Router({
   routes: [{
     path: '/',
     component: Layout1,
-    children: [{
+    children:  [{
       path: '',
       component: () => import('@/components/Home')
     }, {
-      path: 'page-2',
-      component: () => import('@/components/Page2')
+      path: '/WhatWeDo',
+      component: () => import('@/layout/WhatWeDo')
     }]
   }]
 })
