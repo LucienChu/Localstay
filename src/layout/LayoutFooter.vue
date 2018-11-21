@@ -1,6 +1,20 @@
 <template>
-      <nav class="footer bg-footer-theme pt-4 mb-4">
-          <h1>NYT, Forbes, Bloomber, BBC, INDEPENTDENT, CNBC 圖片</h1>
+      <div class="footer-wrapper">
+        
+        <div class="container-fluid footer-nav">
+          <nav class="footer bg-footer-theme pt-4 mb-4">
+                          <!-- associated press -->
+    <div class="container pt-4">
+      <div class="row d-flex align-contents-center">
+        <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4"><img class = "press-img" src="img/press/bbc.svg" alt="BBC image" style="width: 90%"></div>
+        <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4"> <img class = "press-img"  src="img/press/bloomberg.svg" alt="Bloomberg image" style="width: 90%"></div>
+        <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4"><img class = "press-img" src="img/press/cnbc.svg" alt="CNBC image" style="width: 90%"></div>
+        <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4"><img class = "press-img" src="img/press/forbes.svg" alt="forbes image" style="width: 90%"></div>
+        <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4"><img class = "press-img" src="img/press/independent.svg" alt="independent image" style="width: 90%"></div>
+        <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4"><img class = "press-img" src="img/press/newyorktimes.svg" alt="newyorktimes image" style="width: 90%"></div>
+      </div>
+    </div>
+    <!-- end associated press -->
         <div class="container text-center py-4">
           <div class="pb-3">
             <a href="javascript:void(0)" class="footer-text text-large font-weight-normal">.bg-footer-theme</a> <span class="align-top">©</span>
@@ -9,13 +23,9 @@
           <div class="row">
             <div class="col-sm pb-4">
               <div class="footer-text font-weight-bold mb-3 text-large">LOCATIONS</div>
-              <a href="javascript:void(0)" class="footer-link d-block pb-2 text-large">locations1</a>
-              <a href="javascript:void(0)" class="footer-link d-block pb-2 text-large">locations1</a>
-              <a href="javascript:void(0)" class="footer-link d-block pb-2 text-large">locations1</a>
-              <a href="javascript:void(0)" class="footer-link d-block pb-2 text-large">locations1</a>
-              <a href="javascript:void(0)" class="footer-link d-block pb-2 text-large">locations1</a>
-              <a href="javascript:void(0)" class="footer-link d-block pb-2 text-large">locations1</a>
-              <a href="javascript:void(0)" class="footer-link d-block pb-2 text-large">locations1</a>
+              <a v-for="(value, key) in locations" :key="key" :href="value" class="footer-link d-block pb-2 text-large">
+                {{key}}
+              </a>
             </div>
             <div class="col-sm pb-4">
               <div class="footer-text text-large font-weight-bold mb-3">LOCAL STAY</div>
@@ -44,11 +54,23 @@
         </div>
         <h1>地標圖</h1>
       </nav>
+        </div>
+      </div>
 </template>
 
 <script>
 export default {
   name: "app-footer",
+
+  data: function() {
+    return {
+      locations: {
+        Montreal: "www.baidu.com",
+        Laval: "www.taobao.com",
+        Broasa: "www.google.com"
+      }
+    };
+  },
 
   methods: {
     getLayoutFooterBg() {
@@ -57,3 +79,4 @@ export default {
   }
 };
 </script>
+

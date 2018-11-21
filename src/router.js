@@ -16,7 +16,7 @@ const router = new Router({
   routes: [{
     path: '/',
     component: Layout1,
-    children: [{
+    children:  [{
       path: '',
       component: () => import('@/components/Home')
     }, {
