@@ -2,30 +2,34 @@
   <div class="home-page-wrapper">
     <!-- home images swiper -->
     
-    <div class="container-fluid swiper-wrapper py-4" style="padding: 0;">
+    <div class="container-fluid swiper-wrapper py-4 my-5" style="padding: 0;">
       <!-- text content -->
-      <div class="container swiper-text-container">
-        <div class="row mb-4 mb-4">
+      <div class="container swiper-text-container d-flex flex-column flex-warp">
+        <div class="row mb-4 order-1">
           <div class="col-md-12 mx-auto text-center">
-            <h2>Award-winning home rental management company in Montreal</h2>
-            <h3 class = "text-secondary" >Increase your returns by 30%</h3>
-            
+            <h1>Award-winning home rental management company in Montreal</h1>
           </div>
         </div>
-        <div class="row">
-          
-          <div class="col-md-4 col-sm-6 ml-auto text-right">
-            <a href="#"><h4>In partnership with Marriott International</h4></a>
+
+        <div class="row mb-4 order-md-2 order-sm-3 order-3">
+          <div class="col-md-12 mx-auto text-center">
+            <h3 class = "text-secondary pt-4" >Increase your returns by 30%</h3>
           </div>
-          <div class="col-md-4 col-sm-6 mr-auto my-auto">
+                    <div class="col-md-4 col-sm-10 mx-auto text-center">
+            <a href="#" class="mt-2 btn btn-primary btn-lg btn-block">Get Start</a>
+          </div>
+        </div>
+
+        <div class="row order-md-3 order-sm-2 order-2">
+          
+          <div class="col-md-3 col-6 ml-auto text-right">
+            <a href="#"><h4 style="margin-bottom: 0px;">In partnership with Marriott International</h4></a>
+          </div>
+          <div class="col-md-3 col-6 mr-auto my-auto" style="border-left: 1px solid white">
             <a href="#"><img src="img/partners/marriott_international_logo.svg" alt=""></a>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-8 col-sm-10 mx-auto text-center">
-            <a href="#" class="mt-4 btn btn-primary btn-lg">Get Start</a>
-          </div>
-        </div>
+
       </div>
 
       <div class="container-fluid swiper-container">
@@ -48,13 +52,13 @@
     <!-- end home images swiper -->
 
     <!-- first month guarantee -->
-    <div class="container" id = "first-month-rent-guarantee py-4">
-      <div class="row" align-content-center>
-        <div class = "col-md-10 col-lg-5 text-center mx-auto" id="first-month-rent-guarantee-image">
-          <img src="../../public/img/promotion/first month rent guarantee.png" alt="first month rent guarantee">
+    <div class="container" id = "first-month-rent-guarantee py-4 my-5">
+      <div class="row d-flex align-items-center" align-content-center>
+        <div class = "col-lg-4 col-md-12 text-center ml-auto mb-4" id="first-month-rent-guarantee-image">
+          <img src="../../public/img/promotion/first month rent guarantee.png" style="width:100%;" alt="first month rent guarantee">
         </div>
-        <div class=" col-md-10 col-lg-5 text-center mx-auto">
-            <h1 class="display-3 mb-5">
+        <div class="col-lg-4 col-md-12 text-center mr-auto mb-4">
+            <h1 class="display-3 mb-5" title = "section-title">
               We'll guarantee your first month's rent
             </h1>
             <h3 class = "display-4">
@@ -67,11 +71,11 @@
     <!-- end first month guarantee -->
 
     <!-- partner platforms -->
-    <div class = "coop-partners py-4">
+    <div class = "coop-partners py-4 my-5">
       <div class="container-fluid">
         <div class="row">
           <div class="container">
-            <h1 class="display-3 text-center mb-5">
+            <h1 class="display-3 text-center mb-5" title = "section-title">
             Maximising the visiblity of your London listing across channels
           </h1>
           <p class="lead display-5 col-md-10 col-lg-8 text-center text-muted p-0 mx-auto my-4">
@@ -110,9 +114,9 @@
     <!-- end partner platforms -->
 
     <!-- why localstay -->
-    <div class="why-localstay py-4">
+    <div class="why-localstay py-4 my-5">
       <div class="container">
-        <h2 class="display-3 text-center mb-4">Why Localstay</h2>
+        <h2 class="display-3 text-center mb-4" title = "section-title">Why Localstay</h2>
         <h5 class="display-4 text-center mb-5">
           Our unique approach smartly balances short, mid and long 
           lettings to deliver superior earnings
@@ -148,11 +152,11 @@
     <!-- end why localstay -->
 
     <!-- see what your home could earn -->
-    <div class="jumbotron py-4">
+    <div class="jumbotron py-4 my-5">
       <div class="container my-5">
         <div class="row mb-5">
           <div class="col-md-8 col-lg-8 col-xl-6 text-center mx-auto">
-            <h1 class="display-4 mb-5">
+            <h1 class="display-4 mb-5" title = "section-title">
               Find out what your place could earn
             </h1>
           </div>
@@ -211,11 +215,11 @@
     
 
     <!-- where are our clients arcoss your area -->
-    <div class="container-fluid jumbotron-container py-4">
+    <div class="container-fluid jumbotron-container py-4 my-5">
       <div class="container my-5">
         <div class="row mb-3">
           <div class="col-md-8 col-lg-8 col-xl-6 text-center mx-auto">
-            <h1 class="display-4 mb-4">
+            <h1 class="display-4 mb-4" title = "section-title">
               Boosting earnings for Hostmaker hosts across Montreal
             </h1>
           </div>
@@ -263,10 +267,10 @@
 
     <div class="mt-5"></div>
     <!-- house keeping services -->
-    <div class="everything-is-taken-care py-4">
+    <div class="everything-is-taken-care py-4 my-5">
       <div class="container">
         <div class="row">
-          <div class="display-4 text-center mb-5 mx-auto">
+          <div class="display-4 text-center mb-5 mx-auto" title = "section-title">
           Everything is taken care of
         </div>
         </div>
@@ -274,7 +278,7 @@
       <div class="row text-center">
           <div class="col-md-3 my-5 text-center" v-for="(service, id) in services" :key="id">
               <div class="container align-content-center mb-4">
-                <img :src="service.url" :alt="service.desc">
+                <img :src="service.imgUrl" :alt="service.desc">
               </div>
               <h3>
                 {{service.title}}
@@ -296,7 +300,7 @@
     <!-- end house keeping services -->
 
     <!-- text animation -->
-    <div class= "container-fluid text-animation-container py-4" style="background: aqua;">
+    <div class= "container-fluid text-animation-container py-4 my-5" style="background: aqua;">
       <div class="row py-4 text-center d-flex">
         <div class="animate-text-head-div col-xl-2 col-lg-12 col-md-12 ml-auto my-auto text-right text-white">
           <h1 class="fixed-text">{{animateStrTitle}}</h1>
@@ -317,14 +321,13 @@
       </div>
 
     </div>
-    <div class="mb-5"></div>
     <!-- end text animation -->
 
     <!-- hosts' comments -->
-    <div class="hosts-comments  py-4">
+    <div class="hosts-comments  py-4 my-5">
       <div class="container">
         <div class="row">
-          <div class="display-4 text-center mb-5 mx-auto">
+          <div class="display-4 text-center mb-5 mx-auto" title = "section-title">
             What they are saying about us
           </div>
         </div>
@@ -368,8 +371,6 @@
     </div>
     
     <!-- end hosts' comments -->
-
-
   </div>
 
 </template>
@@ -380,7 +381,7 @@
   margin-bottom: 120px;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 520px) {
   h1,
   h2,
   h3,
@@ -391,11 +392,16 @@
   .display-2,
   .display-3,
   .display-4 {
-    font-size: 90%;
+    font-size: 1em;
+  }
+  [title = "section-title"]{
+    font-size: 1.4em;
+    font-weight: 400;
   }
 
-  .home-page-wrapper > div {
-    margin-bottom: 50px;
+  .home-page-wrapper > div,
+  .mb-5 {
+    margin-bottom: 10px !important;
   }
 }
 /* end global css */
@@ -412,20 +418,20 @@
   z-index: 20;
   width: 80%;
 }
-.swiper-text-container h2,
-.swiper-text-container h4 {
+.swiper-text-container h1,  
+.swiper-text-container h4  {
   color: whitesmoke;
 }
 
 @media screen and (max-width: 576px) {
-  .swiper-text-container h2,
+  .swiper-text-container h1,
   .swiper-text-container h3,
   .swiper-text-container h4 {
     margin-bottom: 0;
     text-align: center;
   }
   .swiper-text-container img {
-    display: none;
+    width: 80%;
   }
   .home-page-wrapper > div {
     margin-bottom: 30px;
@@ -566,46 +572,45 @@ export default {
       ],
       animateStrTitle: "",
       animateStrs: [],
-      text: ["first one", "second one"],
       landlineSrc: "img/avatars/1.png",
       services: [
         {
-          url: "img/services/profile.svg",
+          imgUrl: "img/services/profile.svg",
           title: "Profile & Listing",
           desc: "Stand-out listings created across all the best channels"
         },
         {
-          url: "img/services/photography.svg",
+          imgUrl: "img/services/photography.svg",
           title: "Professional photography",
           desc: "Professional photography"
         },
         {
-          url: "img/services/guest-relations.svg",
+          imgUrl: "img/services/guest-relations.svg",
           title: "Guest Relations",
           desc: "24/7 guest support and callout service"
         },
         {
-          url: "img/services/daily-pricing.svg",
+          imgUrl: "img/services/daily-pricing.svg",
           title: "Daily Pricing",
           desc: "Daily pricing review for yield maximisation"
         },
         {
-          url: "img/services/property-design.svg",
+          imgUrl: "img/services/property-design.svg",
           title: "Interior Design service",
           desc: "Interior Design"
         },
         {
-          url: "img/services/housekeeping.svg",
+          imgUrl: "img/services/housekeeping.svg",
           title: "Housekeeping",
           desc: "5-star housekeeping and linen"
         },
         {
-          url: "img/services/maintenance.svg",
+          imgUrl: "img/services/maintenance.svg",
           title: "Maintenance",
           desc: "Quickly resolving maintenance issues"
         },
         {
-          url: "img/services/key-exchange.svg",
+          imgUrl: "img/services/key-exchange.svg",
           title: "24/7 Key Exchange",
           desc: "In-person meet & greets, warmly welcoming guests to your home"
         }
