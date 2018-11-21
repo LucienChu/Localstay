@@ -80,3 +80,10 @@ export default {
 };
 </script>
 
+<style scoped>
+.footer-nav{
+  padding:0;
+}
+</style>
+
+

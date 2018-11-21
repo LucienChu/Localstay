@@ -1,5 +1,5 @@
 <template>
-  <div class = "narbar-wrapper">
+  <div class = "nav-bar-wrapper container-fluid">
 
     <!-- top navbar -->
     <b-navbar id = "top-nav-bar" toggleable="sm" variant="dark" style="z-index: 20">
@@ -70,6 +70,11 @@ export default {
 };
 </script>
 <style scoped>
+.nav-bar-wrapper{
+  position: fixed;
+  z-index: 999;
+  padding: 0;
+}
 #top-nav-bar {
   height: 20px;
 }
