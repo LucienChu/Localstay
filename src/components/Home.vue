@@ -124,7 +124,7 @@
 
         <div class="row text-center">
           <div class="col-md-4 my-5">
-              <h2>picture</h2>
+              <img src="img/services/prize.svg" alt="service prize image">
               <p style = "font-size: 130%">
                 International track record of delivering 
                 <strong>superior yields</strong> 
@@ -132,7 +132,7 @@
           </div>
 
           <div class="col-md-4 my-5">
-              <h2>picture</h2>
+              <img src="img/services/daily-pricing.svg" alt="daily pricing image">
               <p style = "font-size: 130%">
                 <strong>Customised pricing algorithm </strong> 
                 based on rich industry data and market expertise
@@ -140,7 +140,7 @@
           </div>
 
           <div class="col-md-4 my-5">
-              <h2>picture</h2>
+              <img src="img/services/star.svg" alt="">
               <p style = "font-size: 130%">
                 Achieve more 5 star reviews with customised welcome packs and 
                 <strong>24/7 guest support</strong> 
@@ -465,6 +465,15 @@
 
 /* end partner platform css */
 
+
+/* why localstay css */
+.why-localstay img{
+  height: 68px;
+}
+
+/* end why localstay css */
+
+/* typing animation css */
 .fixed-text, .typing{
   margin-bottom: 0;
 }
@@ -485,6 +494,9 @@
     padding: 0px !important;
   }
 }
+/* end typing animation css */
+
+
 
 .jumbotron-container {
   position: relative;
