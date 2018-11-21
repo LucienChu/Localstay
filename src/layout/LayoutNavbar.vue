@@ -46,13 +46,13 @@
     <!-- sub navbar -->
     <b-navbar id = "sup-nav-bar" toggleable="lg" variant="light" style="z-index: 20">
       <b-navbar-nav>
-        <a href = "#">LocalStay</a>
+        <a herf= "src/components/Home.vue" >LocalStay</a>
       </b-navbar-nav>
       <b-navbar-toggle target="sub-bar-list"></b-navbar-toggle>
 
       <b-collapse is-nav id="sub-bar-list">
         <b-navbar-nav class = "ml-auto">
-          <b-nav-item href="#" active>What we do</b-nav-item>
+          <b-nav-item to="/WhatWeDo" active>What we do</b-nav-item>
           <b-nav-item href="#" active>Pricing</b-nav-item>
           <b-nav-item href="#" active>Who we are</b-nav-item>
           <b-nav-item><a href = "#">Log in</a></b-nav-item>

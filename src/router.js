@@ -20,8 +20,8 @@ const router = new Router({
       path: '',
       component: () => import('@/components/Home')
     }, {
-      path: 'page-2',
-      component: () => import('@/components/Page2')
+      path: '/WhatWeDo',
+      component: () => import('@/layout/WhatWeDo')
     }]
   }]
 })
