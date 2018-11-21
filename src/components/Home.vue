@@ -297,11 +297,11 @@
 
     <!-- text animation -->
     <div class= "container-fluid text-animation-container py-4" style="background: aqua;">
-      <div class="row py-4 text-center">
-        <div class="col-md-2 ml-auto my-auto text-right">
-          <h2>{{animateStrTitle}}</h2>
+      <div class="row py-4 text-center d-flex">
+        <div class="animate-text-head-div col-xl-2 col-lg-12 col-md-12 ml-auto my-auto text-right text-white">
+          <h1>{{animateStrTitle}}</h1>
         </div>
-        <div class="mr-auto text-center py-4">
+        <div class="animate-text-tail-div  mr-auto text-center">
           <vue-typed-js :strings = animateStrs 
                         :loop = "true"
                         :smartBackspace = "true"
@@ -311,7 +311,7 @@
                         :startDelay = "1000"
                         :cursorChar = "'|'"
                         @preStringTyped = "getNextTitle()">
-            <h2 class = "typing" style="display: inline-block"></h2>
+            <h1 class = "typing" style="display: inline-block"></h1>
           </vue-typed-js>
         </div>
       </div>
@@ -459,26 +459,23 @@
 
 /* end partner platform css */
 
-/* text animation css
-.text-animation-container,
-.jumbotron-container {
-  margin-bottom: 0px !important;
-}
-.text-animation-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.typing {
-  margin: 0;
-  opacity: 1;
-  display: inline-block;
-}
-@media screen and (max-width: 576px) {
-  .text-animation-container .py-4 {
-    padding: 0 !important;
+@media screen and (max-width: 1025px) {
+  .animate-text-head-div,
+  .animate-text-tail-div {
+    text-align: center !important;
+    margin: 0 auto !important;
   }
-} */
+}
+
+@media screen and (max-width: 576px) {
+  .animate-text-head-div,
+  .animate-text-tail-div {
+    padding: 0px !important;
+  }
+  .animate-text-tail-div h1 {
+    margin-bottom: 0px;
+  }
+}
 
 .jumbotron-container {
   position: relative;
@@ -626,7 +623,6 @@ export default {
     getNextTitle: function() {
       this.currentTextId = (this.currentTextId + 1) % this.textArray.length;
       this.animateStrTitle = this.textArray[this.currentTextId].fixed;
-      console.log(this.animateStrTitle);
     }
   },
   created: function() {
