@@ -1,13 +1,6 @@
 <template>
     <!-- top image and text -->
     <div>
-        <!-- <b-card overlay
-            img-src="/img/bg/1.jpg"
-            img-alt="Card Image"
-            title="'Hostmaker provides an easy-to-use, end-to-end service which I found reliable and well-priced. I especially loved the design element: At Home, their design studio, was a pleasure to work with. They are miles ahead of their competitors.'"
-            text-variant="white" class="card-modify">
-            <p class="card-tex" sytle="margin-right: 20%;">sign</p>
-        </b-card> -->
         <div>
             <h1 class="overlay-img"> say something </h1>
             <img src="img/bg/1.jpg" alt="owner">
@@ -31,10 +24,10 @@
         </nav>
         <!-- second nav bar -->
         <nav class="container-fluid" role="navigation">
-            <b-nav justified tabs class="nav-modify">
-                <b-nav-item active class="on-active align-self-end ">Services &#38; benefits</b-nav-item>
-                <b-nav-item class="on-active align-self-end ">How it works</b-nav-item>
-                <b-nav-item class="on-active align-self-end ">Case Studies</b-nav-item>
+            <b-nav justified tabs class="nav-modify tabs-alt">
+                <b-nav-item active class="align-self-end" style="box-shadow: 0 -2px #0E1112 inset">Services &#38; benefits</b-nav-item>
+                <b-nav-item class="align-self-end ">How it works</b-nav-item>
+                <b-nav-item class="align-self-end ">Case Studies</b-nav-item>
             </b-nav>
         </nav>
     </div>
@@ -57,17 +50,21 @@
         }
     }
 
-    .on-active:active {
-        /* background:linear-gradient(to top, black 5%, white 0%); */
-        border-bottom-color: black;
-        border-bottom-style: solid;
-        border-bottom-width: thick;
-    }
-
     .overlay-img {
         position: absolute;
         top: 30%;
 
     }
 </style>
+
+<script>
+export default {
+    name: 'what-we-do',
+
+    props: {
+
+    }
+}
+</script>
+
 

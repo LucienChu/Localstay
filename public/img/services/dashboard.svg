@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="62px" height="62px" viewBox="0 0 62 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>B3DD47C2-2596-4C44-A44A-B896ADF8B5C2</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop---investor" transform="translate(-909.000000, -947.000000)">
+            <g id="Highlighted-services" transform="translate(150.000000, 867.000000)">
+                <g id="dashboard" transform="translate(761.000000, 82.000000)">
+                    <path d="M1.22532974,31.6327293 C4.81646679,19.6956327 15.8927465,11 29,11 C43.7859504,11 55.9873837,22.0656334 57.7746703,36.3672707 C54.1835332,48.3043673 43.1072535,57 30,57 C15.2140496,57 3.01261632,45.9343666 1.22532974,31.6327293 Z" id="Combined-Shape" fill="#58C4C6"></path>
+                    <circle id="Oval-2" stroke="#444444" stroke-width="3" cx="29" cy="29" r="29"></circle>
+                    <circle id="Oval-3" stroke="#444444" stroke-width="3" cx="29.5" cy="35.5" r="2.5"></circle>
+                    <path d="M29.5,6.5 L29.5,14.5" id="Line-5" stroke="#444444" stroke-width="3" stroke-linecap="round"></path>
+                    <path d="M18.5,9.03589838 L22.5,15.9641016" id="Line-5" stroke="#444444" stroke-width="3" stroke-linecap="round"></path>
+                    <path d="M10.0358984,16.5 L16.9641016,20.5" id="Line-5" stroke="#444444" stroke-width="3" stroke-linecap="round"></path>
+                    <path d="M47.9641016,16.5 L41.0358984,20.5" id="Line-5" stroke="#444444" stroke-width="3" stroke-linecap="round"></path>
+                    <path d="M40.5,9.03589838 L36.5,15.9641016" id="Line-5" stroke="#444444" stroke-width="3" stroke-linecap="round"></path>
+                    <polygon id="Triangle" stroke="#444444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="29.5 23 31 35 28 35"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
