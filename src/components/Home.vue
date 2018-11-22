@@ -116,31 +116,31 @@
     <!-- why localstay -->
     <div class="why-localstay py-4 my-5">
       <div class="container">
-        <h2 class="display-3 text-center mb-4" title = "section-title">Why Localstay</h2>
+        <h1 class="text-center mb-3" title = "section-title">Why Localstay</h1>
         <h5 class="display-4 text-center mb-5">
           Our unique approach smartly balances short, mid and long 
           lettings to deliver superior earnings
         </h5>
 
         <div class="row text-center">
-          <div class="col-md-4 my-5">
-              <img src="img/services/prize.svg" alt="service prize image">
+          <div class="col-md-3 py-4 mx-auto">
+              <img src="img/services/prize.svg" alt="service prize image" class = "service-img">
               <p style = "font-size: 130%">
                 International track record of delivering 
                 <strong>superior yields</strong> 
               </p>
           </div>
 
-          <div class="col-md-4 my-5">
-              <img src="img/services/daily-pricing.svg" alt="daily pricing image">
+          <div class="col-md-3 py-4 mx-auto">
+              <img src="img/services/daily-pricing.svg" alt="daily pricing image" class = "service-img">
               <p style = "font-size: 130%">
                 <strong>Customised pricing algorithm </strong> 
                 based on rich industry data and market expertise
               </p>
           </div>
 
-          <div class="col-md-4 my-5">
-              <img src="img/services/star.svg" alt="">
+          <div class="col-md-3 py-4 mx-auto">
+              <img src="img/services/star.svg" alt="star image" class = "service-img">
               <p style = "font-size: 130%">
                 Achieve more 5 star reviews with customised welcome packs and 
                 <strong>24/7 guest support</strong> 
@@ -152,11 +152,11 @@
     <!-- end why localstay -->
 
     <!-- see what your home could earn -->
-    <div class="jumbotron py-4 my-5">
+    <div class="jumbotron py-4 my-5" style="background: #fafafa">
       <div class="container my-5">
-        <div class="row mb-5">
+        <div class="row mb-2">
           <div class="col-md-8 col-lg-8 col-xl-6 text-center mx-auto">
-            <h1 class="display-4 mb-5" title = "section-title">
+            <h1 class="mb-5" title = "section-title">
               Find out what your place could earn
             </h1>
           </div>
@@ -166,43 +166,56 @@
             <h4 class="">Get an instant estimate of how much your primary home, your secondary residence or one of your properties would earn with our flexible lettings approach. Contact us to get a more accurate estimate by our pricing experts.</h4>
           </div>
         </div>
-        <div class="row mb-5">
-            <div class="container property-search-div py-5" style="background: white; width: 80%">
-              <div class="row">
-                <div class="col-md-5 ml-auto mr-auto">
-                  <b-form-group label="Your property's address" class="">
-                    <b-input placeholder="Search you property here" />
-                  </b-form-group>
-                  <b-form-group label="Number of bedrooms" class="">
-                    <b-select value="Studio" :options="['Studio','1','2','3','4+']" />
-                  </b-form-group>
-                </div>
-                <div class="col-md-5 ml-auto mr-auto">
-                  <div class="container d-flex flex-column" style="">
+
+        <!-- search address form -->
+        <div class="row">
+            <div class="container">
+              <b-form id = "address-form">
+                <div class="row">
+                  <div id = "left-form" class="col-md-5 col-sm-6 col-10 ml-auto mb-5">
+                    <b-form-group id="address"
+                                class="mb-5"
+                                label="Your property's address"
+                                label-for="addressInput">
+                      <b-form-input id="addressinput"                                  
+                                    required
+                                    placeholder="Enter email">
+                      </b-form-input>
+                    </b-form-group>
+                    
+                    <b-form-group label="Number of bedrooms" class="my-auto">
+                      <b-select value="Studio" :options="['Studio','1','2','3','4+']" />
+                    </b-form-group>
+                  </div>
+
+                  <div id = "right-form" class="col-md-5 col-sm-6 col-10 mr-auto">
                     <div class="row mb-3">
                       <div class="col">From</div>
                       <div class="col text-right">To</div>
                     </div>
-                    <div class="row mb-3">
+                    <div class="row mb-2">
                       <div class="col ml-auto"> <p class = "display-4">min</p></div>
                       <div class="col text-center"><p class = "display-4">--</p></div>
                       <div class="col mr-auto text-right "><p class = "display-4">max</p></div>
                     </div>
-                    <div class="row mb-3">
+                    <div class="row mb-4">
                       <div class="col text-center">
                         per week
                       </div>
                     </div>
-                  </div>
-                  <div class="get-start-btn text-center">
-                    <a href="#" class="btn btn-primary" style="width: 80%">Get Start</a>
+                    <div class="row mb-2">
+                      <div class="get-start-btn col text-center">
+                        <a href="#" class="btn btn-primary mx-auto btn-block" style="width: 50%">Get Start</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </b-form>
             </div>
         </div>
-        <div class="row mb-5">
-          <div class="col-md-10 col-lg-8 text-center mx-auto">
+        <!-- end search address form -->
+        <div class="row my-4">
+          <div class="col-md-10 col-lg-8 text-center mx-auto d-flex flex-column">
             <h4 class="text-muted">
               Calculations based on comparable listings in the property area, guest capacity, and Hostmaker data and analysis.
             </h4>
@@ -215,10 +228,10 @@
     
 
     <!-- where are our clients arcoss your area -->
-    <div class="container-fluid jumbotron-container py-4 my-5">
+    <div class="container-fluid jumbotron-container py-4 my-4">
       <div class="container my-5">
         <div class="row mb-3">
-          <div class="col-md-8 col-lg-8 col-xl-6 text-center mx-auto">
+          <div class="col-md-8 col-lg-10 text-center mx-auto">
             <h1 class="display-4 mb-4" title = "section-title">
               Boosting earnings for Hostmaker hosts across Montreal
             </h1>
@@ -266,6 +279,9 @@
     <!-- end where are our clients arcoss your area -->
 
     <div class="mt-5"></div>
+
+
+
     <!-- house keeping services -->
     <div class="everything-is-taken-care py-4 my-5">
       <div class="container">
@@ -275,15 +291,15 @@
         </div>
         </div>
 
-      <div class="row text-center">
-          <div class="col-md-3 my-5 text-center" v-for="(service, id) in services" :key="id">
-              <div class="container align-content-center mb-4">
-                <img :src="service.imgUrl" :alt="service.desc">
+      <div class="row services-div">
+          <div class="col-md-3 col-sm-4 col-5 my-4 mx-auto text-center" v-for="(service, id) in services" :key="id">
+              <div class="mb-4">
+                <img :src="service.imgUrl" :alt="service.desc" class = "service-img">
               </div>
-              <h3>
+              <h3 class="service-title">
                 {{service.title}}
               </h3>
-              <p style = "font-size: 130%">
+              <p class="service-desc">
                 {{service.desc}}
               </p>
           </div>
@@ -381,6 +397,10 @@
   margin-bottom: 120px;
 }
 
+p{
+  font-size: 1.2rem;
+}
+
 @media screen and (max-width: 520px) {
   h1,
   h2,
@@ -392,17 +412,25 @@
   .display-2,
   .display-3,
   .display-4 {
-    font-size: 1em;
+    font-size: 1rem;
   }
+  p{
+  font-size: 0.8rem;
+}
   [title = "section-title"]{
     font-size: 1.4em;
-    font-weight: 400;
+    font-weight: 500;
   }
 
   .home-page-wrapper > div,
   .mb-5 {
     margin-bottom: 10px !important;
   }
+}
+
+.service-img{
+  width: 50px;
+  height: 50px;
 }
 /* end global css */
 
@@ -468,10 +496,44 @@
 
 /* why localstay css */
 .why-localstay img{
-  height: 68px;
+  margin-bottom: 1rem;
 }
 
 /* end why localstay css */
+
+/* what you home could earn css */
+  #left-form{
+    border-right: 2px dashed #000000
+  }
+
+  @media screen and (max-width: 576px){
+    #left-form{
+      border-right: none;
+      margin: 0 auto;
+    }
+    #right-form{
+      margin: 0 auto;
+    }
+  }
+/* end what you home could earn css */
+/* our service css */
+  @media screen and (max-width: 358px){
+    .services-div{
+      margin-top: 20px;
+      display: inline-block;
+    }
+    .services-div .text-center{
+      padding: 10px 0;
+    }
+
+    .service-div .service-title{
+      font-size: 1rem !important;
+    }
+    .service-div p{
+      font-size: 0.8rem !important;
+    }
+  }
+/* end our service css */
 
 /* typing animation css */
 .fixed-text, .typing{
@@ -584,7 +646,7 @@ export default {
       ],
       animateStrTitle: "",
       animateStrs: [],
-      landlineSrc: "img/avatars/1.png",
+      landlineSrc: "img/landmarks/london-landmark.svg",
       services: [
         {
           imgUrl: "img/services/profile.svg",
