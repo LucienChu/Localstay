@@ -5,13 +5,13 @@
           <nav class="footer bg-footer-theme pt-4 mb-4">
                           <!-- associated press -->
     <div class="container pt-4">
-      <div class="row d-flex align-contents-center">
-        <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4"><img class = "press-img" src="img/press/bbc.svg" alt="BBC image" style="width: 90%"></div>
-        <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4"> <img class = "press-img"  src="img/press/bloomberg.svg" alt="Bloomberg image" style="width: 90%"></div>
-        <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4"><img class = "press-img" src="img/press/cnbc.svg" alt="CNBC image" style="width: 90%"></div>
-        <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4"><img class = "press-img" src="img/press/forbes.svg" alt="forbes image" style="width: 90%"></div>
-        <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4"><img class = "press-img" src="img/press/independent.svg" alt="independent image" style="width: 90%"></div>
-        <div class="col-md-6 col-lg-4 col-xl-2 pt-3 my-4"><img class = "press-img" src="img/press/newyorktimes.svg" alt="newyorktimes image" style="width: 90%"></div>
+      <div class="row">
+        <div class="col-6 col-lg-4 col-xl-2 pt-3 my-4"><img class = "press-img" src="img/press/bbc.svg" alt="BBC image"></div>
+        <div class="col-6 col-lg-4 col-xl-2 pt-3 my-4"><img class = "press-img"  src="img/press/bloomberg.svg" alt="Bloomberg image"></div>
+        <div class="col-6 col-lg-4 col-xl-2 pt-3 my-4"><img class = "press-img" src="img/press/cnbc.svg" alt="CNBC image"></div>
+        <div class="col-6 col-lg-4 col-xl-2 pt-3 my-4"><img class = "press-img" src="img/press/forbes.svg" alt="forbes image"></div>
+        <div class="col-6 col-lg-4 col-xl-2 pt-3 my-4"><img class = "press-img" src="img/press/independent.svg" alt="independent image"></div>
+        <div class="col-6 col-lg-4 col-xl-2 pt-3 my-4"><img class = "press-img" src="img/press/newyorktimes.svg" alt="newyorktimes image"></div>
       </div>
     </div>
     <!-- end associated press -->
@@ -81,8 +81,16 @@ export default {
 </script>
 
 <style scoped>
-.footer-nav{
-  padding:0;
+.press-img {
+  width: 60%;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.footer-nav {
+  padding: 0;
 }
 </style>
 
