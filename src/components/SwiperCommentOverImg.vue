@@ -1,9 +1,20 @@
+// client comment over property image
+
+// props: commentImageArray
+//   an array with objects in the following format:
+//       {
+//         desc: strValue,
+//         propertyImgUrl: strValue (image url path),
+//         propertyOwner: strValue
+//       }
+//NOTE: layout is predefined(fixed) and not supposed to change.
+//      only 5 stars comments are supposed to be show.
 <template>
     <div class="container">
         <div class="row">
           <div class="col" style="padding: 0;">
             <swiper class="comment-swiper-container" :options="swiperWithPagination">
-              <swiper-slide v-for = "(comment, id) in comments" :key = "id">
+              <swiper-slide v-for = "(comment, id) in commentImageArray" :key = "id">
                 <div class="container">
                   <div class="row" >
                     <div class="comment-img-div ml-auto col-lg-10 col-md-12">
@@ -41,47 +52,56 @@
 <script>
 import { swiper, swiperSlide } from "vue-awesome-swiper";
 export default {
-    components:{
-        "swiper": swiper,
-        "swiper-slide": swiperSlide
-    },
-    data: function(){
-        return{
-            comments: [
-                {
-                desc: "through Hostmaker has enabled me to capture more revenue than ever befoure. I can't recommend them enough.", 
-                propertyImgUrl: "img/bg/4.jpg",
-                propertyOwner: "Mr. A"
-                },
-                {
-                desc: " Hostmaker has enabled me to capture more revenue than ever befoure. I can't recommend them enough.", 
-                propertyImgUrl: "img/bg/4.jpg",
-                propertyOwner: "Mr. A"
-                },
-                {
-                desc: "through has enabled me to capture more revenue than ever befoure. I can't recommend them enough.", 
-                propertyImgUrl: "img/bg/4.jpg",
-                propertyOwner: "Mr. A"
-                },
-            ],
-            swiperWithPagination: {
-                pagination: {
-                el: ".swiper-pagination",
-                clickable: true
-                },
-                autoplay: {
-                delay: 2500,
-                disableOninteraction: false
-                },
-                loop: true
-            }
-        };
+  props: {
+    commentImageArray: {
+      type: Array,
+      required: true
     }
-}
+  },
+  components: {
+    swiper: swiper,
+    "swiper-slide": swiperSlide
+  },
+  data: function() {
+    return {
+      // comments: [
+      //   {
+      //     desc:
+      //       "through Hostmaker has enabled me to capture more revenue than ever befoure. I can't recommend them enough.",
+      //     propertyImgUrl: "img/bg/4.jpg",
+      //     propertyOwner: "Mr. A"
+      //   },
+      //   {
+      //     desc:
+      //       " Hostmaker has enabled me to capture more revenue than ever befoure. I can't recommend them enough.",
+      //     propertyImgUrl: "img/bg/4.jpg",
+      //     propertyOwner: "Mr. A"
+      //   },
+      //   {
+      //     desc:
+      //       "through has enabled me to capture more revenue than ever befoure. I can't recommend them enough.",
+      //     propertyImgUrl: "img/bg/4.jpg",
+      //     propertyOwner: "Mr. A"
+      //   }
+      // ],
+      swiperWithPagination: {
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        autoplay: {
+          delay: 2500,
+          disableOninteraction: false
+        },
+        loop: true
+      }
+    };
+  }
+};
 </script>
 <style scoped>
-.comment-img-div{
-    padding: 0;
+.comment-img-div {
+  padding: 0;
 }
 .comment-card-div {
   position: absolute;
@@ -96,9 +116,9 @@ export default {
 .comment-swiper-pagination {
   position: static;
 }
-img{
-    width: 100%;
-    height: 100%;
+img {
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (max-width: 562px) {

@@ -4,13 +4,13 @@
 //   servicesArray => array of objs
 //     an object should be in format as 
 //     {
-        imgUrl: "img/services/profile.svg",
-        title: "Profile & Listing",
-        desc: "Stand-out listings created across all the best channels"
+        imgUrl: strValue (image url, ie: "img/services/profile.svg"),
+        title: strValue,
+        desc: strValue,
          }
   
 //   bsGridLayout
-//     placeholder for bootstrap grid layout format
+//     placeholder for bootstrap grid layout format (customizable bootstrap styling)
 
 <template>
     <div class="container">
