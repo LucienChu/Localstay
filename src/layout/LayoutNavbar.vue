@@ -42,7 +42,7 @@
             <b-nav-item to="/WhatWeDo">What We Do</b-nav-item>
             <!-- <router-link to="/WhatWeDo">What we do</router-link> -->
             <b-nav-item to="/Pricing" active>Pricing</b-nav-item>
-            <b-nav-item href="#" active>Who we are</b-nav-item>
+            <b-nav-item href="/WhoWeAre" active>Who we are</b-nav-item>
           </b-navbar-nav>
         </b-collapse>
       </div>
