@@ -1,28 +1,42 @@
 <template>
-    <div class="container" id = "first-month-rent-guarantee py-4 my-5">
-      <div class="row d-flex align-items-center" align-content-center>
-        <div class = "col-lg-4 col-md-12 text-center ml-auto mb-4" id="first-month-rent-guarantee-image">
-          <img src="../../public/img/promotion/first month rent guarantee.png" style="width:100%;" alt="first month rent guarantee">
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <div class = "col-md-6 col-12 text-center ml-auto mb-4">
+          <img :src = "imgUrl" style="width:100%;" alt="first month rent guarantee">
         </div>
-        <div class="col-md-12 text-center mr-auto mb-4">
-            <h1 class="display-3 mb-5" title = "section-title">
-              We'll guarantee your first month's rent
+        <div class = "col-md-6 col-12 text-center mr-auto mb-4">
+            <h1 class="mb-5" title = "section-title">
+              {{promotionTitle}}
             </h1>
-            <h3 class = "display-4 mb-5">
-              We're so confident we can fill your property that we'll guarantee it
+            <h3 class = "mb-5">
+              {{promotionDesc}}
             </h3>
-            <a href="#" class="btn btn-primary btn-lg">Please, tell me more!</a>
+            <router-link :to = btnRouterAddress class="btn btn-primary btn-lg">{{btnText}}</router-link>
           </div>
       </div>
     </div>
 </template>
 <script>
 export default {
-    
-}
+  props: {
+    imgUrl: {
+      type: String,
+      required: true
+    },
+    promotionTitle: {
+      type: String,
+      required: true
+    },
+    promotionDesc: String,
+    btnText: {
+      type: String,
+      required: true
+    },
+    btnRouterAddress: String
+  }
+};
 </script>
 <style scoped>
-
 </style>
 
 

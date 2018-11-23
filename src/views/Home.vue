@@ -4,13 +4,19 @@
     
     <home-page-swiper/>
 
-    <home-page-promotion />
+    <home-page-promotion 
+      imgUrl = "/img/promotion/first month rent guarantee.png"
+      promotion-title = "We'll guarantee your first month's rent"
+      promotion-desc = "We're so confident we can fill your property that we'll guarantee it"
+      btn-text = "Please tell me more !"
+      btn-router-address = "/WhatWeDo"
+      />
 
     <div class = "coop-partners py-4 my-5">
       <div class="container">
         <div class="row">
           <div class="col-md-10 mx-auto">
-            <h1 class="display-3 text-center mb-5" title = "section-title">
+            <h1 class="text-center mb-5" title = "section-title">
                 Maximising the visiblity of your London listing across channels
             </h1>
             <p class="lead display-5 text-center text-muted p-0 mx-auto my-4">
@@ -27,7 +33,7 @@
     <div class="why-localstay py-4 my-5">
       <div class="container">
         <h1 class="text-center mb-3" title = "section-title">Why Localstay</h1>
-        <h5 class="display-4 text-center mb-5">
+        <h5 class="text-center text-muted mb-5">
           Our unique approach smartly balances short, mid and long 
           lettings to deliver superior earnings
         </h5>
@@ -142,14 +148,14 @@
       <div class="container">
         <div class="row mb-3">
           <div class="col-md-8 col-lg-10 text-center mx-auto">
-            <h1 class="display-4 mb-4" title = "section-title">
+            <h1 class="mb-4" title = "section-title">
               Boosting earnings for Hostmaker hosts across Montreal
             </h1>
           </div>
         </div>
         <div class="row mb-5">
           <div class="col-md-10 text-center mx-auto">
-            <h4>in areas including:</h4>
+            <h4 class = "text-muted">in areas including:</h4>
           </div>
         </div> 
 
@@ -165,7 +171,7 @@
             </b-list-group>
           </div>
           <div class="col-md-6 text-center mx-auto mt-3">
-             <h5>and more</h5>
+             <h5 class = "text-secondary">and more</h5>
            </div>
         </div>
 
@@ -310,18 +316,15 @@
 }
 
 /* end partner platform css */
-=======
 /* global css */
 .home-page-wrapper > div {
   margin-bottom: 120px;
 }
 
->>>>>>> c86baa63989e79028562428d9a2c2a39b2e5c031
-
 /* why localstay css */
 .why-localstay img {
   margin-bottom: 1rem;
-    width: 50px;
+  width: 50px;
   height: 50px;
 }
 
@@ -400,9 +403,6 @@
   }
 }
 /* end our service css */
-=======
->>>>>>> c86baa63989e79028562428d9a2c2a39b2e5c031
-
 .fixed-text,
 .typing {
   margin-bottom: 0;
@@ -435,27 +435,19 @@
 .comment-swiper-container {
   position: relative;
 }
-
-
 </style>
 
 <style src="@/vendor/libs/vue-awesome-swiper/vue-awesome-swiper.scss" lang="scss"></style>
-<<<<<<< HEAD
-<style src="@/globalFontStyle.css"></style>
-=======
 <style src = "@/GlobalFontStyle.css"></style>
->>>>>>> c86baa63989e79028562428d9a2c2a39b2e5c031
 
 <script>
 import { swiper, swiperSlide } from "vue-awesome-swiper";
 import homePageSwiper from "@/components/HomePageSwiper";
-<<<<<<< HEAD
-=======
+
 import homePagePromotion from "@/components/HomePagePromotion";
 import smallIconGallery from "@/components/SmallIconGallery";
-import serviceCardDeck from "@/components/ServiceCardDeck"
-import swiperCommentOverImg from "@/components/SwiperCommentOverImg"
->>>>>>> c86baa63989e79028562428d9a2c2a39b2e5c031
+import serviceCardDeck from "@/components/ServiceCardDeck";
+import swiperCommentOverImg from "@/components/SwiperCommentOverImg";
 export default {
   name: "home",
   metaInfo: {
@@ -466,9 +458,9 @@ export default {
     swiperSlide,
     "home-page-swiper": homePageSwiper,
     "home-page-promotion": homePagePromotion,
-    "small-icon-gallery" : smallIconGallery,
-    "service-card-deck" : serviceCardDeck,
-    "swiper-comment-over-img" : swiperCommentOverImg
+    "small-icon-gallery": smallIconGallery,
+    "service-card-deck": serviceCardDeck,
+    "swiper-comment-over-img": swiperCommentOverImg
   },
   data: function() {
     return {
@@ -492,7 +484,7 @@ export default {
       ],
       animateStrTitle: "",
       animateStrs: [],
-      landlineSrc: "img/landmarks/london-landmark.svg",
+      landlineSrc: "img/landmarks/london-landmark.svg"
     };
   },
   methods: {
@@ -513,39 +505,4 @@ export default {
   }
 };
 </script>
-<<<<<<< HEAD
-<style>
-/* global css */
 
-/* p {
-  font-size: 1.2rem;
-}
-
-@media screen and (max-width: 520px) {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  .display-1,
-  .display-2,
-  .display-3,
-  .display-4 {
-    font-size: 1rem;
-  }
-  p {
-    font-size: 0.8rem;
-  }
-  [title="section-title"] {
-    font-size: 1.4em;
-    font-weight: 500;
-  }
-} */
-
-/* end global css */
-</style>
-=======
-
-// 首頁模組化初步成型
->>>>>>> c86baa63989e79028562428d9a2c2a39b2e5c031
