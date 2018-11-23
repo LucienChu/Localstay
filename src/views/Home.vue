@@ -383,48 +383,6 @@
 </template>
 
 <style scoped>
-/* global css */
-.home-page-wrapper > div {
-  margin-bottom: 120px;
-}
-
-p {
-  font-size: 1.2rem;
-}
-
-@media screen and (max-width: 520px) {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  .display-1,
-  .display-2,
-  .display-3,
-  .display-4 {
-    font-size: 1rem;
-  }
-  p {
-    font-size: 0.8rem;
-  }
-  [title="section-title"] {
-    font-size: 1.4em;
-    font-weight: 500;
-  }
-
-  .home-page-wrapper > div,
-  .mb-5 {
-    margin-bottom: 10px !important;
-  }
-}
-
-.service-img {
-  width: 50px;
-  height: 50px;
-}
-/* end global css */
-
 /* swiper-wrapper css */
 /* .swiper-wrapper {
   position: relative;
@@ -458,6 +416,13 @@ p {
 } */
 /* end swiper-wrapper css */
 
+.home-page-wrapper > div,
+.mb-5 {
+  margin-bottom: 10px !important;
+}
+.home-page-wrapper > div {
+  margin-bottom: 120px;
+}
 /* partner platform css */
 .partner-img {
   width: 180px;
@@ -542,6 +507,10 @@ p {
 
 /* end service area css */
 /* our service css */
+.service-img {
+  width: 50px;
+  height: 50px;
+}
 @media screen and (max-width: 358px) {
   .services-div {
     margin-top: 20px;
@@ -623,10 +592,11 @@ p {
 </style>
 
 <style src="@/vendor/libs/vue-awesome-swiper/vue-awesome-swiper.scss" lang="scss"></style>
+<style src="@/globalFontStyle.css"></style>
 
 <script>
 import { swiper, swiperSlide } from "vue-awesome-swiper";
-import homePageSwiper from "../components/HomePageSwiper";
+import homePageSwiper from "@/components/HomePageSwiper";
 export default {
   name: "home",
   metaInfo: {
@@ -732,3 +702,34 @@ export default {
   }
 };
 </script>
+<style>
+/* global css */
+
+/* p {
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 520px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .display-1,
+  .display-2,
+  .display-3,
+  .display-4 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  [title="section-title"] {
+    font-size: 1.4em;
+    font-weight: 500;
+  }
+} */
+
+/* end global css */
+</style>
