@@ -11,7 +11,7 @@
           <div class="col-md-12 mx-auto text-center">
             <h3 class = "text-secondary pt-4" >Increase your returns by 30%</h3>
           </div>
-                    <div class="col-md-4 col-sm-10 mx-auto text-center">
+          <div class="col-md-4 col-sm-10 mx-auto text-center">
             <a href="#" class="mt-2 btn btn-primary btn-lg btn-block">Get Start</a>
           </div>
         </div>
@@ -48,13 +48,12 @@
 </template>
 <style src="@/vendor/libs/vue-awesome-swiper/vue-awesome-swiper.scss" lang="scss"></style>
 
+
+
+
 <script>
 import { swiper, swiperSlide } from "vue-awesome-swiper";
 export default {
-  name: "home",
-  metaInfo: {
-    title: "home"
-  },
   components: {
     swiper,
     swiperSlide
@@ -69,7 +68,8 @@ export default {
         autoplay: {
           delay: 2500,
           disableOninteraction: false
-        }
+        },
+        loop: true
       }
     };
   }
