@@ -2,116 +2,26 @@
   <div class="home-page-wrapper">
     <!-- home images swiper -->
     
-    <!-- <div class="container-fluid swiper-wrapper py-4 my-5" style="padding: 0;">
-      <div class="container swiper-text-container d-flex flex-column flex-warp">
-        <div class="row mb-4 order-1">
-          <div class="col-md-12 mx-auto text-center">
-            <h1>Award-winning home rental management company in Montreal</h1>
-          </div>
-        </div>
-
-        <div class="row mb-4 order-md-2 order-sm-3 order-3">
-          <div class="col-md-12 mx-auto text-center">
-            <h3 class = "text-secondary pt-4" >Increase your returns by 30%</h3>
-          </div>
-                    <div class="col-md-4 col-sm-10 mx-auto text-center">
-            <a href="#" class="mt-2 btn btn-primary btn-lg btn-block">Get Start</a>
-          </div>
-        </div>
-
-        <div class="row order-md-3 order-sm-2 order-2">
-          
-          <div class="col-md-3 col-6 ml-auto text-right">
-            <a href="#"><h4 style="margin-bottom: 0px;">In partnership with Marriott International</h4></a>
-          </div>
-          <div class="col-md-3 col-6 mr-auto my-auto" style="border-left: 1px solid white">
-            <a href="#"><img src="img/partners/marriott_international_logo.svg" alt=""></a>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="container-fluid swiper-container">
-        <div class="row">
-          <swiper :options="swiperWithPagination" autoplay = "true">
-            <swiper-slide>
-              <img :src="`${baseUrl}img/bg/1.jpg`" alt="" style="width: 100%">         
-            </swiper-slide>
-            <swiper-slide>
-              <img :src="`${baseUrl}img/bg/2.jpg`" alt="" style="width: 100%">         
-            </swiper-slide>
-            <swiper-slide>
-              <img :src="`${baseUrl}img/bg/3.jpg`" alt="" style="width: 100%">         
-            </swiper-slide>
-            <div slot="pagination" class="swiper-pagination mt-3" style="position: static"></div>
-          </swiper>
-        </div>
-      </div>
-    </div> -->
-    <!-- end home images swiper -->
     <home-page-swiper/>
 
-    <!-- first month guarantee -->
-    <div class="container" id = "first-month-rent-guarantee py-4 my-5">
-      <div class="row d-flex align-items-center" align-content-center>
-        <div class = "col-lg-4 col-md-12 text-center ml-auto mb-4" id="first-month-rent-guarantee-image">
-          <img src="../../public/img/promotion/first month rent guarantee.png" style="width:100%;" alt="first month rent guarantee">
-        </div>
-        <div class="col-lg-4 col-md-12 text-center mr-auto mb-4">
-            <h1 class="display-3 mb-5" title = "section-title">
-              We'll guarantee your first month's rent
-            </h1>
-            <h3 class = "display-4">
-              We're so confident we can fill your property that we'll guarantee it
-            </h3>
-            <a href="#" class="btn btn-primary btn-lg">Please, tell me more!</a>
-          </div>
-      </div>
-    </div>
-    <!-- end first month guarantee -->
+    <home-page-promotion />
 
-    <!-- partner platforms -->
     <div class = "coop-partners py-4 my-5">
-      <div class="container-fluid">
+      <div class="container">
         <div class="row">
-          <div class="container">
+          <div class="col-md-10 mx-auto">
             <h1 class="display-3 text-center mb-5" title = "section-title">
-            Maximising the visiblity of your London listing across channels
-          </h1>
-          <p class="lead display-5 col-md-10 col-lg-8 text-center text-muted p-0 mx-auto my-4">
-            Such As Airbnb, Homeaway, Booking.com, Tripadvisor and other leading channels globally
-          </p>
-          </div>
-        </div><br><br>
-        <div class="row">
-          <div class="container">
-            <div class="row text-center mx-auto p-0">
-              <div class="col-xl-2 col-md-4 col-sm-5 mx-auto pt-3 my-4 partner-img-div">
-                  <img class = "partner-img" src="../../public/img/partners/airbnb.svg" style = "width: 70%" alt="airbnb">
-              </div>
-              <div class="col-xl-2 col-md-4 col-sm-5 mx-auto pt-3 my-4 partner-img-div">
-                  <img class = "partner-img" src="../../public/img/partners/homeaway.svg" style = "width: 70%" alt="airbnb">
-              </div>
-              
-              <div class="col-xl-2 col-md-4 col-sm-5 mx-auto pt-3 my-4 partner-img-div">
-                  <img class = "partner-img" src="../../public/img/partners/luxuryretreats.svg" style = "width: 70%" alt="airbnb">
-              </div>
-              
-              <div class="col-xl-2 col-md-4 col-sm-5 mx-auto pt-3 my-4 partner-img-div">
-                  <img class = "partner-img" src="../../public/img/partners/tripadvisor.svg" style = "width: 70%" alt="airbnb">
-              </div>
-              <div class="col-xl-2 col-md-4 col-sm-5 mx-auto pt-3 my-4 partner-img-div">
-                  <img class = "partner-img" src="../../public/img/partners/onefinestay.svg" style = "width: 70%" alt="airbnb">
-              </div>
-              <div class="col-xl-2 col-md-4 col-sm-5 mx-auto pt-3 my-4 partner-img-div">
-                  <img class = "partner-img" src="../../public/img/partners/bookingcom.svg" style = "width: 70%" alt="airbnb">
-              </div>
-            </div>
+                Maximising the visiblity of your London listing across channels
+            </h1>
+            <p class="lead display-5 text-center text-muted p-0 mx-auto my-4">
+                Such As Airbnb, Homeaway, Booking.com, Tripadvisor and other leading channels globally
+            </p>
           </div>
         </div>
-        </div>
+      </div>
+      <small-icon-gallery id = "partner-icons-gallery"/>
     </div>
-    <!-- end partner platforms -->
+    
 
     <!-- why localstay -->
     <div class="why-localstay py-4 my-5">
@@ -278,24 +188,10 @@
       <div class="container">
         <div class="row">
           <div class="display-4 text-center mb-5 mx-auto" title = "section-title">
-          Everything is taken care of
-        </div>
-        </div>
-
-      <div class="row services-div">
-          <div class="col-md-3 col-sm-4 col-5 my-4 mx-auto text-center" v-for="(service, id) in services" :key="id">
-              <div class="mb-4">
-                <img :src="service.imgUrl" :alt="service.desc" class = "service-img">
-              </div>
-              <h3 class="service-title">
-                {{service.title}}
-              </h3>
-              <p class="service-desc">
-                {{service.desc}}
-              </p>
+            Everything is taken care of
           </div>
+          <service-card-deck />
         </div>
-
       </div>
 
       <div class="row mt-5">
@@ -331,50 +227,15 @@
     <!-- end text animation -->
 
     <!-- hosts' comments -->
-    <div class="hosts-comments  py-4 my-5">
+    <div class="hosts-comments  pt-3 mt-3">
       <div class="container">
         <div class="row">
           <div class="display-4 text-center mb-5 mx-auto" title = "section-title">
             What they are saying about us
           </div>
         </div>
-        <div class="row">
-          <div class="col" style="padding: 0;">
-            <swiper class="comment-swiper-container" :options="swiperWithPagination">
-              <swiper-slide>
-                <div class="container">
-                  <div class="row">
-                    <div class="comment-img-div ml-auto col-lg-10 col-md-12" style="padding: 0;">
-                      <img src="img/bg/4.jpg" alt="background img" style="width: 100%; height: 100%;">
-                    </div>  
-                    <div class="comment-card-div col-md-5 col-sm-6">
-                      <b-card class="comment-card">
-                        <div class="mb-3">
-                            <span>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                              <i class="fas fa-star"></i>
-                            </span>
-                        </div>
-                        <blockquote class="blockquote mb-0">
-                          <p>
-                            "Hosting through Hostmaker has enabled me to capture more revenue than ever befoure. I can't recommend them enough."
-                          </p>
-                          <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                        </blockquote>
-                      </b-card>
-                    </div>           
-                  </div>
-                </div>   
-              </swiper-slide>
-                            
-            <div slot="pagination" class="comment-swiper-pagination swiper-pagination" style=""></div>
-          </swiper>
-          </div>
-        </div>
       </div>
+      <swiper-comment-over-img/>  
     </div>
     
     <!-- end hosts' comments -->
@@ -383,6 +244,7 @@
 </template>
 
 <style scoped>
+<<<<<<< HEAD
 /* swiper-wrapper css */
 /* .swiper-wrapper {
   position: relative;
@@ -448,10 +310,19 @@
 }
 
 /* end partner platform css */
+=======
+/* global css */
+.home-page-wrapper > div {
+  margin-bottom: 120px;
+}
+
+>>>>>>> c86baa63989e79028562428d9a2c2a39b2e5c031
 
 /* why localstay css */
 .why-localstay img {
   margin-bottom: 1rem;
+    width: 50px;
+  height: 50px;
 }
 
 /* end why localstay css */
@@ -505,6 +376,7 @@
   }
 }
 
+<<<<<<< HEAD
 /* end service area css */
 /* our service css */
 .service-img {
@@ -528,8 +400,9 @@
   }
 }
 /* end our service css */
+=======
+>>>>>>> c86baa63989e79028562428d9a2c2a39b2e5c031
 
-/* typing animation css */
 .fixed-text,
 .typing {
   margin-bottom: 0;
@@ -563,40 +436,26 @@
   position: relative;
 }
 
-/* host comment section css */
-.comment-card-div {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 100;
-}
-.comment-card {
-  background: gray;
-  color: whitesmoke;
-}
-.comment-swiper-pagination {
-  position: static;
-}
 
-@media screen and (max-width: 562px) {
-  .comment-card-div {
-    position: relative;
-  }
-
-  .comment-swiper-pagination {
-    position: absolute;
-    transform: translateY(-350%);
-  }
-}
-/* host comment section css */
 </style>
 
 <style src="@/vendor/libs/vue-awesome-swiper/vue-awesome-swiper.scss" lang="scss"></style>
+<<<<<<< HEAD
 <style src="@/globalFontStyle.css"></style>
+=======
+<style src = "@/GlobalFontStyle.css"></style>
+>>>>>>> c86baa63989e79028562428d9a2c2a39b2e5c031
 
 <script>
 import { swiper, swiperSlide } from "vue-awesome-swiper";
 import homePageSwiper from "@/components/HomePageSwiper";
+<<<<<<< HEAD
+=======
+import homePagePromotion from "@/components/HomePagePromotion";
+import smallIconGallery from "@/components/SmallIconGallery";
+import serviceCardDeck from "@/components/ServiceCardDeck"
+import swiperCommentOverImg from "@/components/SwiperCommentOverImg"
+>>>>>>> c86baa63989e79028562428d9a2c2a39b2e5c031
 export default {
   name: "home",
   metaInfo: {
@@ -605,7 +464,11 @@ export default {
   components: {
     swiper,
     swiperSlide,
-    "home-page-swiper": homePageSwiper
+    "home-page-swiper": homePageSwiper,
+    "home-page-promotion": homePagePromotion,
+    "small-icon-gallery" : smallIconGallery,
+    "service-card-deck" : serviceCardDeck,
+    "swiper-comment-over-img" : swiperCommentOverImg
   },
   data: function() {
     return {
@@ -630,58 +493,6 @@ export default {
       animateStrTitle: "",
       animateStrs: [],
       landlineSrc: "img/landmarks/london-landmark.svg",
-      services: [
-        {
-          imgUrl: "img/services/profile.svg",
-          title: "Profile & Listing",
-          desc: "Stand-out listings created across all the best channels"
-        },
-        {
-          imgUrl: "img/services/photography.svg",
-          title: "Professional photography",
-          desc: "Professional photography"
-        },
-        {
-          imgUrl: "img/services/guest-relations.svg",
-          title: "Guest Relations",
-          desc: "24/7 guest support and callout service"
-        },
-        {
-          imgUrl: "img/services/daily-pricing.svg",
-          title: "Daily Pricing",
-          desc: "Daily pricing review for yield maximisation"
-        },
-        {
-          imgUrl: "img/services/property-design.svg",
-          title: "Interior Design service",
-          desc: "Interior Design"
-        },
-        {
-          imgUrl: "img/services/housekeeping.svg",
-          title: "Housekeeping",
-          desc: "5-star housekeeping and linen"
-        },
-        {
-          imgUrl: "img/services/maintenance.svg",
-          title: "Maintenance",
-          desc: "Quickly resolving maintenance issues"
-        },
-        {
-          imgUrl: "img/services/key-exchange.svg",
-          title: "24/7 Key Exchange",
-          desc: "In-person meet & greets, warmly welcoming guests to your home"
-        }
-      ],
-      swiperWithPagination: {
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true
-        },
-        autoplay: {
-          delay: 2500,
-          disableOninteraction: false
-        }
-      }
     };
   },
   methods: {
@@ -702,6 +513,7 @@ export default {
   }
 };
 </script>
+<<<<<<< HEAD
 <style>
 /* global css */
 
@@ -733,3 +545,7 @@ export default {
 
 /* end global css */
 </style>
+=======
+
+// 首頁模組化初步成型
+>>>>>>> c86baa63989e79028562428d9a2c2a39b2e5c031
