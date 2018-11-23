@@ -79,7 +79,7 @@ export default {
   }
 };
 </script>
-
+<style src = "@/GlobalFontStyle.css"></style>
 <style scoped>
 .press-img {
   width: 60%;

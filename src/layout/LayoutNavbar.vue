@@ -26,20 +26,23 @@
         <b-navbar-nav id = "company-logo" href = "#" class="ml-2">
          LocalStay
         </b-navbar-nav>
-                
-        <b-collapse is-nav id="sub-bar-list2">
+        
+        <!-- nav-bar-item that is hidden while collapse -->
+        <b-collapse is-nav id="collapse-not-show">
           <b-navbar-nav class = "ml-auto">
-            <b-nav-item to="/WhatWeDo">What We Dooo</b-nav-item>
+            <b-nav-item to="/WhatWeDo">What We Do</b-nav-item>
             <!-- <router-link to="/WhatWeDo">What we do</router-link> -->
-            <b-nav-item href="#" active>Pricing</b-nav-item>
+            <b-nav-item to="/Pricing" active>Pricing</b-nav-item>
             <b-nav-item href="#" active>Who we are</b-nav-item>
           </b-navbar-nav>
         </b-collapse>
-        <b-navbar-toggle target="sub-bar-list"></b-navbar-toggle>
 
-        <b-collapse is-nav id="sub-bar-list">
+        <b-navbar-toggle   target="sub-bar-collapse-show-card"></b-navbar-toggle>
+
+         <!-- nav-bar-item that is shown while collapse toggle is triggered -->
+        <b-collapse is-nav id="sub-bar-collapse-show-card">
           <b-navbar-nav class = "ml-auto">
-            <b-nav-item to="/WhatWeDo">What We Do</b-nav-item>
+            <b-nav-item to="/WhatWeDo">What We Do00</b-nav-item>
             <!-- <router-link to="/WhatWeDo">What we do</router-link> -->
             <b-nav-item to="/Pricing" active>Pricing</b-nav-item>
             <b-nav-item href="#" active>Who we are</b-nav-item>
