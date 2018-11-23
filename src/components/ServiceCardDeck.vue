@@ -1,3 +1,17 @@
+// this component takes an array of objects and user-defined
+// bootstrap layout to generate a series of service cards
+// prop: 
+//   servicesArray => array of objs
+//     an object should be in format as 
+//     {
+        imgUrl: "img/services/profile.svg",
+        title: "Profile & Listing",
+        desc: "Stand-out listings created across all the best channels"
+         }
+  
+//   bsGridLayout
+//     placeholder for bootstrap grid layout format
+
 <template>
     <div class="container">
       <div class="row services-div">
@@ -28,50 +42,7 @@ export default {
     }
   },
   data: function() {
-    return {
-      // services: [
-      //   {
-      //     imgUrl: "img/services/profile.svg",
-      //     title: "Profile & Listing",
-      //     desc: "Stand-out listings created across all the best channels"
-      //   },
-      //   {
-      //     imgUrl: "img/services/photography.svg",
-      //     title: "Professional photography",
-      //     desc: "Professional photography"
-      //   },
-      //   {
-      //     imgUrl: "img/services/guest-relations.svg",
-      //     title: "Guest Relations",
-      //     desc: "24/7 guest support and callout service"
-      //   },
-      //   {
-      //     imgUrl: "img/services/daily-pricing.svg",
-      //     title: "Daily Pricing",
-      //     desc: "Daily pricing review for yield maximisation"
-      //   },
-      //   {
-      //     imgUrl: "img/services/property-design.svg",
-      //     title: "Interior Design service",
-      //     desc: "Interior Design"
-      //   },
-      //   {
-      //     imgUrl: "img/services/housekeeping.svg",
-      //     title: "Housekeeping",
-      //     desc: "5-star housekeeping and linen"
-      //   },
-      //   {
-      //     imgUrl: "img/services/maintenance.svg",
-      //     title: "Maintenance",
-      //     desc: "Quickly resolving maintenance issues"
-      //   },
-      //   {
-      //     imgUrl: "img/services/key-exchange.svg",
-      //     title: "24/7 Key Exchange",
-      //     desc: "In-person meet & greets, warmly welcoming guests to your home"
-      //   }
-      // ]
-    };
+    return {};
   }
 };
 </script>
