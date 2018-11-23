@@ -22,6 +22,9 @@ const router = new Router({
     }, {
       path: '/WhatWeDo',
       component: () => import('@/layout/WhatWeDo')
+    }, {
+      path: '/Pricing',
+      component: () => import('@/layout/Pricing.vue')
     }]
   }]
 })
