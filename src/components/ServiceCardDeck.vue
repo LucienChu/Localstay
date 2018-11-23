@@ -17,9 +17,9 @@
 </template>
 <script>
 export default {
-    data: function(){
-        return {
-            services: [
+  data: function() {
+    return {
+      services: [
         {
           imgUrl: "img/services/profile.svg",
           title: "Profile & Listing",
@@ -60,10 +60,10 @@ export default {
           title: "24/7 Key Exchange",
           desc: "In-person meet & greets, warmly welcoming guests to your home"
         }
-      ],
-        };
-    }
-}
+      ]
+    };
+  }
+};
 </script>
 
 <style scoped>
@@ -71,7 +71,7 @@ export default {
   width: 50px;
   height: 50px;
 }
-    @media screen and (max-width: 358px) {
+@media screen and (max-width: 358px) {
   .services-div {
     margin-top: 20px;
     display: inline-block;
