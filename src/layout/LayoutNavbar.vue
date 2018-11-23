@@ -5,9 +5,9 @@
     <b-navbar id = "top-nav-bar" toggleable="sm" variant="dark" style="z-index: 20">
       <div class="container">
         <b-dd id = "locationDropdownBtn" variant="default" text="Montreal" size="xs">
-          <b-dd-item>First action</b-dd-item>
+          <b-dd-item>First Place</b-dd-item>
 
-          <b-dd-item>Second action</b-dd-item>
+          <b-dd-item>Second Place</b-dd-item>
         </b-dd>
 
         <b-navbar-nav class = "ml-auto">
@@ -21,11 +21,20 @@
     <!-- end top navbar -->
 
     <!-- sub navbar -->
-    <b-navbar id = "sup-nav-bar" toggleable="lg" variant="light" style="z-index: 0">
+    <b-navbar id = "sub-nav-bar" toggleable="lg" variant="light" style="z-index: 0">
       <div class="container">
         <b-navbar-nav id = "company-logo" href = "#" class="ml-2">
          LocalStay
         </b-navbar-nav>
+                
+        <b-collapse is-nav id="sub-bar-list2">
+          <b-navbar-nav class = "ml-auto">
+            <b-nav-item to="/WhatWeDo">What We Dooo</b-nav-item>
+            <!-- <router-link to="/WhatWeDo">What we do</router-link> -->
+            <b-nav-item href="#" active>Pricing</b-nav-item>
+            <b-nav-item href="#" active>Who we are</b-nav-item>
+          </b-navbar-nav>
+        </b-collapse>
         <b-navbar-toggle target="sub-bar-list"></b-navbar-toggle>
 
         <b-collapse is-nav id="sub-bar-list">
