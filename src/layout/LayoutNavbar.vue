@@ -27,26 +27,19 @@
          LocalStay
         </b-navbar-nav>
         
-        <!-- nav-bar-item that is hidden while collapse -->
-        <b-collapse is-nav id="collapse-not-show">
+
+
+        <b-navbar-toggle   target="sub-bar-collapse-show-card"></b-navbar-toggle>
+
+        <b-collapse is-nav id="sub-bar-collapse-show-card">
           <b-navbar-nav class = "ml-auto">
             <b-nav-item to="/WhatWeDo">What We Do</b-nav-item>
             <!-- <router-link to="/WhatWeDo">What we do</router-link> -->
             <b-nav-item to="/Pricing" active>Pricing</b-nav-item>
             <b-nav-item href="#" active>Who we are</b-nav-item>
           </b-navbar-nav>
-        </b-collapse>
-
-        <b-navbar-toggle   target="sub-bar-collapse-show-card"></b-navbar-toggle>
-
-         <!-- nav-bar-item that is shown while collapse toggle is triggered -->
-        <b-collapse is-nav id="sub-bar-collapse-show-card">
-          <b-navbar-nav class = "ml-auto">
-            <b-nav-item to="/WhatWeDo">What We Do00</b-nav-item>
-            <!-- <router-link to="/WhatWeDo">What we do</router-link> -->
-            <b-nav-item to="/Pricing" active>Pricing</b-nav-item>
-            <b-nav-item href="#" active>Who we are</b-nav-item>
-          </b-navbar-nav>
+              <!-- <service-card-deck bs-grid-layout = "col-4 text-center" :services-array = serviceArray /> -->
+ 
         </b-collapse>
       </div>
     </b-navbar>
@@ -55,12 +48,33 @@
 </template>
 
 <script>
+import serviceCardDeck from "@/components/ServiceCardDeck";
 export default {
   name: "app-header",
+  components:{
+    "service-card-deck" : serviceCardDeck,
+  },
   data: function() {
     return {
       localEmail: "montreal@localstaty.com",
-      localPhoneNumber: "+1 514-123-4567"
+      localPhoneNumber: "+1 514-123-4567",
+      serviceArray: [
+        {
+          imgUrl: "/img/services/housekeeping.svg",
+          title: "what we do",
+          routerLink: "#"
+        },
+        {
+          imgUrl: "/img/services/housekeeping.svg",
+          title: "what we do",
+          routerLink: "#"
+        },
+        {
+          imgUrl: "/img/services/housekeeping.svg",
+          title: "what we do",
+          routerLink: "#"
+        }
+      ]
     };
   },
   props: {
@@ -95,11 +109,6 @@ export default {
   padding: 0;
 }
 
-@media screen and (max-width: 600px) {
-  #top-nav-bar {
-    display: none;
-  }
-}
 </style>
 
 

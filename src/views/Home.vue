@@ -438,7 +438,7 @@ export default {
         {
           imgUrl: "img/services/photography.svg",
           title: "Professional photography",
-          desc: "Professional photography"
+          desc: "Professional photography",
         },
         {
           imgUrl: "img/services/guest-relations.svg",
