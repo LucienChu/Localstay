@@ -24,12 +24,12 @@
     <b-navbar id = "sub-nav-bar" toggleable="lg" variant="light" style="z-index: 0">
       <div class="container">
         <b-navbar-nav id = "company-logo" href = "#" class="ml-2">
-         LocalStay
+         LocalStay {{showCard}}
         </b-navbar-nav>
         
 
 
-        <b-navbar-toggle   target="sub-bar-collapse-show-card"></b-navbar-toggle>
+        <b-navbar-toggle   target="sub-bar-collapse-noshown"></b-navbar-toggle>
 
         <b-collapse is-nav id="sub-bar-collapse-show-card">
           <b-navbar-nav class = "ml-auto">
@@ -37,9 +37,12 @@
             <!-- <router-link to="/WhatWeDo">What we do</router-link> -->
             <b-nav-item to="/Pricing" active>Pricing</b-nav-item>
             <b-nav-item href="#" active>Who we are</b-nav-item>
-          </b-navbar-nav>
-              <!-- <service-card-deck bs-grid-layout = "col-4 text-center" :services-array = serviceArray /> -->
- 
+          </b-navbar-nav> 
+        </b-collapse>
+        <b-button variant = "primary"to = "/WhatWeDo">Get Start</b-button>
+
+        <b-collapse v-if = "showCard" is-nav id = "sub-bar-collapse-show-card">
+           <service-card-deck bs-grid-layout = "col-4 text-center" :services-array = serviceArray />
         </b-collapse>
       </div>
     </b-navbar>
@@ -56,6 +59,7 @@ export default {
   },
   data: function() {
     return {
+      showCard: false,
       localEmail: "montreal@localstaty.com",
       localPhoneNumber: "+1 514-123-4567",
       serviceArray: [
@@ -109,6 +113,10 @@ export default {
   padding: 0;
 }
 
+@media screen and (max-width: 600px) {
+  #top-nav-bar {
+    display: none;
+  }
+}
+
 </style>
-
-
