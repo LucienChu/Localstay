@@ -41,7 +41,7 @@
             <b-nav-item to = "/Pricing" active>Pricing</b-nav-item>
             <b-nav-item to = "/WhoWeAre" active>Who we are</b-nav-item>
           </b-navbar-nav>
-            <b-button v-if = "!collapse" id = "getStartBtn1" variant = "primary" size = "sm" to = "/WhatWeDo">get start</b-button>
+            <b-button v-if = "!collapse" id = "getStartBtn1" variant = "primary" size = "sm" to = "/GetStart">get start</b-button>
 
           <b-navbar-nav v-if = "collapse" >
             <service-card-deck bs-grid-layout = "col-4 text-center pt-5"

@@ -8,6 +8,9 @@ import globals from './globals'
 import Popper from 'popper.js'
 import VueTypedJs from 'vue-typed-js'
 
+import VueFormWizard from 'vue-form-wizard'
+import 'vue-form-wizard/dist/vue-form-wizard.min.css'
+
 
 
 // Required to enable animations on dropdowns/tooltips/popovers
@@ -17,6 +20,7 @@ Vue.config.productionTip = false
 
 Vue.use(BootstrapVue)
 Vue.use(VueTypedJs)
+Vue.use(VueFormWizard)
 
 // Global RTL flag
 Vue.mixin({
