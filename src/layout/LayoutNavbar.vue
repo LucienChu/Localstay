@@ -24,26 +24,25 @@
     <b-navbar id = "sub-nav-bar" toggleable="lg" variant="light" style="z-index: 0">
       <div class="container">
         <b-navbar-nav id = "company-logo" href = "#" class="ml-2">
-         LocalStay
+         LocalStay {{showCard}}
         </b-navbar-nav>
-                
-        <b-collapse is-nav id="sub-bar-list2">
-          <b-navbar-nav class = "ml-auto">
-            <b-nav-item to="/WhatWeDo">What We Dooo</b-nav-item>
-            <!-- <router-link to="/WhatWeDo">What we do</router-link> -->
-            <b-nav-item href="#" active>Pricing</b-nav-item>
-            <b-nav-item href="#" active>Who we are</b-nav-item>
-          </b-navbar-nav>
-        </b-collapse>
-        <b-navbar-toggle target="sub-bar-list"></b-navbar-toggle>
+        
 
-        <b-collapse is-nav id="sub-bar-list">
+
+        <b-navbar-toggle   target="sub-bar-collapse-noshown"></b-navbar-toggle>
+
+        <b-collapse is-nav id="sub-bar-collapse-show-card">
           <b-navbar-nav class = "ml-auto">
             <b-nav-item to="/WhatWeDo">What We Do</b-nav-item>
             <!-- <router-link to="/WhatWeDo">What we do</router-link> -->
             <b-nav-item to="/Pricing" active>Pricing</b-nav-item>
-            <b-nav-item href="/WhoWeAre" active>Who we are</b-nav-item>
-          </b-navbar-nav>
+            <b-nav-item href="#" active>Who we are</b-nav-item>
+          </b-navbar-nav> 
+        </b-collapse>
+        <b-button variant = "primary" to = "/WhatWeDo">Get Start</b-button>
+
+        <b-collapse v-if = "showCard" is-nav id = "sub-bar-collapse-show-card">
+           <service-card-deck bs-grid-layout = "col-4 text-center" :services-array = serviceArray />
         </b-collapse>
       </div>
     </b-navbar>
@@ -52,12 +51,34 @@
 </template>
 
 <script>
+import serviceCardDeck from "@/components/ServiceCardDeck";
 export default {
   name: "app-header",
+  components:{
+    "service-card-deck" : serviceCardDeck,
+  },
   data: function() {
     return {
+      showCard: false,
       localEmail: "montreal@localstaty.com",
-      localPhoneNumber: "+1 514-123-4567"
+      localPhoneNumber: "+1 514-123-4567",
+      serviceArray: [
+        {
+          imgUrl: "/img/services/housekeeping.svg",
+          title: "what we do",
+          routerLink: "#"
+        },
+        {
+          imgUrl: "/img/services/housekeeping.svg",
+          title: "what we do",
+          routerLink: "#"
+        },
+        {
+          imgUrl: "/img/services/housekeeping.svg",
+          title: "what we do",
+          routerLink: "#"
+        }
+      ]
     };
   },
   props: {
@@ -97,6 +118,5 @@ export default {
     display: none;
   }
 }
+
 </style>
-
-

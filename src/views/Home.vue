@@ -196,7 +196,7 @@
           <div class="display-4 text-center mb-5 mx-auto" title = "section-title">
             Everything is taken care of
           </div>
-          <service-card-deck />
+          <service-card-deck :services-array = services />
         </div>
       </div>
 
@@ -241,7 +241,7 @@
           </div>
         </div>
       </div>
-      <swiper-comment-over-img/>  
+      <swiper-comment-over-img :comment-image-array = commentsWithImgs />  
     </div>
     
     <!-- end hosts' comments -->
@@ -250,40 +250,6 @@
 </template>
 
 <style scoped>
-<<<<<<< HEAD
-/* swiper-wrapper css */
-/* .swiper-wrapper {
-  position: relative;
-}
-.swiper-text-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 20;
-  width: 80%;
-}
-.swiper-text-container h1,
-.swiper-text-container h4 {
-  color: whitesmoke;
-}
-
-@media screen and (max-width: 576px) {
-  .swiper-text-container h1,
-  .swiper-text-container h3,
-  .swiper-text-container h4 {
-    margin-bottom: 0;
-    text-align: center;
-  }
-  .swiper-text-container img {
-    width: 80%;
-  }
-  .home-page-wrapper > div {
-    margin-bottom: 30px;
-  }
-} */
-/* end swiper-wrapper css */
-
 .home-page-wrapper > div,
 .mb-5 {
   margin-bottom: 10px !important;
@@ -379,7 +345,6 @@
   }
 }
 
-<<<<<<< HEAD
 /* end service area css */
 /* our service css */
 .service-img {
@@ -464,6 +429,69 @@ export default {
   },
   data: function() {
     return {
+      services: [
+        {
+          imgUrl: "img/services/profile.svg",
+          title: "Profile & Listing",
+          desc: "Stand-out listings created across all the best channels"
+        },
+        {
+          imgUrl: "img/services/photography.svg",
+          title: "Professional photography",
+          desc: "Professional photography",
+        },
+        {
+          imgUrl: "img/services/guest-relations.svg",
+          title: "Guest Relations",
+          desc: "24/7 guest support and callout service"
+        },
+        {
+          imgUrl: "img/services/daily-pricing.svg",
+          title: "Daily Pricing",
+          desc: "Daily pricing review for yield maximisation"
+        },
+        {
+          imgUrl: "img/services/property-design.svg",
+          title: "Interior Design service",
+          desc: "Interior Design"
+        },
+        {
+          imgUrl: "img/services/housekeeping.svg",
+          title: "Housekeeping",
+          desc: "5-star housekeeping and linen"
+        },
+        {
+          imgUrl: "img/services/maintenance.svg",
+          title: "Maintenance",
+          desc: "Quickly resolving maintenance issues"
+        },
+        {
+          imgUrl: "img/services/key-exchange.svg",
+          title: "24/7 Key Exchange",
+          desc: "In-person meet & greets, warmly welcoming guests to your home"
+        }
+      ],
+
+      commentsWithImgs: [
+        {
+          desc:
+            "through Hostmaker has enabled me to capture more revenue than ever befoure. I can't recommend them enough.",
+          propertyImgUrl: "img/bg/4.jpg",
+          propertyOwner: "Mr. A"
+        },
+        {
+          desc:
+            " Hostmaker has enabled me to capture more revenue than ever befoure. I can't recommend them enough.",
+          propertyImgUrl: "img/bg/4.jpg",
+          propertyOwner: "Mr. A"
+        },
+        {
+          desc:
+            "through has enabled me to capture more revenue than ever befoure. I can't recommend them enough.",
+          propertyImgUrl: "img/bg/4.jpg",
+          propertyOwner: "Mr. A"
+        }
+      ],
       serviceArea: [
         "CDN/NDG",
         "Griffintown",

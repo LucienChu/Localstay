@@ -28,6 +28,9 @@ const router = new Router({
     }, {
       path: '/WhoWeAre',
       component: () => import('@/layout/WhoWeAre.vue')
+    }, {
+      path: '/InputGroups',
+      component: () => import('@/components/forms/InputGroups.vue')
     }]
   }]
 })
