@@ -40,11 +40,6 @@
             <!-- <router-link to="/WhatWeDo">What we do</router-link> -->
             <b-nav-item href="#" active>Pricing</b-nav-item>
             <b-nav-item href="#" active>Who we are</b-nav-item>
-<<<<<<< HEAD
-          </b-navbar-nav> 
-        </b-collapse>
-        <b-button variant = "primary" to = "/WhatWeDo">Get Start</b-button>
-=======
           </b-navbar-nav>
             <b-button v-if = "!collapse" id = "getStartBtn1" variant = "primary" size = "sm" to = "/WhatWeDo">get start</b-button>
 
@@ -63,7 +58,6 @@
               <b-list-group-item class="mx-auto">
                 <b-dd variant="default" text="Montreal" size="sm">
           <b-dd-item>First Place</b-dd-item>
->>>>>>> origin/master
 
           <b-dd-item>Second Place</b-dd-item>
         </b-dd>
