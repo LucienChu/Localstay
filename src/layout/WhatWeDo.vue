@@ -31,30 +31,30 @@
             </b-nav>
         </nav>
 
-        <b-container fluid style="background-color: white;">
+        <b-container>
             <b-row>
-                <h3 class="mx-auto">What Localstay does to protect your downside &#38; maximise your returns</h3>
+                <h3 class="mx-auto py-5">What Localstay does to protect your downside &#38; maximise your returns</h3>
             </b-row>
-            <b-row  style="margin-bottom: 25px">
-                <b-col cols="8">
+            <b-row  style="margin-bottom: 25px" class = "d-flex">
+                <b-col cols="md-6 sm-12 mx-auto" class = "order-md-1 order-2">
                     <p>Up to 30% more revenues for property portfolios from 10 to 1,000 units</p>
                     <h4>Impeccable listings for maximum visibility</h4>
                     <p class="article-size">We create stand-out listings for your property portfolio across 15+ distribution channels, with a mix of expert copywriting, professional photography and smart automations. Our channels include exclusive, premium channels such as Stayy with Hostmaker or Tribute Portfolio Homes, in partnership with Marriott Intenational.</p>
                     <h4>Your dedicated advisor</h4>
                     <p class="article-size">Your dedicated advisor assists you every step of the way with expert advice, local knowledge and in-depth insights about the performance of your portfolio. He or she will your single point of contact bringing your whole team at Hostmaker together.</p></b-col>
-                <b-col><img src="img/avatars/3.png" class="rounded mx-auto d-block" alt="Picture 1"></b-col>
+                <b-col cols="md-6 sm-12 mx-auto" class = "order-md-2 order-1"><img src="img/avatars/3.png" class="rounded mx-auto d-block" alt="Picture 1"></b-col>
             </b-row>
             <b-row style="margin-bottom: 25px">
-                <b-col cols="4"><img src="img/avatars/3.png" class="rounded mx-auto d-block" alt="Picture 1"></b-col>
-                <b-col>
+                <b-col cols="md-6 sm-12"><img src="img/avatars/3.png" class="rounded mx-auto d-block" alt="Picture 1"></b-col>
+                <b-col cols="md-6 sm-12">
                     <p>Maximise your returns and track your portfolio's performance daily, monthly, yearly</p>
                     <h4>Daily pricing review to maximise your returns</h4>
                     <p class="article-size">Our advanced pricing algorithms are tailored to your risk profile and property portfolio, delivering an industry-leading 30% mark-up in returns. They dynamically adjust prices on a daily basis to deliver the best possible RevPAR per unit and overall NOI.</p>
                     <h4>Customised online performance dashboard</h4>
                     <p class="article-size">Track your property portfolio's daily, monthly and yearly performance thanks to a powerful, customised online dashboard. Dive into the details of specific units, or have a quick look at your key metrics and performance indicators.</p></b-col>
             </b-row>
-            <b-row style="margin-bottom: 25px">
-                <b-col cols="8">
+            <b-row style="margin-bottom: 25px" class = "d-flex">
+                <b-col cols="md-6 sm-12" class = "order-md-1 order-2">
                     <p>Better design and happier guests &#38; tenants for better returns</p>
                     <h4>Design studio: At Home with Hostmaker</h4>
                     <p class="article-size">Our in-house interior design studio creates unique interiors in a scalable, cost-effective way. From refurbishments to full-on furnishing jobs, At Home with Hostmaker crafts travel-inspired homes to delight guests and tenants alike.</p>
@@ -63,10 +63,10 @@
                     <h4>Tech-fuelled operations</h4>
                     <p class="article-size">Our product and tech teams supercharge each and every part of our operations, from high-end linen logistics all the way to Welcome Wizards (as we call our greeters) routing .</p>
                 </b-col>
-                <b-col><img src="img/avatars/3.png" class="rounded mx-auto d-block" alt="Picture 1"></b-col>
+                <b-col cols = "md-6 sm-12" class="order-md-2 order-1"><img src="img/avatars/3.png" class="rounded mx-auto d-block" alt="Picture 1"></b-col>
             </b-row>
             <b-row style="margin-bottom: 25px">
-                <b-col cols="4"><img src="img/avatars/3.png" class="rounded mx-auto d-block" alt="Picture 1"></b-col>
+                <b-col cols="md-6 sm-12"><img src="img/avatars/3.png" class="rounded mx-auto d-block" alt="Picture 1"></b-col>
                 <b-col>
                     <p>Property portfolio management &#38; maintenance</p>
                     <h4>End-to-end maintenance of property repairs</h4>
@@ -79,18 +79,18 @@
             </b-row>
         </b-container>
 
-        <b-container fluid>
+        <b-container>
             <h3 class="text-center">At Home with Localstay: our design studio</h3>
             <b-row>
-                <b-col><b-img src="img/small/1.jpg" fluied alt="place holder"/></b-col>
-                <b-col>
+                <b-col cols = "md-6 sm-12" class="mb-3"><b-img src="img/small/1.jpg" fluied alt="place holder" style="height: 100%"/></b-col>
+                <b-col cols = "md-6 sm-12" class="mb-3">
                     <b-row>
                         <b-col>
                             <b-img src="img/small/2.jpg" fluid alt="place holder2"/>
                         </b-col>
                     </b-row>
                     <b-row>
-                        <b-col>
+                        <b-col class="pt-4">
                             <p>Our skilled team of interior designers will have your home looking impeccable for your guests, encouraging 5-star reviews and a boost in your revenue.</p>
                         </b-col>
                     </b-row>
@@ -101,41 +101,41 @@
 </template>
 
 <style>
-    .article-size {
-        font-size: 1.25em;
-    }
+img {
+  width: 100%;
+}
+.article-size {
+  font-size: 1.25em;
+}
 
-    .nav-modify {
-        margin: 0 30% 0 30%; 
-    }
+.nav-modify {
+  margin: 0 30% 0 30%;
+}
 
-    @media screen and (max-width: 991px){
-        .nav-modify {
-            margin: 0 20% 0 20%;
-        }
-    }
+@media screen and (max-width: 991px) {
+  .nav-modify {
+    margin: 0 20% 0 20%;
+  }
+}
 
-    @media screen and (max-width: 765px){
-        .nav-modify {
-            margin: 0;
-        }
-    }
+@media screen and (max-width: 765px) {
+  .nav-modify {
+    margin: 0;
+  }
+}
 
-    .overlay-img {
-        position: absolute;
-        top: 30%;
-
-    }
+.overlay-img {
+  position: absolute;
+  top: 30%;
+}
 </style>
 
 <script>
 export default {
-    name: 'what-we-do',
+  name: "what-we-do",
 
-    props: {
-
-    }
-}
+  props: {}
+};
 </script>
 
 
