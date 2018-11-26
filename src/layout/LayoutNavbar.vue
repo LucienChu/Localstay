@@ -36,10 +36,10 @@
 
         <b-collapse is-nav id = "collapse-content" @show = "collapse = !collapse" @hidden = "collapse = !collapse">
           <b-navbar-nav v-if = "!collapse" class = "ml-auto">
-            <b-nav-item to="/WhatWeDo">What We Dooo</b-nav-item>
+            <b-nav-item to = "/WhatWeDo">What We Do</b-nav-item>
             <!-- <router-link to="/WhatWeDo">What we do</router-link> -->
-            <b-nav-item href="#" active>Pricing</b-nav-item>
-            <b-nav-item href="#" active>Who we are</b-nav-item>
+            <b-nav-item to = "/Pricing" active>Pricing</b-nav-item>
+            <b-nav-item to = "/WhoWeAre" active>Who we are</b-nav-item>
           </b-navbar-nav>
             <b-button v-if = "!collapse" id = "getStartBtn1" variant = "primary" size = "sm" to = "/WhatWeDo">get start</b-button>
 
@@ -79,8 +79,8 @@
 import serviceCardDeck from "@/components/ServiceCardDeck";
 export default {
   name: "app-header",
-  components:{
-    "service-card-deck" : serviceCardDeck,
+  components: {
+    "service-card-deck": serviceCardDeck
   },
   data: function() {
     return {
@@ -93,17 +93,17 @@ export default {
         {
           imgUrl: "/img/services/housekeeping.svg",
           title: "what we do",
-          routerLink: "#"
+          routerLink: "/WhatWeDo"
         },
         {
           imgUrl: "/img/services/daily-pricing.svg",
           title: "Pricing",
-          routerLink: "#"
+          routerLink: "/Pricing"
         },
         {
           imgUrl: "/img/services/who-we-are.svg",
           title: "who we are",
-          routerLink: "#"
+          routerLink: "/WhoWeAre"
         }
       ]
     };
@@ -122,8 +122,7 @@ export default {
 
     getLayoutNavbarBg() {
       return this.layoutNavbarBg;
-    },
-
+    }
   }
 };
 </script>
@@ -141,7 +140,7 @@ export default {
   padding: 0;
 }
 
-#getStartBtn{
+#getStartBtn {
   margin-right: 0.2em;
 }
 
@@ -151,15 +150,14 @@ export default {
   }
 }
 
-@media screen and (min-width: 990px){
-  #getStartBtn{
-    display:none;
+@media screen and (min-width: 990px) {
+  #getStartBtn {
+    display: none;
   }
 }
 
-.navbar-toggle-icon{
+.navbar-toggle-icon {
   width: 15px !important;
   height: 15px !important;
 }
-
 </style>
