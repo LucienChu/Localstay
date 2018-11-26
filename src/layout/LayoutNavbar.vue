@@ -24,26 +24,57 @@
     <b-navbar id = "sub-nav-bar" toggleable="lg" variant="light" style="z-index: 0">
       <div class="container">
         <b-navbar-nav id = "company-logo" href = "#" class="ml-2">
-         LocalStay {{showCard}}
+         LocalStay
         </b-navbar-nav>
-        
+        <div class="ml-auto">
+          <b-button id = "getStartBtn" variant = "primary" size = "sm" to = "/WhatWeDo">get start</b-button>
+          <b-navbar-toggle target = "collapse-content">
+            
+            <span v-if = "collapse == true" class = "ion ion-md-close" style = "width: 1.5em; height: 1.5em;"></span>
+          </b-navbar-toggle>
+        </div>
 
-
-        <b-navbar-toggle   target="sub-bar-collapse-noshown"></b-navbar-toggle>
-
-        <b-collapse is-nav id="sub-bar-collapse-show-card">
-          <b-navbar-nav class = "ml-auto">
-            <b-nav-item to="/WhatWeDo">What We Do</b-nav-item>
+        <b-collapse is-nav id = "collapse-content" @show = "collapse = !collapse" @hidden = "collapse = !collapse">
+          <b-navbar-nav v-if = "!collapse" class = "ml-auto">
+            <b-nav-item to="/WhatWeDo">What We Dooo</b-nav-item>
             <!-- <router-link to="/WhatWeDo">What we do</router-link> -->
-            <b-nav-item to="/Pricing" active>Pricing</b-nav-item>
+            <b-nav-item href="#" active>Pricing</b-nav-item>
             <b-nav-item href="#" active>Who we are</b-nav-item>
+<<<<<<< HEAD
           </b-navbar-nav> 
         </b-collapse>
         <b-button variant = "primary" to = "/WhatWeDo">Get Start</b-button>
+=======
+          </b-navbar-nav>
+            <b-button v-if = "!collapse" id = "getStartBtn1" variant = "primary" size = "sm" to = "/WhatWeDo">get start</b-button>
 
-        <b-collapse v-if = "showCard" is-nav id = "sub-bar-collapse-show-card">
-           <service-card-deck bs-grid-layout = "col-4 text-center" :services-array = serviceArray />
+          <b-navbar-nav v-if = "collapse" >
+            <service-card-deck bs-grid-layout = "col-4 text-center pt-5"
+          :services-array = serviceArray />
+            <b-list-group class = "pt-4">
+              <b-list-group-item class="d-flex justify-content-between align-items-center">
+                Guest Contact
+                <span>{{localPhoneNumber}}</span>
+              </b-list-group-item>
+              <b-list-group-item class="d-flex justify-content-between align-items-center">
+                Email
+                <span>{{localEmail}}</span>
+              </b-list-group-item>
+              <b-list-group-item class="mx-auto">
+                <b-dd variant="default" text="Montreal" size="sm">
+          <b-dd-item>First Place</b-dd-item>
+>>>>>>> origin/master
+
+          <b-dd-item>Second Place</b-dd-item>
+        </b-dd>
+              </b-list-group-item>
+
+            </b-list-group>
+          </b-navbar-nav>
+          
         </b-collapse>
+
+
       </div>
     </b-navbar>
     <!-- end sub navbar -->
@@ -59,9 +90,11 @@ export default {
   },
   data: function() {
     return {
-      showCard: false,
+      toggleIcon: "",
       localEmail: "montreal@localstaty.com",
       localPhoneNumber: "+1 514-123-4567",
+
+      collapse: false,
       serviceArray: [
         {
           imgUrl: "/img/services/housekeeping.svg",
@@ -69,13 +102,13 @@ export default {
           routerLink: "#"
         },
         {
-          imgUrl: "/img/services/housekeeping.svg",
-          title: "what we do",
+          imgUrl: "/img/services/daily-pricing.svg",
+          title: "Pricing",
           routerLink: "#"
         },
         {
-          imgUrl: "/img/services/housekeeping.svg",
-          title: "what we do",
+          imgUrl: "/img/services/who-we-are.svg",
+          title: "who we are",
           routerLink: "#"
         }
       ]
@@ -95,7 +128,8 @@ export default {
 
     getLayoutNavbarBg() {
       return this.layoutNavbarBg;
-    }
+    },
+
   }
 };
 </script>
@@ -113,10 +147,25 @@ export default {
   padding: 0;
 }
 
+#getStartBtn{
+  margin-right: 0.2em;
+}
+
 @media screen and (max-width: 600px) {
   #top-nav-bar {
     display: none;
   }
+}
+
+@media screen and (min-width: 990px){
+  #getStartBtn{
+    display:none;
+  }
+}
+
+.navbar-toggle-icon{
+  width: 15px !important;
+  height: 15px !important;
 }
 
 </style>
