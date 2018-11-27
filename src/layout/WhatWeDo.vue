@@ -6,21 +6,66 @@
             <b-img src="img/bg/1.jpg" fluid alt="owner" />
         </div>
         <!-- first nav bar -->
+        <!-- <b-container>
+            <b-row class = "d-flex justify-content-between mx-auto">
+                <b-col cols="4 text-center" class="home-block">
+                    <img src="/img/services/investor.svg" class="home-imgs" alt="Many homes">
+                    <h5>Many homes</h5>
+                </b-col>
+                <b-col cols="4 text-center" class="home-block">
+                    <img src="/img/services/landlord.svg" class="home-imgs" alt="a few home">
+                    <h5>A few homes</h5>
+                </b-col>
+                <b-col cols="4 text-center" class="home-block">
+                    <img src="/img/services/homeowner.svg" class="home-imgs" alt="one home">
+                    <h5>One home</h5>
+                </b-col>
+            </b-row>
+        </b-container> -->
+
+        <b-nav class="pt-4 mt-3">
+            <b-container style = "width: 40%;">
+            <b-row class = "d-flex justify-content-between mx-auto">
+                <b-nav-item class="col-4 home-block mx-auto text-center">
+                    <img src="/img/services/investor.svg" class="home-imgs" alt="Many homes">
+                    <h5 class = "pt-3" title = "num-of-property">Many homes</h5>
+                </b-nav-item>
+                <b-nav-item class="col-4 home-block mx-auto text-center">
+                    <img src="/img/services/landlord.svg" class="home-imgs" alt="a few home">
+                    <h5 class = "pt-3" title = "num-of-property">A few homes</h5>
+                </b-nav-item>
+                <b-nav-item class="col-4 home-block mx-auto text-center">
+                    <img src="/img/services/homeowner.svg" class="home-imgs" alt="one home">
+                    <h5 class = "pt-3" title = "num-of-property">One home</h5>
+                </b-nav-item>
+            </b-row>
+        </b-container>
+        </b-nav>
         <nav role="navigation">
-            <b-nav justified class="nav-modify">
-                <b-nav-item class="align-self-end mx-auto">
-                    <img src="/img/services/investor.svg" class="rounded mx-auto d-block" alt="Many homes">
-                    <div>Many homes</div>
-                </b-nav-item>
-                <b-nav-item class="align-self-end mx-auto">
-                    <img src="/img/services/landlord.svg" class="rounded mx-auto d-block" alt="a few home">
-                    <div>A few homes</div>
-                </b-nav-item>
-                <b-nav-item class="align-self-end mx-auto">
-                    <img src="/img/services/homeowner.svg" class="rounded mx-auto d-block" alt="one home">
-                    <div>One home</div>
-                </b-nav-item> 
-            </b-nav>
+            <b-container>
+                <b-nav justified class="mx-auto">
+                    <b-col cols = "4" class = "mx-auto">
+                        <b-nav-item>
+                            <div>
+                                <img src="/img/services/investor.svg" class="rounded mx-auto d-block" alt="Many homes">
+                            </div>
+                        Many homes
+                    </b-nav-item>
+                    </b-col>
+                    <b-col cols = "4" class = "mx-auto">
+                        <b-nav-item>
+                        <img src="/img/services/landlord.svg" class="rounded mx-auto d-block" alt="a few home">
+                        <div>A few homes</div>
+                    </b-nav-item></b-col>
+                    
+                    <b-col cols = "4" class = "mx-auto">
+                        <b-nav-item>
+                        <img src="/img/services/homeowner.svg" class="rounded mx-auto d-block" alt="one home">
+                        <div>One home</div>
+                    </b-nav-item> </b-col>
+                    
+                </b-nav>
+            </b-container>
         </nav>
         <!-- second nav bar -->
         <nav class="container-fluid" role="navigation">
@@ -100,15 +145,18 @@
     </div>
 </template>
 
-<style>
-img {
+
+
+<style scoped>
+/* img {
   width: 100%;
-}
+} */
 .article-size {
   font-size: 1.25em;
 }
 
-.nav-modify {
+/* first nav bar css */
+/* .nav-modify {
   margin: 0 30% 0 30%;
 }
 
@@ -122,8 +170,33 @@ img {
   .nav-modify {
     margin: 0;
   }
+} */
+/* first nav bar css */
+
+.home-imgs{
+    width: 8em;
+    height: 4.5em;
+    width: 100%;
 }
 
+[title = "num-of-property"]{
+    color: lightslategray;
+}
+
+
+[title = "num-of-property"]:focus-within{
+    color: red;
+}
+
+
+.home-block{
+    opacity: 0.4
+}
+
+.home-block:hover,
+.home-block:focus-within{
+    opacity: 1;
+}
 .overlay-img {
   position: absolute;
   top: 30%;
