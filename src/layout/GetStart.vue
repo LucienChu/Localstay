@@ -1,47 +1,62 @@
 <template>
     <b-card>
-    <form-wizard @on-complete="onComplete">
-        <tab-content title="Location"
-                    icon="ti-user">
-            <location :parentData="myData" v-on:nextForm="toLocation"></location>
-        </tab-content>
-        <tab-content title="Details"
-                    icon="ti-settings">
-        My second tab content
-        </tab-content>
-        <tab-content title="Book property assessment"
-                    icon="ti-check">
-        Yuhuuu! This seems pretty damn simple
-        </tab-content>
-    </form-wizard>
-    <p>{{fromLocation}}</p>
+        <b-form>
+            <form-wizard @on-complete="onComplete">
+                <tab-content title="Location"
+                            icon="ti-user">
+                    <form-location v-on:childToParentAddress="toLocation" />
+                </tab-content>
+                <tab-content title="Details"
+                            icon="ti-settings">
+                    <form-detail v-on:childToParentDetail="toDetail" />
+                </tab-content>
+                <tab-content title="About you"
+                            icon="ti-check">
+                    <form-aboutyou v-on:childToParentAboutYou="toAboutYou" />
+                </tab-content>
+            </form-wizard>
+        </b-form>
+    <p>Parent: {{formData}}</p>
     </b-card>
 
 </template>
 
 <script>
-import location from "../components/Location.vue"
+import location from "@/components/Location.vue"
+import detail from "@/components/Detail.vue"
+import aboutYou from "@/components/AboutYou.vue"
+
 export default {
     components: {
-        "location": location,
+        "form-location": location,
+        "form-detail": detail,
+        "form-aboutyou": aboutYou
     },
     data: () => {
         return {
-            fromLocation: '',
-            fromDetail: '',
+            formData: {
+                fromLocation: '',
+                fromDetail: '',
+                fromAboutYou: ''
+            }, 
         }
     },
     methods: {
         onComplete: function(){
             alert('Yay. Done!');
         },
-        toLocation(value)
+        toLocation: function (value)
         {
-            this.fromLocation = value;
+            this.formData.fromLocation = value;
         },
-        toDetail(value)
+        toDetail: function(value)
         {
-            this.fromDetail = value;
+            console.log("in")
+            this.formData.fromDetail = value;
+        },
+        toAboutYou: function(value) 
+        {
+            this.formData.fromAboutYou = value;
         }
     }
   }
