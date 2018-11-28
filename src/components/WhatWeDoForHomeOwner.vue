@@ -3,7 +3,7 @@
     <b-container>
       <b-row class="title-row">
         <b-col cols="lg-10 md-12 mx-auto text-center">
-          <h3 title="header-title" class="display-4">Where we can help with your property portfolio</h3>
+          <h3 title="header-title" class="display-4">Benefits for Primary Home Owners at Hostmaker</h3>
           <services-for-investor
             class="pt-4"
             bs-grid-layout="col-lg-4 col-12 mb-4"
@@ -144,25 +144,25 @@ export default {
     return {
       servicesArr: [
         {
-          imgUrl: "/img/services/prize.svg",
-          desc: "A prize image",
+          imgUrl: "/img/services/profile.svg",
+          desc: "A profile image",
           imgSize: "md",
           rawHTML:
-            "<p style = 'font-size: 1.2em;'>Put your property in safe hands with our <b>guest vetting</b> team &#38; <b>in-person-check ins</b></p>"
+            "<p style = 'font-size: 1.2em;'>Put your property in safe hands with our <b>guest vetting</b> team &amp; <b>in-person check-ins</b></p>"
         },
         {
-          imgUrl: "/img/services/daily-pricing.svg",
-          desc: "A pricing image",
+          imgUrl: "/img/services/photography.svg",
+          desc: "An photography image",
           imgSize: "md",
           rawHTML:
             "<p style = 'font-size: 1.2em;'>Experience superior listings complete with <b>professional photography</b> and copywriting</p>"
         },
         {
-          imgUrl: "/img/services/dashboard.svg",
-          desc: "A dash board image ",
+          imgUrl: "/img/services/guest-relations.svg",
+          desc: "a guest-relation image",
           imgSize: "md",
           rawHTML:
-            "<p style = 'font-size: 1.2em;'>Experience superior listings complete with <b>professional photography</b> and copywriting</p>"
+            "<p style = 'font-size: 1.2em;'>Achieve more 5 star reviews with customised welcome packs and <b>24/7 guest support</b></p>"
         }
       ]
     };

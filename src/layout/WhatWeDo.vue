@@ -43,79 +43,84 @@
               :class="[{'sub-navbar-item-selected': subNavbarIndex == 0}, 'sub-navbar-items col-4']"
               @click="subNavbarIndex = 0"
             >Services &#38; benefits</b-nav-item>
-            <b-nav-item :class="[{'sub-navbar-item-selected': subNavbarIndex == 1}, 'sub-navbar-items col-4']" 
-                        @click="subNavbarIndex = 1">How it works</b-nav-item>
-            <b-nav-item :class="[{'sub-navbar-item-selected': subNavbarIndex == 2}, 'sub-navbar-items col-4']" 
-                        @click="subNavbarIndex = 2">Case Studies</b-nav-item>
+            <b-nav-item
+              :class="[{'sub-navbar-item-selected': subNavbarIndex == 1}, 'sub-navbar-items col-4']"
+              @click="subNavbarIndex = 1"
+            >How it works</b-nav-item>
+            <b-nav-item
+              :class="[{'sub-navbar-item-selected': subNavbarIndex == 2}, 'sub-navbar-items col-4']"
+              @click="subNavbarIndex = 2"
+            >Case Studies</b-nav-item>
           </b-nav>
         </b-container>
       </b-nav>
     </b-container>
 
-    <what-we-do-for-investor v-if = "topNavbarIndex == 0 && subNavbarIndex == 0" />
-
+    <what-we-do-for-investor v-if="topNavbarIndex == 0 && subNavbarIndex == 0"/>
+    <what-we-do-for-landlord v-if="topNavbarIndex == 1 && subNavbarIndex == 0"/>
+    <what-we-do-for-home-owner v-if="topNavbarIndex == 2 && subNavbarIndex == 0"/>
+    <case-study v-if="subNavbarIndex == 2"/>
   </div>
 </template>
 
 
 
 <style scoped>
- /* navbars' css */
- #top-navbar-container{
-     width: 50%;
- }
+/* navbars' css */
+#top-navbar-container {
+  width: 50%;
+}
 
- #sub-navbar-container{
-     width: 45%;
- }
+#sub-navbar-container {
+  width: 45%;
+}
 
- .sub-navbar-items{
-   font-size: 1.1em;
-   font-weight: 500;
- }
- @media screen and (max-width: 768px){
-     #top-navbar-container,
-     #sub-navbar-container{
-         width: 100%;
-     }
- }
-
-  @media screen and (max-width: 420px){
-     #top-navbar-container,
-     #sub-navbar-container{
-         padding: 0;
-     }
-
-     .sub-navbar-items{
-         padding: 0px;
-     }
- }
- 
- .home-imgs{
-    width: 8em;
-    height: 4.5em;
+.sub-navbar-items {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+@media screen and (max-width: 768px) {
+  #top-navbar-container,
+  #sub-navbar-container {
     width: 100%;
+  }
 }
 
-[title = "num-of-property"]{
-    color: lightslategray;
-}
-.home-block{
-    opacity: 0.4
+@media screen and (max-width: 420px) {
+  #top-navbar-container,
+  #sub-navbar-container {
+    padding: 0;
+  }
+
+  .sub-navbar-items {
+    padding: 0px;
+  }
 }
 
-.home-block:hover{
-    opacity: 1;
+.home-imgs {
+  width: 8em;
+  height: 4.5em;
+  width: 100%;
 }
 
-.top-navbar-item-selected{
-    border-bottom: 2px solid red;
-    opacity: 1;
+[title="num-of-property"] {
+  color: lightslategray;
+}
+.home-block {
+  opacity: 0.4;
 }
 
-.sub-navbar-item-selected{
+.home-block:hover {
+  opacity: 1;
+}
+
+.top-navbar-item-selected {
+  opacity: 1;
+}
+
+.sub-navbar-item-selected {
   border-bottom: 3px solid black;
-    opacity: 1;
+  opacity: 1;
 }
 /* end navbars' css */
 
@@ -123,40 +128,34 @@
   font-size: 1.25em;
 }
 
-
-
-
-
-
-
-
-
-
-
 .overlay-img {
   position: absolute;
   top: 30%;
 }
-
 </style>
 
 <script>
 import whatWeDoForInvestor from "@/components/WhatWeDoForInvestor";
+import whatWeDoForLandlord from "@/components/WhatWeDoForLandlord";
+import whatWeDoForHomeOwner from "@/components/WhatWeDoForHomeOwner";
+import caseStudy from "@/components/CaseStudyCards";
 export default {
   name: "what-we-do",
-  components:{
-    "what-we-do-for-investor" : whatWeDoForInvestor
+  components: {
+    "what-we-do-for-investor": whatWeDoForInvestor,
+    "what-we-do-for-landlord": whatWeDoForLandlord,
+    "what-we-do-for-home-owner": whatWeDoForHomeOwner,
+    "case-study": caseStudy
   },
   props: {},
-  data: ()=>{
-      return{
-        topNavbarIndex: 0,
-        subNavbarIndex: 0,
-      }
+  data: () => {
+    return {
+      topNavbarIndex: 0,
+      subNavbarIndex: 0
+    };
   },
-  
-  methods: {
-  }
+
+  methods: {}
 };
 </script>
 

@@ -22,27 +22,26 @@
 <template>
   <div class="container">
     <div class="row services-div">
-      <div :class = bsGridLayout v-for="(service, id) in servicesArray" :key="id">
+      <div :class="bsGridLayout" v-for="(service, id) in servicesArray" :key="id">
         <div class="mb-3">
-        <img :src="service.imgUrl" :alt="service.desc" 
-             :class = "['service-img', {'service-img-md' : service.imgSize == 'md'} , {'service-img-lg' : service.imgSize == 'lg'}]">
+          <img
+            :src="service.imgUrl"
+            :alt="service.desc"
+            :class="['service-img', {'service-img-md' : service.imgSize == 'md'} , {'service-img-lg' : service.imgSize == 'lg'}]"
+          >
         </div>
-        <div class="col-10 mx-auto" v-if = "service.routerLink">
-          <router-link :to = "service.routerLink">{{service.title}}</router-link>
+        <div class="col-10 mx-auto" v-if="service.routerLink">
+          <router-link :to="service.routerLink">{{service.title}}</router-link>
         </div>
-        <div v-else-if = "service.rawHTML">
-          <span v-html = "service.rawHTML"></span>
+        <div v-else-if="service.rawHTML">
+          <span v-html="service.rawHTML"></span>
         </div>
         <div v-else>
-          <h3 class="service-title">
-          {{service.title}}
-          </h3>
-          <p class="service-desc">
-          {{service.desc}}
-          </p>
-          </div>
+          <h3 class="service-title">{{service.title}}</h3>
+          <p class="service-desc">{{service.desc}}</p>
         </div>
       </div>
+    </div>
   </div>
 </template>
 <script>
@@ -76,7 +75,7 @@ export default {
 
 .service-img-lg {
   width: 100px;
-  height: 100px
+  height: 100px;
 }
 @media screen and (max-width: 358px) {
   .services-div {
