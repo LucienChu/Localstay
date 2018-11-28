@@ -5,6 +5,8 @@
 //     an object should be in format as 
 //     {
 //         imgUrl: strValue (image url, ie: "img/services/profile.svg"),
+//         imgSize: strValue in ['md' | 'lg'], default is empty
+//         rawHTML: strValue (allow to accept HTML syntax in string value)
 //         title: strValue,
 //         desc: strValue,
 //         routerLink: strValue (ie: rounter link address)
@@ -22,10 +24,14 @@
     <div class="row services-div">
       <div :class = bsGridLayout v-for="(service, id) in servicesArray" :key="id">
         <div class="mb-3">
-        <img :src="service.imgUrl" :alt="service.desc" class = "service-img">
+        <img :src="service.imgUrl" :alt="service.desc" 
+             :class = "['service-img', {'service-img-md' : service.imgSize == 'md'} , {'service-img-lg' : service.imgSize == 'lg'}]">
         </div>
         <div class="col-10 mx-auto" v-if = "service.routerLink">
           <router-link :to = "service.routerLink">{{service.title}}</router-link>
+        </div>
+        <div v-else-if = "service.rawHTML">
+          <span v-html = "service.rawHTML"></span>
         </div>
         <div v-else>
           <h3 class="service-title">
@@ -61,6 +67,16 @@ export default {
 .service-img {
   width: 50px;
   height: 50px;
+}
+
+.service-img-md {
+  width: 75px;
+  height: 75px;
+}
+
+.service-img-lg {
+  width: 100px;
+  height: 100px
 }
 @media screen and (max-width: 358px) {
   .services-div {
