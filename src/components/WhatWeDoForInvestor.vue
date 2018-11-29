@@ -3,10 +3,10 @@
     <b-container>
       <b-row class="title-row">
         <b-col cols="lg-10 md-12 mx-auto text-center">
-          <h3 title="header-title" class="display-4">Where we can help with your property portfolio</h3>
+          <h3  class="display-4">Where we can help with your property portfolio</h3>
           <services-for-investor
             class="pt-4"
-            bs-grid-layout="col-lg-4 col-12 mb-4"
+            bs-grid-layout="col-md-4 col-12 mx-auto mb-4"
             :servicesArray="servicesArr"
           />
         </b-col>
@@ -18,7 +18,7 @@
         <b-row class="mx-auto text-center">
           <h3
             class="py-4 display-4 mx-auto"
-            title="header-title"
+            
           >What Localstay does to protect your downside &#38; maximise your returns</h3>
         </b-row>
         <b-row class="d-flex pb-4 mb-4 pt-3 mt-3 img-and-text">
@@ -110,7 +110,6 @@
         <b-row class="mx-auto text-center">
           <h3
             class="py-4 display-4 mx-auto"
-            title="header-title"
           >At Home with Localstay: our design studio</h3>
         </b-row>
         <b-row>

@@ -6,7 +6,7 @@
           <h3 title="header-title" class="display-4">Benefits for Primary Home Owners at Hostmaker</h3>
           <services-for-investor
             class="pt-4"
-            bs-grid-layout="col-lg-4 col-12 mb-4"
+            bs-grid-layout="col-md-4 col-12 mx-auto mb-4"
             :servicesArray="servicesArr"
           />
         </b-col>

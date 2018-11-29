@@ -1,73 +1,115 @@
 <template>
   <b-container fluid class="template-wrapper">
-    <b-container class="template-content-wrapper">
-      <h4 class="ui-block-heading">5-star reviews that pay for your next holiday</h4>
+    <b-row class="my-4 py-4">
+      <h3 class="display-4 mx-auto">5-star reviews that pay for your next holiday</h3>
+    </b-row>
 
-      <b-row class="mx-auto">
-        <b-col cols="lg-4 md-2 12 mx-auto">
-          <b-card
-            no-body
-            img-top
-            :img-src="`${baseUrl}img/bg/2.jpg`"
-            img-alt="Card image cap"
-            class="mb-3"
-          >
-            <b-card-body class="card-body">
-              <h4 class="card-title small-title">PRICING</h4>
-              <b-link to="/">
-                <h5 class="link-title">Localstay's Pricing Team Has You Sorted</h5>
-              </b-link>
-            </b-card-body>
-          </b-card>
-        </b-col>
-        <b-col cols="lg-4 md-2 12 mx-auto">
-          <b-card
-            no-body
-            img-top
-            :img-src="`${baseUrl}img/bg/2.jpg`"
-            img-alt="Card image cap"
-            class="mb-3"
-          >
-            <b-card-body class="card-body">
-              <h4 class="card-title small-title">PRICING</h4>
-              <b-link to="/">
-                <h5 class="link-title">Localstay's Pricing Team Has You Sorted</h5>
-              </b-link>
-            </b-card-body>
-          </b-card>
-        </b-col>
-        <b-col cols="lg-4 md-2 12 mx-auto">
-          <b-card
-            no-body
-            img-top
-            :img-src="`${baseUrl}img/bg/2.jpg`"
-            img-alt="Card image cap"
-            class="mb-3"
-          >
-            <b-card-body class="card-body">
-              <h4 class="card-title small-title">PRICING</h4>
-              <b-link to="/">
-                <h5 class="link-title">Localstay's Pricing Team Has You Sorted</h5>
-              </b-link>
-            </b-card-body>
-          </b-card>
-        </b-col>
-      </b-row>
-    </b-container>
+    <b-row class="mx-auto card-row pb-4 mb-4">
+      <div class = "col-lg-4 col-md-6 mx-auto" v-for = "(imgCard, id) in imgCardArray" :key = "id">
+        <b-card
+          no-body
+          img-top
+          :img-src="imgCard.imgSrc"
+          img-alt="imgCard.imgAlt"
+          class="mb-3"
+        >
+          <b-card-body class="card-body">
+            <h4 class="card-title small-title">{{imgCard.title}}</h4>
+            <b-link to="/">
+              <h5 class="link-title">{{imgCard.desc}}</h5>
+            </b-link>
+          </b-card-body>
+        </b-card>
+      </div>
+    </b-row>
   </b-container>
 </template>
 <script>
-export default {};
+export default {
+  data: function(){
+    return{
+      imgCardArray: [
+      {
+        imgSrc: "/img/bg/2.jpg",
+        imgAlt: "A card image",
+        linkUrl: "/",
+        title: "PRICING",
+        desc: "Localstay's Pricing Team Has You Sorted"
+      },
+      {
+        imgSrc: "/img/bg/3.jpg",
+        imgAlt: "A card image",
+        linkUrl: "/",
+        title: "PRICING",
+        desc: "Localstay's Pricing Team Has You Sorted"
+      },
+      {
+        imgSrc: "/img/bg/2.jpg",
+        imgAlt: "A card image",
+        linkUrl: "/",
+        title: "PRICING",
+        desc: "Localstay's Pricing Team Has You Sorted"
+      },
+      {
+        imgSrc: "/img/bg/2.jpg",
+        imgAlt: "A card image",
+        linkUrl: "/",
+        title: "PRICING",
+        desc: "Localstay's Pricing Team Has You Sorted"
+      },
+      {
+        imgSrc: "/img/bg/2.jpg",
+        imgAlt: "A card image",
+        linkUrl: "/",
+        title: "PRICING",
+        desc: "Localstay's Pricing Team Has You Sorted"
+      },
+      {
+        imgSrc: "/img/bg/2.jpg",
+        imgAlt: "A card image",
+        linkUrl: "/",
+        title: "PRICING",
+        desc: "Localstay's Pricing Team Has You Sorted"
+      },
+      {
+        imgSrc: "/img/bg/2.jpg",
+        imgAlt: "A card image",
+        linkUrl: "/",
+        title: "PRICING",
+        desc: "Localstay's Pricing Team Has You Sorted"
+      },
+      {
+        imgSrc: "/img/bg/2.jpg",
+        imgAlt: "A card image",
+        linkUrl: "/",
+        title: "PRICING",
+        desc: "Localstay's Pricing Team Has You Sorted"
+      },
+      {
+        imgSrc: "/img/bg/2.jpg",
+        imgAlt: "A card image",
+        linkUrl: "/",
+        title: "PRICING",
+        desc: "Localstay's Pricing Team Has You Sorted"
+      },
+    ]
+    };
+  }
+};
 </script>
 <style scoped>
 .template-wrapper {
   padding: 0 !important;
 }
-
-.template-content-wrapper {
-  width: 90% !important;
-  padding: 0;
+.card-row{
+  max-width: 1200px;
 }
+@media screen and (max-width: 992px){
+  .card-row{
+    padding: 0 2%;
+  }
+}
+
 .card-body {
   padding: 1.25rem;
 }
