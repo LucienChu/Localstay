@@ -1,10 +1,17 @@
 <template>
   <!-- top image and text -->
-  <div>
-    <div>
-      <h1 class="overlay-img">say something</h1>
-      <b-img src="img/bg/1.jpg" fluid alt="owner"/>
-    </div>
+  <div class="template-wrapper">
+    <comment-img-overlay
+      bgImgUrl="url('/img/bg/3.jpg')"
+      bgImgHeight="70vh"
+      text=" Localstay provides an easy-to-use, end-to-end service which I found reliable and well-priced.
+          I especially loved the design element: At Home, their design studio, was a pleasure to work with.
+          They are miles ahead of their competitors.”
+        "
+      textColor="white"
+      textMaxWidth="600px"
+      textFooter="a footer"
+    />
     <!-- first nav bar -->
     <b-nav class="nav-modify tabs-alt pt-4 mt-3">
       <b-container id="top-navbar-container">
@@ -66,6 +73,11 @@
 
 
 <style scoped>
+@media screen and (max-width: 520px) {
+  .owner-description {
+    font-size: 1.4rem;
+  }
+}
 /* navbars' css */
 #top-navbar-container {
   width: 50%;
@@ -139,13 +151,15 @@ import whatWeDoForInvestor from "@/components/WhatWeDoForInvestor";
 import whatWeDoForLandlord from "@/components/WhatWeDoForLandlord";
 import whatWeDoForHomeOwner from "@/components/WhatWeDoForHomeOwner";
 import caseStudy from "@/components/CaseStudyCards";
+import commentImgOverlay from "@/components/CommentImgOverlay";
 export default {
   name: "what-we-do",
   components: {
     "what-we-do-for-investor": whatWeDoForInvestor,
     "what-we-do-for-landlord": whatWeDoForLandlord,
     "what-we-do-for-home-owner": whatWeDoForHomeOwner,
-    "case-study": caseStudy
+    "case-study": caseStudy,
+    "comment-img-overlay": commentImgOverlay
   },
   props: {},
   data: () => {
