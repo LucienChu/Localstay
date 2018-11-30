@@ -43,21 +43,21 @@
 
     <!-- second nav bar -->
     <b-container fluid style="background: white;">
-      <b-nav class="container fluid" role="navigation" id="sub-navbar-container">
-        <b-container>
+      <b-nav class="mx-auto" role="navigation" id="sub-navbar-container">
+        <b-container class="inner">
           <b-nav justified tabs class="nav-modify tabs-alt">
             <b-nav-item
-              :class="[{'sub-navbar-item-selected': subNavbarIndex == 0}, 'sub-navbar-items col-4']"
+              :class="[{'sub-navbar-item-selected': subNavbarIndex == 0}, 'sub-navbar-items col-4 mx-auto']"
               @click="subNavbarIndex = 0"
             >Services &#38; benefits</b-nav-item>
             <b-nav-item
-              :class="[{'sub-navbar-item-selected': subNavbarIndex == 1}, 'sub-navbar-items col-4']"
+              :class="[{'sub-navbar-item-selected': subNavbarIndex == 1}, 'sub-navbar-items col-4 mx-auto']"
               @click="subNavbarIndex = 1"
             >How it works</b-nav-item>
-            <b-nav-item
+            <!-- <b-nav-item
               :class="[{'sub-navbar-item-selected': subNavbarIndex == 2}, 'sub-navbar-items col-4']"
               @click="subNavbarIndex = 2"
-            >Case Studies</b-nav-item>
+            >Case Studies</b-nav-item> -->
           </b-nav>
         </b-container>
       </b-nav>
@@ -66,7 +66,7 @@
     <what-we-do-for-investor v-if="topNavbarIndex == 0 && subNavbarIndex == 0"/>
     <what-we-do-for-landlord v-if="topNavbarIndex == 1 && subNavbarIndex == 0"/>
     <what-we-do-for-home-owner v-if="topNavbarIndex == 2 && subNavbarIndex == 0"/>
-    <case-study v-if="subNavbarIndex == 2"/>
+    <!-- <case-study v-if="subNavbarIndex == 2"/> -->
   </div>
 </template>
 

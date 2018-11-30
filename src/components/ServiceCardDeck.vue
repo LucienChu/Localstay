@@ -5,7 +5,7 @@
 //     an object should be in format as 
 //     {
 //         imgUrl: strValue (image url, ie: "img/services/profile.svg"),
-//         imgSize: strValue in ['md' | 'lg'], default is empty
+//         imgSize: strValue in ['md' | 'lg'], default is empty indicating 50px by 50px
 //         rawHTML: strValue (allow to accept HTML syntax in string value)
 //         title: strValue,
 //         desc: strValue,
@@ -19,14 +19,14 @@
 //   bsGridLayout
 //     placeholder for bootstrap grid layout format (customizable bootstrap styling)
 
-<template>
+<template class = "template-wrapper">
   <div class="container">
     <div class="row services-div">
       <div :class="bsGridLayout" v-for="(service, id) in servicesArray" :key="id">
         <div class="mb-3">
           <img
             :src="service.imgUrl"
-            :alt="service.desc"
+            :alt="service.desc+' image'"
             :class="['service-img', {'service-img-md' : service.imgSize == 'md'} , {'service-img-lg' : service.imgSize == 'lg'}]"
           >
         </div>
@@ -37,8 +37,8 @@
           <span v-html="service.rawHTML"></span>
         </div>
         <div v-else>
-          <h3 class="service-title">{{service.title}}</h3>
-          <p class="service-desc">{{service.desc}}</p>
+          <h3 class="service-title" v-html="service.title"></h3>
+          <p class="service-desc" v-html="service.desc"></p>
         </div>
       </div>
     </div>
@@ -63,6 +63,9 @@ export default {
 </script>
 
 <style scoped>
+.template-wrapper{
+  max-width: 1200px;
+}
 .service-img {
   width: 50px;
   height: 50px;

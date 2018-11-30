@@ -20,7 +20,10 @@
     <!-- sub navbar -->
     <b-navbar id="sub-nav-bar" toggleable="lg" variant="light" style="z-index: 0">
       <div class="container">
-        <b-navbar-nav id="company-logo" href="#" class="ml-2">LocalStay</b-navbar-nav>
+        <b-navbar-nav id="company-logo" to="/" class="ml-2">
+          <b-nav-item active to="/">localstaty</b-nav-item>
+        </b-navbar-nav>
+        
 
         <div class="ml-auto">
           <b-button id="getStartBtn" variant="primary" size="sm" to="/WhatWeDo">get start</b-button>
