@@ -250,38 +250,6 @@
 </template>
 
 <style scoped>
-.home-page-wrapper > div,
-.mb-5 {
-  margin-bottom: 10px !important;
-}
-.home-page-wrapper > div {
-  margin-bottom: 120px;
-}
-/* partner platform css */
-.partner-img {
-  width: 180px;
-  height: 50px;
-}
-
-.partner-img {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-@media screen and (max-width: 576px) {
-  .partner-img {
-    width: 80px !important;
-    height: 50px;
-  }
-  .partner-img-div {
-    width: 140px !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-  }
-}
-
-/* end partner platform css */
 /* global css */
 .home-page-wrapper > div {
   margin-bottom: 120px;
@@ -292,6 +260,10 @@
   margin-bottom: 1rem;
   width: 50px;
   height: 50px;
+}
+
+.coop-partners {
+  background: #f5f5f0;
 }
 
 /* end why localstay css */
@@ -368,6 +340,8 @@
   }
 }
 /* end our service css */
+
+/* typing animation css */
 .fixed-text,
 .typing {
   margin-bottom: 0;
@@ -438,7 +412,7 @@ export default {
         {
           imgUrl: "img/services/photography.svg",
           title: "Professional photography",
-          desc: "Professional photography",
+          desc: "Professional photography"
         },
         {
           imgUrl: "img/services/guest-relations.svg",
