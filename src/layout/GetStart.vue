@@ -1,5 +1,5 @@
 <template>
-    <b-card>
+    <b-card style="margin-top: 100px">
         <b-form>
             <form-wizard @on-complete="onComplete">
                 <tab-content title="Location"
@@ -16,7 +16,7 @@
                 </tab-content>
             </form-wizard>
         </b-form>
-    <p>Parent: {{formData}}</p>
+    <p>Parent: {{json}}</p>
     </b-card>
 
 </template>
@@ -39,11 +39,12 @@ export default {
                 fromDetail: '',
                 fromAboutYou: ''
             }, 
+            json: ''
         }
     },
     methods: {
         onComplete: function(){
-            alert('Yay. Done!');
+            json = JSON.stringify(formData);
         },
         toLocation: function (value)
         {
@@ -51,7 +52,6 @@ export default {
         },
         toDetail: function(value)
         {
-            console.log("in")
             this.formData.fromDetail = value;
         },
         toAboutYou: function(value) 
