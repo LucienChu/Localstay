@@ -24,8 +24,6 @@
 </b-container>
 </template>
 
-
-
 <script>
 
 import vClickOutside from 'v-click-outside'
