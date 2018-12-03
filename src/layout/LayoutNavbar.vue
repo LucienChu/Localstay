@@ -41,7 +41,6 @@
         >
           <b-navbar-nav :class="{'pt-4': collapseShow, 'ml-auto': true}">
             <b-nav-item class="ml-2" to="/WhatWeDo">What We Do</b-nav-item>
-            <!-- <router-link to="/WhatWeDo">What we do</router-link> -->
             <b-nav-item class="ml-2" to="/Pricing">Pricing</b-nav-item>
             <b-nav-item class="ml-2" to="/WhoWeAre">Who we are</b-nav-item>
           </b-navbar-nav>
@@ -77,12 +76,8 @@
 </template>
 
 <script>
-import serviceCardDeck from "@/components/ServiceCardDeck";
 export default {
   name: "app-header",
-  components: {
-    "service-card-deck": serviceCardDeck
-  },
   data: function() {
     return {
       localEmail: "montreal@localstaty.com",
