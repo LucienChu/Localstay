@@ -25,9 +25,18 @@ const router = new Router({
     }, {
       path: '/Pricing',
       component: () => import('@/layout/Pricing.vue')
+<<<<<<< HEAD
     },{
       path: "/WhoWeAre",
       component: ()=> import("@/views/WhoWeAre.vue")
+=======
+    }, {
+      path: '/WhoWeAre',
+      component: () => import('@/layout/WhoWeAre.vue')
+    }, {
+      path: '/GetStart',
+      component: () => import('@/layout/GetStart.vue')
+>>>>>>> origin/kevin
     }]
   }]
 })

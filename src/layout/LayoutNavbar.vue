@@ -44,6 +44,10 @@
             <b-nav-item class="ml-2" to="/Pricing">Pricing</b-nav-item>
             <b-nav-item class="ml-2" to="/WhoWeAre">Who we are</b-nav-item>
           </b-navbar-nav>
+<<<<<<< HEAD
+=======
+            <b-button v-if = "!collapse" id = "getStartBtn1" variant = "primary" size = "sm" to = "/GetStart">get start</b-button>
+>>>>>>> origin/kevin
 
           <!-- a btn shown on right hand side when drop down toggle is not shown
           hidden otherwise-->

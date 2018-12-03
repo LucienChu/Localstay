@@ -11,7 +11,7 @@
         <!-- Features -->
 
         <datepicker
-          v-model="date1"
+          v-model="state.date"
           :bootstrapStyling="true"
           :monday-first="true"
           :full-month-name="true"
@@ -92,7 +92,7 @@ export default {
     // Vuejs Datepicker
     //
 
-    date1: moment().toDate(),
+    data1: state.date,
     disabledDates: {
       days: [0] // Disable sunday
     },
