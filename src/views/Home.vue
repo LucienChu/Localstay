@@ -89,13 +89,14 @@
               <b-form id = "address-form">
                 <div class="row">
                   <div id = "left-form" class="col-md-5 col-sm-6 col-10 ml-auto mb-5">
+                    <!-- address input -->
                     <b-form-group id="address"
                                 class="mb-5"
                                 label="Your property's address"
-                                label-for="addressInput">
-                      <b-form-input id="addressinput"                                  
+                                label-for="autocomplete">
+                      <b-form-input id="autocomplete"                                  
                                     required
-                                    placeholder="Enter email">
+                                    placeholder="Enter Address" >
                       </b-form-input>
                     </b-form-group>
                     
@@ -379,6 +380,9 @@
 <style src="@/vendor/libs/vue-awesome-swiper/vue-awesome-swiper.scss" lang="scss"></style>
 <style src = "@/GlobalFontStyle.css"></style>
 
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8DHacr9qgj9bVn_NKpk-hJb2Zrs9OyrY&libraries=places"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8DHacr9qgj9bVn_NKpk-hJb2Zrs9OyrY&callback=initAutocomplete" async defer></script>
+
 <script>
 import { swiper, swiperSlide } from "vue-awesome-swiper";
 import homePageSwiper from "@/components/HomePageSwiper";
@@ -387,6 +391,14 @@ import homePagePromotion from "@/components/HomePagePromotion";
 import smallIconGallery from "@/components/SmallIconGallery";
 import serviceCardDeck from "@/components/ServiceCardDeck";
 import swiperCommentOverImg from "@/components/SwiperCommentOverImg";
+// import * as VueGoogleMpas from "vue2-google-maps"
+
+// Vue.use (VueGoogleMpas, {
+//   load: {
+//     key: 'AIzaSyB8DHacr9qgj9bVn_NKpk-hJb2Zrs9OyrY',
+//     libraries: 'places' 
+//   }
+// })
 export default {
   name: "home",
   metaInfo: {
@@ -486,14 +498,15 @@ export default {
       ],
       animateStrTitle: "",
       animateStrs: [],
-      landlineSrc: "img/landmarks/london-landmark.svg"
+      landlineSrc: "img/landmarks/london-landmark.svg",
+      
     };
   },
   methods: {
     getNextTitle: function() {
       this.currentTextId = (this.currentTextId + 1) % this.textArray.length;
       this.animateStrTitle = this.textArray[this.currentTextId].fixed;
-    }
+    },
   },
   created: function() {
     let size = this.textArray.length;
@@ -504,7 +517,10 @@ export default {
     }
     this.animateStrs = strArray;
     this.animateStrTitle = this.textArray[0].fixed;
-  }
+  },
+
+  
 };
 </script>
+
 
