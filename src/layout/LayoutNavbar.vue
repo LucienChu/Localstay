@@ -23,7 +23,6 @@
         <b-navbar-nav id="company-logo" to="/" class="ml-2">
           <b-nav-item active to="/">localstaty</b-nav-item>
         </b-navbar-nav>
-        
 
         <div class="ml-auto">
           <b-button id="getStartBtn" variant="primary" size="sm" to="/WhatWeDo">get start</b-button>
@@ -44,14 +43,10 @@
             <b-nav-item class="ml-2" to="/Pricing">Pricing</b-nav-item>
             <b-nav-item class="ml-2" to="/WhoWeAre">Who we are</b-nav-item>
           </b-navbar-nav>
-<<<<<<< HEAD
-=======
-            <b-button v-if = "!collapse" id = "getStartBtn1" variant = "primary" size = "sm" to = "/GetStart">get start</b-button>
->>>>>>> origin/kevin
 
           <!-- a btn shown on right hand side when drop down toggle is not shown
           hidden otherwise-->
-          <b-button id="getStartBtn1" variant="primary" size="sm" to="/WhatWeDo">get start</b-button>
+          <b-button id="getStartBtn1" variant="primary" size="sm" to="/GetStart">get start</b-button>
 
           <b-navbar-nav v-if="collapseShow" style="height: 100vh;" class="pt-4">
             <b-list-group>
