@@ -43,11 +43,25 @@
             <b-nav-item class="ml-2" to="/Pricing">Pricing</b-nav-item>
             <b-nav-item class="ml-2" to="/WhoWeAre">Who we are</b-nav-item>
           </b-navbar-nav>
+<<<<<<< HEAD
 
           <!-- a btn shown on right hand side when drop down toggle is not shown
           hidden otherwise-->
           <b-button id="getStartBtn1" variant="primary" size="sm" to="/GetStart">get start</b-button>
 
+=======
+          <b-button
+            v-if="!collapseShow"
+            id="getStartBtn1"
+            variant="primary"
+            size="sm"
+            to="/GetStart"
+          >get start</b-button>
+
+          <!-- a btn shown on right hand side when drop down toggle is not shown
+          hidden otherwise-->
+          <!-- <b-button id="getStartBtn1" variant="primary" size="sm" to="/WhatWeDo">get start</b-button> -->
+>>>>>>> f7eb1c6b7bc7e8ad2cd2ec105ed790d29f9c4840
           <b-navbar-nav v-if="collapseShow" style="height: 100vh;" class="pt-4">
             <b-list-group>
               <b-list-group-item class="px-2 d-flex justify-content-between align-items-center">
