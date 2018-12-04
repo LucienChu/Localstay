@@ -72,7 +72,6 @@
 </template>
 
 <script>
-<<<<<<< HEAD
 import animatedProgressStep from "@/components/AnimatedProgressStep";
 
 export default {
@@ -108,45 +107,10 @@ export default {
       if (true) {
         this.stepCounter += 1;
       }
-=======
-import location from "@/components/Location.vue";
-import detail from "@/components/Detail.vue";
-import aboutYou from "@/components/AboutYou.vue";
-
-export default {
-  components: {
-    "form-location": location,
-    "form-detail": detail,
-    "form-aboutyou": aboutYou
-  },
-  data: () => {
-    return {
-      formData: {
-        fromLocation: "",
-        fromDetail: "",
-        fromAboutYou: ""
-      },
-      json: ""
-    };
-  },
-  methods: {
-    onComplete: function() {
-      json = JSON.stringify(formData);
-    },
-    toLocation: function(value) {
-      this.formData.fromLocation = value;
-    },
-    toDetail: function(value) {
-      this.formData.fromDetail = value;
-    },
-    toAboutYou: function(value) {
-      this.formData.fromAboutYou = value;
->>>>>>> f7eb1c6b7bc7e8ad2cd2ec105ed790d29f9c4840
     }
   }
 };
 </script>
-<<<<<<< HEAD
 
 <style scoped>
 .container-wrapper {
@@ -187,13 +151,6 @@ export default {
 
 #get-start-form {
   background: #fff;
-=======
-<style scoped>
-.template-wrapper {
-  position: relative;
-}
-#get-start-form-card {
->>>>>>> f7eb1c6b7bc7e8ad2cd2ec105ed790d29f9c4840
   position: absolute;
   top: 50%;
   left: 50%;
@@ -202,15 +159,10 @@ export default {
   transform: translate(-50%, -50%);
 }
 
-<<<<<<< HEAD
 @media screen and (max-width: 576px) {
   #form-container {
     padding-left: 0;
     padding-right: 0;
   }
-=======
-.vue-form-wizard .wizard-nav-pills > li > a {
-  color: green !important;
->>>>>>> f7eb1c6b7bc7e8ad2cd2ec105ed790d29f9c4840
 }
 </style>
