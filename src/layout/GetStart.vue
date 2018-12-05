@@ -8,24 +8,25 @@
 
     <b-container id="form-container">
       <b-row>
-        <div class="col-lg-7 col-sm-12 mx-auto">
+        <div class="col-lg-7 col-sm-12 mx-auto" style="height: 2000px !important;">
           <b-card id="get-start-form-card" class="mx-auto py-4">
-            <b-col class="col-md-10 col-12 mx-auto pb-5">
+            <b-col class="col-md-10 col-12 mx-auto pb-2">
               <h6
                 id="form-statement"
                 class="mt-2 pt-2"
+                v-if="stepCounter === 0"
               >To unlock the potential of your home, we just need to know a little more about your property. It only takes 30 seconds!</h6>
             </b-col>
 
             <!-- first form: general property info -->
-            <b-form v-if="false" class="col-md-8 col-12 mx-auto" id="get-start-form">
-              <b-form-group class="pb-5">
+            <b-form v-if="stepCounter === 0" class="col-md-8 col-12 mx-auto" id="get-start-form">
+              <b-form-group class="pb-5 pt-4">
                 <label for="property-address">
                   <h3 class="display-4 form-labels">Your property address</h3>
                 </label>
                 <b-form-input v-model="address" id="property-address"></b-form-input>
               </b-form-group>
-              <b-form-group class="pb-5">
+              <b-form-group class="pb-2">
                 <label for="property-status">
                   <h3 class="display-4 form-labels">Tell us about your property</h3>
                 </label>
@@ -38,13 +39,19 @@
                 ></b-form-radio-group>
               </b-form-group>
               <div class="text-center">
-                <b-button class="col-6" @click="checkAddress()">Next</b-button>
+                <b-button variant="secondary" class="col-5" @click="checkAddress()">
+                  <span style="font-size: 120%;">Next</span>
+                </b-button>
               </div>
             </b-form>
 
-            <!-- second form: single property user -->
-            <b-form v-if="false" class="col-md-8 col-12 mx-auto" id="get-start-form">
-              <b-form-group class="col-10 pb-5 pl-0">
+            <!-- form for users with one property-->
+            <b-form
+              v-if="stepCounter == 1 && propertyStatus === 'I live here'"
+              class="col-md-9 col-12 mx-auto"
+              id="get-start-form"
+            >
+              <b-form-group class="col-10 pb-2 pl-0">
                 <label for="number-of-bedrooms">
                   <h3 class="display-4 form-labels">Number of bedrooms</h3>
                 </label>
@@ -53,10 +60,11 @@
                   buttons
                   v-model="numOfBedrooms"
                   :options="numOfBedroomsOptions"
-                  name="radiosBtnDefault"
+                  name="radiosBtnOutline"
+                  button-variant="outline-secondary"
                 />
               </b-form-group>
-              <b-form-group class="pb-5">
+              <b-form-group class="pb-2">
                 <b-row>
                   <div class="col-6">
                     <label for="available-date">
@@ -65,7 +73,7 @@
                     <b-form-input
                       id="available-date"
                       type="date"
-                      min="2018-12-04"
+                      :min="currentDate"
                       v-model="availableDate"
                     ></b-form-input>
                   </div>
@@ -82,7 +90,7 @@
                   </div>
                 </b-row>
               </b-form-group>
-              <b-form-group class="pb-5">
+              <b-form-group class="pb-2">
                 <label for="airbnb-link">
                   <h3 class="display-4 form-labels">
                     Airbnb (or similar sites) link
@@ -91,13 +99,75 @@
                 </label>
                 <b-form-input id="airbnb-link" type="text" v-model="airbnbLink"></b-form-input>
               </b-form-group>
-              <div class="text-center">
-                <b-button class="col-6" @click="checkAddress()">Next</b-button>
-              </div>
+              <b-form-group class="pb-2">
+                <label for="number-of-property">
+                  <h3 class="display-4 form-labels">Number of properties you want to market</h3>
+                </label>
+                <b-form-input type="number" min="3" :value="numOfProperty" id="number-of-property"></b-form-input>
+              </b-form-group>
+              <b-row>
+                <b-col cols="3" class="mr-auto">
+                  <b-button variant="outline-primary" @click="stepCounter-=1">Previous</b-button>
+                </b-col>
+                <b-col cols="3" class="ml-auto">
+                  <b-button variant="secondary" @click="checkAddress()">Next</b-button>
+                </b-col>
+              </b-row>
+            </b-form>
+
+            <!-- for for user with one extra property -->
+            <b-form
+              v-if="stepCounter == 1 && propertyStatus === 'This is my second home'"
+              class="col-md-9 col-12 mx-auto"
+              id="get-start-form"
+            >
+              <b-form-group class="col-10 pb-2 pl-0">
+                <label for="number-of-bedrooms">
+                  <h3 class="display-4 form-labels">Number of bedrooms</h3>
+                </label>
+                <b-form-radio-group
+                  id="btnradios1"
+                  buttons
+                  v-model="numOfBedrooms"
+                  :options="numOfBedroomsOptions"
+                  name="radiosBtnOutline"
+                  button-variant="outline-secondary"
+                />
+              </b-form-group>
+              <b-row>
+                <b-col cols="3" class="mr-auto">
+                  <b-button variant="outline-primary" @click="stepCounter-=1">Previous</b-button>
+                </b-col>
+                <b-col cols="3" class="ml-auto">
+                  <b-button variant="secondary" @click="checkAddress()">Next</b-button>
+                </b-col>
+              </b-row>
+            </b-form>
+
+            <!-- form for owners with multiple properties -->
+            <b-form
+              v-if="stepCounter == 1 && propertyStatus === 'I have multiple properties'"
+              class="col-md-9 col-12 mx-auto"
+              id="get-start-form"
+            >
+              <b-form-group class="pb-2">
+                <label for="number-of-property">
+                  <h3 class="display-4 form-labels">Number of properties you want to market</h3>
+                </label>
+                <b-form-input type="number" min="3" v-model="numOfProperty" id="number-of-property"></b-form-input>
+              </b-form-group>
+              <b-row>
+                <b-col cols="3" class="mr-auto">
+                  <b-button variant="outline-primary" @click="stepCounter-=1">Previous</b-button>
+                </b-col>
+                <b-col cols="3" class="ml-auto">
+                  <b-button variant="secondary" @click="checkAddress()">Next</b-button>
+                </b-col>
+              </b-row>
             </b-form>
 
             <!-- third form: user info -->
-            <b-form v-if="true" class="col-md-8 col-12 mx-auto" id="get-start-form">
+            <b-form v-if="stepCounter === 2" class="col-md-8 col-12 mx-auto" id="get-start-form">
               <b-form-group class="pb-2">
                 <label for="first-name">
                   <h3 class="display-4 form-labels">First Name</h3>
@@ -122,9 +192,14 @@
                 </label>
                 <b-form-input type="email" v-model="email" id="email"></b-form-input>
               </b-form-group>
-              <div class="text-center">
-                <b-button class="col-6" @click="checkAddress()">Next</b-button>
-              </div>
+              <b-row>
+                <b-col cols="3" class="mr-auto">
+                  <b-button variant="outline-primary" @click="stepCounter-=1">Previous</b-button>
+                </b-col>
+                <b-col cols="3" class="ml-auto">
+                  <b-button variant="secondary" @click="checkAddress()">Submit</b-button>
+                </b-col>
+              </b-row>
             </b-form>
           </b-card>
         </div>
@@ -135,16 +210,19 @@
 
 <script>
 import animatedProgressStep from "@/components/AnimatedProgressStep";
-
+import { getStartFormBus } from "@/main.js";
 export default {
   components: {
     "animated-progress-step": animatedProgressStep
   },
+
   data: function() {
     return {
       steps: 3,
       stepCounter: 0,
       address: "",
+      currentDate: "",
+      numOfProperty: "",
       propertyStatusOptions: [
         { text: "I live here", value: "I live here" },
         { text: "This is my second home", value: "This is my second home" },
@@ -163,7 +241,7 @@ export default {
       ],
 
       // data for single property
-      numOfBedrooms: 0,
+      numOfBedrooms: "Studio",
       availableDate: "",
       unavailableDate: "",
       airbnbLink: "",
@@ -180,7 +258,34 @@ export default {
       if (true) {
         this.stepCounter += 1;
       }
+    },
+    getCurrentDate: function() {
+      let today = new Date();
+      let day = today.getDate();
+      let month = today.getMonth() + 1;
+      let year = today.getFullYear();
+      if (day < 10) {
+        day = "0" + day;
+      }
+      if (month < 10) {
+        month = "0" + month;
+      }
+
+      this.currentDate = `${year}-${month}-${day}`;
+      alert(this.currentDate);
+    },
+    getAddress: function(str) {
+      this.address = str;
+      alert(`address updated as ${this.address}`);
     }
+  },
+  mounted() {
+    getStartFormBus.$on("checkForm", propertyAddress => {
+      alert(`alert from on ${propertyAddress}`);
+      this.getAddress(propertyAddress);
+    });
+    this.getCurrentDate();
+    this.getAddress();
   }
 };
 </script>
@@ -210,7 +315,11 @@ export default {
 }
 
 #get-start-form-card {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  max-height: 70vh;
+  max-width: 70vh;
 }
 
 #form-statement {

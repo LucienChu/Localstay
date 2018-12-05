@@ -7,21 +7,21 @@
         id="step1"
         :class="{'is-complete':stepCount > 0, 'is-active': stepCount == 0, 'progress-step':true}"
       >
-        <h4>Location</h4>
+        <h5>Location</h5>
       </div>
 
       <div
         id="step2"
         :class="{'is-complete':stepCount > 1, 'is-active': stepCount == 1, 'progress-step':true}"
       >
-        <h4>About your property</h4>
+        <h5>About your property</h5>
       </div>
 
       <div
         id="step3"
         :class="{'is-complete':stepCount > 2, 'is-active': stepCount == 2, 'progress-step':true}"
       >
-        <h4>About you</h4>
+        <h5>About you</h5>
       </div>
     </div>
   </b-container>
@@ -30,6 +30,7 @@
 .progressBar {
   position: relative;
   display: flex;
+  counter-reset: h5 0;
 }
 
 .progress-step {
@@ -39,6 +40,7 @@
   font-size: 12px;
   text-align: center;
   color: white;
+  counter-increment: h5;
 }
 
 .progress-step.is-active {
@@ -58,21 +60,23 @@
   display: flex;
   margin: 0 auto;
   margin-bottom: 20px;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background: #fff;
   border: 4px solid#dfe3e4;
   border-radius: 100%;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .progress-step.is-active:before {
-  content: "\f004";
+  /* content: "\f004"; */
+  content: counter(h5);
+  transition: 0.75s;
   font-family: "Font Awesome 5 Free";
   color: #fff;
   background: red;
   border: 4px solid transparent;
-  padding-left: 0.3em;
+  padding-left: 0.4em;
   font-weight: 900;
   animation: pulse 2s infinite;
 }
@@ -82,17 +86,18 @@
   color: #fff;
   background: #009900;
   border: 4px solid transparent;
-  padding-left: 0.3em;
+  padding-left: 0.18em;
+  padding-top: 0.05em;
   font-weight: 900;
 }
 .progress-step:after {
   content: "";
   position: absolute;
-  top: 15px;
+  top: 13px;
   left: 50%;
   width: 0%;
   transition: width 1s ease-in;
-  height: 10px;
+  height: 5px;
   background: #dfe3e4;
   z-index: -1;
 }
