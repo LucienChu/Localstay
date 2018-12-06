@@ -24,7 +24,7 @@
                 <label for="property-address">
                   <h3 class="display-4 form-labels">Your property address</h3>
                 </label>
-                <b-form-input v-model="address" id="property-address"></b-form-input>
+                <b-form-input :value="propertyAddress" id="property-address"></b-form-input>
               </b-form-group>
               <b-form-group class="pb-2">
                 <label for="property-status">
@@ -210,7 +210,6 @@
 
 <script>
 import animatedProgressStep from "@/components/AnimatedProgressStep";
-import { getStartFormBus } from "@/main.js";
 export default {
   components: {
     "animated-progress-step": animatedProgressStep
@@ -220,7 +219,7 @@ export default {
     return {
       steps: 3,
       stepCounter: 0,
-      address: "",
+      propertyAddress: "",
       currentDate: "",
       numOfProperty: "",
       propertyStatusOptions: [
@@ -272,20 +271,10 @@ export default {
       }
 
       this.currentDate = `${year}-${month}-${day}`;
-      alert(this.currentDate);
-    },
-    getAddress: function(str) {
-      this.address = str;
-      alert(`address updated as ${this.address}`);
     }
   },
-  mounted() {
-    getStartFormBus.$on("checkForm", propertyAddress => {
-      alert(`alert from on ${propertyAddress}`);
-      this.getAddress(propertyAddress);
-    });
+  created() {
     this.getCurrentDate();
-    this.getAddress();
   }
 };
 </script>

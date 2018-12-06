@@ -131,7 +131,6 @@
                         href="/GetStart"
                         class="btn btn-primary mx-auto btn-block"
                         style="width: 50%"
-                        @click="checkForm()"
                       >Get Start</a>
                     </div>
                   </div>
@@ -393,7 +392,6 @@
 
 <script>
 import { swiper, swiperSlide } from "vue-awesome-swiper";
-import { getStartFormBus } from "@/main.js";
 import homePageSwiper from "@/components/HomePageSwiper";
 
 import homePagePromotion from "@/components/HomePagePromotion";
@@ -505,12 +503,6 @@ export default {
     };
   },
   methods: {
-    checkForm: function() {
-      if (this.propertyAddress || this.numOfBedrooms) {
-        getStartFormBus.$emit("checkForm", this.propertyAddress);
-        alert(`alert from emit ${this.propertyAddress}`);
-      }
-    },
     getNextTitle: function() {
       this.currentTextId = (this.currentTextId + 1) % this.textArray.length;
       this.animateStrTitle = this.textArray[this.currentTextId].fixed;
