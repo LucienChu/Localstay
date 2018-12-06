@@ -30,7 +30,7 @@ const router = new Router({
       component: () => import('@/layout/WhoWeAre.vue')
     }, {
       path: '/GetStart',
-      component: () => import('@/views/GetStart.vue')
+      component: () => import('@/layout/GetStart.vue')
     }]
   }]
 })
