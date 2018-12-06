@@ -1,5 +1,12 @@
 <template >
   <b-container fluid class="container-wrapper">
+    <b-container class="text-center">
+      <b-col md="4" cols="12" class="mx-auto">
+        <h3
+          class="display-4"
+        >Supercharge your rental income by 30%Supercharge your rental income by 30%</h3>
+      </b-col>
+    </b-container>
     <b-row style="width: 80%;" class="mx-auto pb-4 mb-4">
       <b-col>
         <animated-progress-step :steps="steps" :stepCount="stepCounter"/>
