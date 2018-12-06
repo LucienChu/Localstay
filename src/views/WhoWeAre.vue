@@ -191,21 +191,17 @@
   color: white;
   font-weight: 400;
 }
-
 .business-statement-container,
 .city-thumbnails-container {
   padding: 100px 0;
   background: white;
 }
-
 .paragraph-body {
   line-height: 1.8em;
 }
-
 #company-potential-container p {
   font-size: 1.5em;
 }
-
 .img-thumbnail-content {
   position: absolute;
   top: 90%;
@@ -216,28 +212,23 @@
   -webkit-filter: grayscale(100%);
   -webkit-transition: all 0.5s ease-in-out;
 }
-
 .img-thumbnail:hover,
 .staff-img:hover {
   filter: none !important;
   -webkit-filter: none !important;
 }
-
 .CEO-title-below-img {
   display: none;
 }
-
 .CEO-img {
   width: 100%;
 }
-
 .staff-card {
   border: none;
 }
 .card-body {
   padding-left: 0px;
 }
-
 @media screen and (max-width: 576px) {
   .header-container {
     height: 40vh;
@@ -248,7 +239,6 @@
   .business-statement-container {
     padding: 50px 0;
   }
-
   .paragraph-title {
     font-size: 2em;
     padding-bottom: 5% !important;
@@ -262,11 +252,9 @@
   .CEO-img {
     width: 50%;
   }
-
   .CEO-title-below-img {
     display: block;
   }
-
   .CEO-title-on-paragraph {
     display: none;
   }
@@ -331,4 +319,3 @@ export default {
   }
 };
 </script>
-

@@ -20,10 +20,22 @@
     <!-- sub navbar -->
     <b-navbar id="sub-nav-bar" toggleable="lg" variant="light" style="z-index: 0">
       <div class="container">
-        <b-navbar-nav id="company-logo" to="/" class="ml-2">
-          <b-nav-item active to="/">localstaty</b-nav-item>
-        </b-navbar-nav>
-
+        <!-- Brand -->
+        <b-navbar-brand href="/" class="app-brand" id="company-logo">
+          <img
+            src="/img/logo/localstay-logo.png"
+            alt="localstay logo"
+            class="app-brand-logo ui-w-120"
+          >
+        </b-navbar-brand>
+        <b-navbar-brand href="/" class="app-brand" id="company-logo-small">
+          <img
+            src="/img/logo/localstay-logo-small.png"
+            alt="localstay logo"
+            class="app-brand-logo ui-w-30"
+          >
+        </b-navbar-brand>
+        <!-- / Brand -->
         <div class="ml-auto">
           <b-button id="getStartBtn" variant="primary" size="sm" to="/WhatWeDo">get start</b-button>
           <b-navbar-toggle target="collapse-content">
@@ -106,7 +118,21 @@ export default {
   }
 };
 </script>
+
 <style scoped>
+/* company logo */
+@media screen and (min-width: 769px) {
+  #company-logo-small {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  #company-logo {
+    display: none;
+  }
+}
+
+/* end company logo */
 .nav-bar-wrapper {
   position: fixed;
   z-index: 999;

@@ -2,16 +2,33 @@
   <!-- top image and text -->
   <div class="template-wrapper">
     <comment-img-overlay
+      v-if="topNavbarIndex == 0"
       bgImgUrl="url('/img/bg/3.jpg')"
       bgImgHeight="70vh"
-      text=" Localstay provides an easy-to-use, end-to-end service which I found reliable and well-priced.
-          I especially loved the design element: At Home, their design studio, was a pleasure to work with.
-          They are miles ahead of their competitors.”
-        "
-      textColor="white"
-      textMaxWidth="600px"
-      textFooter="a footer"
+      :comment="investorComment.comment"
+      commentColor="white"
+      commentMaxWidth="600px"
+      :commentFooter="investorComment.author"
     />
+    <comment-img-overlay
+      v-if="topNavbarIndex == 1"
+      bgImgUrl="url('/img/bg/2.jpg')"
+      bgImgHeight="70vh"
+      :comment="landlordComment.comment"
+      commentColor="white"
+      commentMaxWidth="600px"
+      :commentFooter="landlordComment.author"
+    />
+    <comment-img-overlay
+      v-if="topNavbarIndex == 2"
+      bgImgUrl="url('/img/bg/1.jpg')"
+      bgImgHeight="70vh"
+      :comment="propertyOwnerComment.comment"
+      commentColor="white"
+      commentMaxWidth="600px"
+      :commentFooter="propertyOwnerComment.author"
+    />
+
     <!-- first nav bar -->
     <b-nav class="nav-modify tabs-alt pt-4 mt-3">
       <b-container id="top-navbar-container">
@@ -57,7 +74,7 @@
             <!-- <b-nav-item
               :class="[{'sub-navbar-item-selected': subNavbarIndex == 2}, 'sub-navbar-items col-4']"
               @click="subNavbarIndex = 2"
-            >Case Studies</b-nav-item> -->
+            >Case Studies</b-nav-item>-->
           </b-nav>
         </b-container>
       </b-nav>
@@ -164,6 +181,24 @@ export default {
   props: {},
   data: () => {
     return {
+      investorComment: {
+        comment: `Localstay provides an easy-to-use, end-to-end service which I found reliable and well-priced.
+                  I especially loved the design element: At Home, their design studio, was a pleasure to work with.
+                  They are miles ahead of their competitors.`,
+        author: "I am an investor"
+      },
+
+      landlordComment: {
+        comment: `Hostmaker has done a remarkable job. The occupancy levels are high and the rates per night excellent. 
+                  They go out of their way to make the life of the property owner easier.`,
+        author: "I am a landlord"
+      },
+
+      propertyOwnerComment: {
+        comment: `My experience working with Hostmaker has been outstanding from start to finish. The team took brilliant 
+                  care of my place and the guests who chose to stay there.`,
+        author: "I live with tenant"
+      },
       topNavbarIndex: 0,
       subNavbarIndex: 0
     };

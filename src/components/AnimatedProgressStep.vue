@@ -1,5 +1,5 @@
 <template>
-  <b-container fluid class="pt-5">
+  <b-container fluid>
     <div class="progressBar">
       <div class="progress-track"></div>
 
@@ -74,7 +74,7 @@
   transition: 0.75s;
   font-family: "Font Awesome 5 Free";
   color: #fff;
-  background: red;
+  background: #d93e4e;
   border: 4px solid transparent;
   padding-left: 0.4em;
   font-weight: 900;

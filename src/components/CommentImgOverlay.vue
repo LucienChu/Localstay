@@ -2,20 +2,20 @@
 // It is a image overlay component takes properties as:
 //       bgImgUrl: strValue --> ie: "url('urlPath')"
 //       bgImgHeight strValue --> ie: "70vh"
-//       text: strValue
-//       text-color: strValue
-//       textFooter: strValue
-//       textFooterColor: strValue
+//       comment: strValue
+//       comment-color: strValue
+//       commentFooter: strValue
+//       commentFooterColor: strValue
 
 <template>
   <div class="container-fluid bg-overlay" :style="{background: bgImgUrl, height: bgImgHeight}">
-    <div class="row text-left text-container" :style="{maxWidth: textMaxWidth}">
-      <p class="display-4 text-element" :style="{color: textColor}">{{text}}</p>
+    <div class="row comment-left comment-container" :style="{maxWidth: commentMaxWidth}">
+      <p class="display-4 comment-element" :style="{color: commentColor}">&quot;{{comment}}&quot;</p>
       <footer
         class="blockquote-footer"
-        v-if="textFooter"
-        :style="{color: textFooterColor}"
-      >{{textFooter}}</footer>
+        v-if="commentFooter"
+        :style="{color: commentFooterColor}"
+      >{{commentFooter}}</footer>
     </div>
   </div>
 </template>
@@ -30,22 +30,22 @@ export default {
       type: String,
       default: "70vh"
     },
-    text: {
+    comment: {
       type: String,
-      default: "default text"
+      default: "default comment"
     },
-    textColor: {
+    commentColor: {
       type: String,
       default: "white"
     },
-    textMaxWidth: {
+    commentMaxWidth: {
       type: String,
       default: "70vh"
     },
-    textFooter: {
+    commentFooter: {
       type: String
     },
-    textFooterColor: {
+    commentFooterColor: {
       type: String
     }
   },
@@ -58,20 +58,20 @@ export default {
 .bg-overlay {
   position: relative;
 }
-.text-container {
+.comment-container {
   position: absolute;
-  bottom: 20px;
+  bottom: 10%;
   padding: 0 3%;
 }
 footer {
   font-size: 1.2em;
 }
 
-.text-element {
+.comment-element {
   line-height: 1.1em;
 }
 @media screen and (max-width: 520px) {
-  .text-element {
+  .comment-element {
     font-size: 1.5rem;
     line-height: 1.4em;
     opacity: 0.8;

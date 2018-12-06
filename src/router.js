@@ -21,17 +21,20 @@ const router = new Router({
       component: () => import('@/views/Home')
     }, {
       path: '/WhatWeDo',
-      component: () => import('@/layout/WhatWeDo')
+      component: () => import('@/views/WhatWeDo')
     }, {
       path: '/Pricing',
-      component: () => import('@/layout/Pricing.vue')
+      component: () => import('@/views/Pricing.vue')
     }, {
       path: '/WhoWeAre',
-      component: () => import('@/layout/WhoWeAre.vue')
-    }, {
-      path: '/GetStart',
-      component: () => import('@/layout/GetStart.vue')
-    }]
+      component: () => import('@/views/WhoWeAre.vue')
+    },
+    ]
+  }, {
+    path: "/GetStart",
+    name: "GetStart",
+    component: () => import("@/views/GetStart.vue"),
+    props: true
   }]
 })
 

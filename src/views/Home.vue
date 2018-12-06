@@ -93,12 +93,7 @@
                     label="Your property's address"
                     label-for="addressInput"
                   >
-                    <b-form-input
-                      id="addressinput"
-                      required
-                      placeholder="Property address"
-                      v-model="propertyAddress"
-                    ></b-form-input>
+                    <b-form-input id="addressinput" required placeholder="Property address"></b-form-input>
                   </b-form-group>
 
                   <b-form-group label="Number of bedrooms" class="my-auto" v-model="numOfBedrooms">
@@ -127,11 +122,11 @@
                   </div>
                   <div class="row mb-2">
                     <div class="get-start-btn col text-center">
-                      <a
-                        href="/GetStart"
+                      <router-link
                         class="btn btn-primary mx-auto btn-block"
-                        style="width: 50%"
-                      >Get Start</a>
+                        :to="{name: 'GetStart', params: { propertyAddress } }"
+                        style="color:#FFF; width: 50%"
+                      >Get Start</router-link>
                     </div>
                   </div>
                 </div>
